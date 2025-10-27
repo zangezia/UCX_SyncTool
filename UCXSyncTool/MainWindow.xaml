@@ -1,0 +1,111 @@
+<Window x:Class="UCXSyncTool.MainWindow"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="clr-namespace:UCXSyncTool"
+    Title="UCX SyncTool" Height="650" Width="1000" MinWidth="900" MinHeight="500"
+    Icon="pack://application:,,,/Assets/app_icon.ico">
+    <Window.Resources>
+        <local:BpsToMBsConverter x:Key="BpsToMBsConverter" />
+    </Window.Resources>
+    <Grid Margin="10">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="*" />
+        </Grid.RowDefinitions>
+
+        <Grid Grid.Row="0" Margin="0,0,0,8">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="Auto" />
+            </Grid.RowDefinitions>
+
+            <!-- Row 0: Project selection and destination (responsive grid so Browse button remains visible) -->
+            <Grid Grid.Row="0" VerticalAlignment="Center">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="Auto" /> <!-- logo -->
+                    <ColumnDefinition Width="Auto" /> <!-- project label + combo + refresh -->
+                    <ColumnDefinition Width="Auto" /> <!-- dest label -->
+                    <ColumnDefinition Width="*" />    <!-- dest textbox (fills remaining) -->
+                    <ColumnDefinition Width="Auto" /> <!-- browse button -->
+                </Grid.ColumnDefinitions>
+
+                <!-- high-resolution logo -->
+                <Image Grid.Column="0" Source="pack://siteoforigin:,,,/Assets/logo.jpg" Width="48" Height="48" Margin="0,0,8,0" Stretch="Uniform" />
+
+                <!-- project controls grouped -->
+                <StackPanel Grid.Column="1" Orientation="Horizontal" VerticalAlignment="Center" Margin="0,0,8,0">
+                    <Label Content="Проект:" VerticalAlignment="Center"/>
+                    <ComboBox x:Name="ProjectCombo" IsEditable="True" Width="220" Margin="6,0" />
+                    <Button x:Name="RefreshProjectsBtn" Content="Обновить" Width="90" Margin="6,0" Click="RefreshProjectsBtn_Click" />
+                </StackPanel>
+
+                <Label Grid.Column="2" Content="Папка назначения:" VerticalAlignment="Center" />
+
+                <!-- dest path fills available space so Browse button stays visible -->
+                <TextBox Grid.Column="3" x:Name="DestRootText" Margin="6,0" />
+
+                <Button Grid.Column="4" x:Name="BrowseDestBtn" Content="Обзор..." Width="90" Margin="6,0,0,0" Click="BrowseDestBtn_Click" />
+            </Grid>
+
+            <!-- Row 1: grouped settings and actions -->
+            <DockPanel Grid.Row="1" LastChildFill="False" VerticalAlignment="Center">
+                <StackPanel Orientation="Horizontal" DockPanel.Dock="Left" VerticalAlignment="Center">
+                    <StackPanel Orientation="Horizontal" Margin="0,4,12,0" VerticalAlignment="Center">
+                        <Label Content="Время простоя (мин):" VerticalAlignment="Center"/>
+                        <TextBox x:Name="IdleText" Width="60" Margin="6,0" Text="5" />
+                    </StackPanel>
+                    <StackPanel Orientation="Horizontal" Margin="0,4,12,0" VerticalAlignment="Center">
+                        <Label Content="Потоки (/MT):" VerticalAlignment="Center"/>
+                        <TextBox x:Name="ThreadsText" Width="60" Margin="6,0" Text="8" />
+                    </StackPanel>
+                </StackPanel>
+
+                <StackPanel Orientation="Horizontal" DockPanel.Dock="Right" VerticalAlignment="Center">
+                    <Button x:Name="StartBtn" Content="Запустить" Width="90" Margin="10,0" Click="StartBtn_Click" />
+                    <Button x:Name="StopBtn" Content="Остановить" Width="90" Margin="6,0" Click="StopBtn_Click" IsEnabled="False" />
+                </StackPanel>
+            </DockPanel>
+        </Grid>
+
+        <StackPanel Grid.Row="1">
+            <TextBox x:Name="LogText" Height="80" IsReadOnly="True" VerticalScrollBarVisibility="Auto" TextWrapping="Wrap" />
+
+            <StackPanel Orientation="Horizontal" Margin="0,6,0,6">
+                <StackPanel Width="250">
+                    <TextBlock Text="CPU" />
+                    <ProgressBar x:Name="CpuBar" Height="16" Minimum="0" Maximum="100" />
+                    <TextBlock x:Name="CpuLabel" FontSize="11" />
+                </StackPanel>
+                <StackPanel Width="250" Margin="10,0">
+                    <TextBlock Text="Диск (I/O)" />
+                    <ProgressBar x:Name="DiskBar" Height="16" Minimum="0" Maximum="100" />
+                    <TextBlock x:Name="DiskLabel" FontSize="11" />
+                </StackPanel>
+                <StackPanel Width="250" Margin="10,0">
+                    <TextBlock Text="Сеть" />
+                    <ProgressBar x:Name="NetBar" Height="16" Minimum="0" Maximum="100" />
+                    <TextBlock x:Name="NetLabel" FontSize="11" />
+                </StackPanel>
+                <StackPanel Width="250" Margin="10,0">
+                    <TextBlock Text="Свободно на диске назначения" />
+                    <TextBlock x:Name="DestFreeLabel" FontSize="11" />
+                </StackPanel>
+            </StackPanel>
+        </StackPanel>
+
+        <DataGrid x:Name="ActiveGrid" Grid.Row="2" AutoGenerateColumns="False" CanUserAddRows="False">
+            <DataGrid.Columns>
+                <DataGridTextColumn Header="Узел" Binding="{Binding Node}" Width="90" />
+                <DataGridTextColumn Header="Шара" Binding="{Binding Share}" Width="60" />
+                <DataGridTextColumn Header="Состояние" Binding="{Binding Status}" Width="120" />
+                <DataGridTextColumn Header="Последнее изменение" Binding="{Binding LastChange}" Width="180" />
+                <DataGridTextColumn Header="PID" Binding="{Binding ProcessId}" Width="60" />
+                <DataGridTextColumn Header="Лог" Binding="{Binding LogPath}" Width="*" />
+                <DataGridTextColumn Header="Скорость (MB/s)" Binding="{Binding SpeedBytesPerSec, Converter={StaticResource BpsToMBsConverter}}" Width="120" />
+                <DataGridTextColumn Header="Прогресс" Binding="{Binding ProgressPercent, StringFormat={}{0:F1}%}" Width="90" />
+            </DataGrid.Columns>
+        </DataGrid>
+
+    </Grid>
+</Window>

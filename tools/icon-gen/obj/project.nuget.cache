@@ -1,0 +1,11 @@
+{
+  "version": 2,
+  "dgSpecHash": "mRlsBDgO/qg=",
+  "success": true,
+  "projectFilePath": "c:\\Users\\Zangezi\\Desktop\\UCX_SyncTool\\tools\\icon-gen\\IconGen.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\Zangezi\\.nuget\\packages\\microsoft.win32.systemevents\\9.0.10\\microsoft.win32.systemevents.9.0.10.nupkg.sha512",
+    "C:\\Users\\Zangezi\\.nuget\\packages\\system.drawing.common\\9.0.10\\system.drawing.common.9.0.10.nupkg.sha512"
+  ],
+  "logs": []
+}
