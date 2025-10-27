@@ -5,6 +5,7 @@ using System.IO;
 using System.Text.RegularExpressions;
 using System.Linq;
 using System.Threading;
+using System.Collections.Concurrent;
 using UCXSyncTool.Models;
 
 namespace UCXSyncTool.Services
@@ -33,7 +34,7 @@ namespace UCXSyncTool.Services
             public DateTime lastDirScanTime = DateTime.MinValue;
             public double speedBytesPerSec = 0;
         }
-        private readonly Dictionary<string, ActiveInfo> _active = new();
+    private readonly ConcurrentDictionary<string, ActiveInfo> _active = new();
 
         private Action<string>? _logger;
 
@@ -45,7 +46,8 @@ namespace UCXSyncTool.Services
                 _cts = new CancellationTokenSource();
                 _logger = logger;
                 var token = _cts.Token;
-                ThreadPool.QueueUserWorkItem(async _ =>
+                // run the main loop on the threadpool as an async Task so exceptions and async/await are handled correctly
+                _ = System.Threading.Tasks.Task.Run(async () =>
                 {
                     try
                     {
@@ -179,7 +181,7 @@ namespace UCXSyncTool.Services
                             if (info.proc == null || info.proc.HasExited)
                             {
                                 _logger?.Invoke($"[{node}][{share}] Копирование завершено.");
-                                _active.Remove(key);
+                                _active.TryRemove(key, out _);
                                 continue;
                             }
 
@@ -241,7 +243,7 @@ namespace UCXSyncTool.Services
                                         {
                                             _logger?.Invoke($"[{node}][{share}] Критически мало свободного места ({freeNow} байт) — останавливаю robocopy.");
                                             try { if (info.proc != null && !info.proc.HasExited) info.proc.Kill(true); } catch { }
-                                            _active.Remove(key);
+                                            _active.TryRemove(key, out _);
                                             continue;
                                         }
                                     }
@@ -256,7 +258,7 @@ namespace UCXSyncTool.Services
                                 {
                                     _logger?.Invoke($"[{node}][{share}] Нет новых файлов {idleMinutes} минут — останавливаю robocopy.");
                                     try { if (info.proc != null && !info.proc.HasExited) info.proc.Kill(true); } catch { }
-                                    _active.Remove(key);
+                                    _active.TryRemove(key, out _);
                                 }
 
                             continue;
