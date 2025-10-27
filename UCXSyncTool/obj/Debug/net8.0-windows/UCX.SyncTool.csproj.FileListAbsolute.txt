@@ -21,3 +21,4 @@ c:\Users\Zangezi\Desktop\UCX_SyncTool\UCXSyncTool\obj\Debug\net8.0-windows\Gener
 c:\Users\Zangezi\Desktop\UCX_SyncTool\UCXSyncTool\obj\Debug\net8.0-windows\UCX.SyncTool_MarkupCompile.lref
 c:\Users\Zangezi\Desktop\UCX_SyncTool\UCXSyncTool\bin\Debug\net8.0-windows\Assets\logo.jpg
 c:\Users\Zangezi\Desktop\UCX_SyncTool\UCXSyncTool\obj\Debug\net8.0-windows\UCX.SyncTool_Content.g.cs
+C:\Users\Zangezi\Desktop\UCX_SyncTool\UCXSyncTool\obj\Debug\net8.0-windows\UCX.SyncTool.sourcelink.json

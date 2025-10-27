@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "c:\\Users\\Zangezi\\Desktop\\UCX_SyncTool\\UCXSyncTool\\UCX.SyncTool.csproj": {}
+    "C:\\Users\\Zangezi\\Desktop\\UCX_SyncTool\\UCXSyncTool\\UCX.SyncTool.csproj": {}
   },
   "projects": {
-    "c:\\Users\\Zangezi\\Desktop\\UCX_SyncTool\\UCXSyncTool\\UCX.SyncTool.csproj": {
+    "C:\\Users\\Zangezi\\Desktop\\UCX_SyncTool\\UCXSyncTool\\UCX.SyncTool.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "c:\\Users\\Zangezi\\Desktop\\UCX_SyncTool\\UCXSyncTool\\UCX.SyncTool.csproj",
+        "projectUniqueName": "C:\\Users\\Zangezi\\Desktop\\UCX_SyncTool\\UCXSyncTool\\UCX.SyncTool.csproj",
         "projectName": "UCX.SyncTool",
-        "projectPath": "c:\\Users\\Zangezi\\Desktop\\UCX_SyncTool\\UCXSyncTool\\UCX.SyncTool.csproj",
+        "projectPath": "C:\\Users\\Zangezi\\Desktop\\UCX_SyncTool\\UCXSyncTool\\UCX.SyncTool.csproj",
         "packagesPath": "C:\\Users\\Zangezi\\.nuget\\packages\\",
-        "outputPath": "c:\\Users\\Zangezi\\Desktop\\UCX_SyncTool\\UCXSyncTool\\obj\\",
+        "outputPath": "C:\\Users\\Zangezi\\Desktop\\UCX_SyncTool\\UCXSyncTool\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
