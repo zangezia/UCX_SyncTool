@@ -18,6 +18,18 @@ namespace UCXSyncTool.Services
         private CancellationTokenSource? _cts;
         private readonly object _lock = new();
 
+        // Map share names to friendly aliases
+        private static string GetShareAlias(string? share)
+        {
+            if (string.IsNullOrEmpty(share)) return string.Empty;
+            return share.ToUpperInvariant() switch
+            {
+                "E$" => "Fast",
+                "F$" => "Normal",
+                _ => share
+            };
+        }
+
         // key -> info
         private class ActiveInfo
         {
@@ -32,13 +44,14 @@ namespace UCXSyncTool.Services
             public DateTime lastSampleTime = DateTime.MinValue;
             // last time we scanned the destination directory (to avoid frequent expensive scans)
             public DateTime lastDirScanTime = DateTime.MinValue;
-            public double speedBytesPerSec = 0;
+            // count of files downloaded in this session
+            public int filesDownloaded = 0;
         }
     private readonly ConcurrentDictionary<string, ActiveInfo> _active = new();
 
         private Action<string>? _logger;
 
-        public void Start(string project, string destRoot, int idleMinutes, Action<string>? logger = null, int robocopyThreads = 8)
+        public void Start(string project, string destRoot, Action<string>? logger = null, int robocopyThreads = 8)
         {
             lock (_lock)
             {
@@ -51,7 +64,7 @@ namespace UCXSyncTool.Services
                 {
                     try
                     {
-                        await RunLoop(project, destRoot, idleMinutes, token, robocopyThreads);
+                        await RunLoop(project, destRoot, token, robocopyThreads);
                     }
                     catch (OperationCanceledException) { }
                     catch (Exception ex)
@@ -90,12 +103,11 @@ namespace UCXSyncTool.Services
                 return _active.Select(kv => new ActiveCopyViewModel
                 {
                     Node = kv.Value.node ?? string.Empty,
-                    Share = kv.Value.share ?? string.Empty,
+                    Share = GetShareAlias(kv.Value.share),
                     Status = (kv.Value.proc == null || kv.Value.proc.HasExited) ? "Exited" : "Running",
                     LastChange = kv.Value.lastChange,
-                    ProcessId = (kv.Value.proc == null || kv.Value.proc.HasExited) ? null : kv.Value.proc.Id,
                     LogPath = kv.Value.logPath ?? string.Empty,
-                    SpeedBytesPerSec = kv.Value.speedBytesPerSec,
+                    FilesDownloaded = kv.Value.filesDownloaded,
                     ProgressPercent = (kv.Value.totalBytes > 0) ? (double?)((kv.Value.lastDestBytes * 100.0) / kv.Value.totalBytes) : null
                 }).ToList();
             }
@@ -126,7 +138,10 @@ namespace UCXSyncTool.Services
                             try
                             {
                                 var name = Path.GetFileName(d);
-                                if (!string.IsNullOrEmpty(name)) set.Add(name);
+                                if (!string.IsNullOrEmpty(name) && IsValidProjectName(name))
+                                {
+                                    set.Add(name);
+                                }
                             }
                             catch { }
                         }
@@ -143,7 +158,63 @@ namespace UCXSyncTool.Services
             return list;
         }
 
-        private async System.Threading.Tasks.Task RunLoop(string project, string destRoot, int idleMinutes, CancellationToken token, int robocopyThreads)
+        /// <summary>
+        /// Check if a folder name is a valid project name (exclude system folders and logs)
+        /// </summary>
+        private static bool IsValidProjectName(string name)
+        {
+            var lowercaseName = name.ToLowerInvariant();
+            
+            // Exclude system folders
+            var excludedFolders = new[]
+            {
+                "system volume information",
+                "recycler",
+                "recycled",
+                "$recycle.bin",
+                "logs",
+                "log",
+                "temp",
+                "tmp",
+                "windows",
+                "program files",
+                "program files (x86)",
+                "programdata",
+                "users",
+                "documents and settings",
+                "config.msi",
+                "msocache",
+                "recovery",
+                "boot",
+                "efi",
+                "perflogs"
+            };
+
+            // Check if name matches any excluded folder
+            foreach (var excluded in excludedFolders)
+            {
+                if (lowercaseName == excluded || lowercaseName.StartsWith(excluded + " "))
+                {
+                    return false;
+                }
+            }
+
+            // Exclude folders starting with $ or containing only special characters
+            if (name.StartsWith("$") || name.StartsWith("."))
+            {
+                return false;
+            }
+
+            // Exclude very short names (likely system folders)
+            if (name.Length <= 1)
+            {
+                return false;
+            }
+
+            return true;
+        }
+
+        private async System.Threading.Tasks.Task RunLoop(string project, string destRoot, CancellationToken token, int robocopyThreads)
         {
             var logRoot = Path.Combine(destRoot, "Logs");
             Directory.CreateDirectory(logRoot);
@@ -180,86 +251,102 @@ namespace UCXSyncTool.Services
                         {
                             if (info.proc == null || info.proc.HasExited)
                             {
-                                _logger?.Invoke($"[{node}][{share}] Копирование завершено.");
+                                _logger?.Invoke($"[{node}][{share}] Процесс robocopy неожиданно завершился. Перезапуск...");
                                 _active.TryRemove(key, out _);
-                                continue;
+                                continue; // Will restart in next iteration
                             }
 
-                                            // update lastChange by scanning files
-                                            if (Directory.Exists(src))
-                                            {
-                                                var latest = GetLatestWriteTime(src);
-                                                if (latest.HasValue)
-                                                {
-                                                    // update lastChange safely
-                                                    lock (_lock) { info.lastChange = latest.Value; }
-                                                }
-                                            }
-
-                                // update speed/progress by measuring destination size
+                            // update lastChange by checking robocopy log activity (every 30 seconds)
+                            var now = DateTime.Now;
+                            if ((now - info.lastDirScanTime).TotalSeconds > 30)
+                            {
+                                // Check if robocopy log shows recent activity
+                                bool hasRecentActivity = false;
+                                
                                 try
                                 {
-                                    var destDir = Path.Combine(destRoot, project);
-                                    // Prefer parsing robocopy log for bytes copied (cheaper than full directory scan)
-                                    long? currentDestBytes = null;
+                                    if (File.Exists(info.logPath))
+                                    {
+                                        var logLastWrite = File.GetLastWriteTime(info.logPath);
+                                        // If log was written in last 2 minutes, consider it active
+                                        if ((now - logLastWrite).TotalMinutes < 2)
+                                        {
+                                            hasRecentActivity = true;
+                                            lock (_lock) { info.lastChange = now; }
+                                        }
+                                    }
+                                }
+                                catch { }
+                                
+                                // Also check source directory for new files if no log activity
+                                if (!hasRecentActivity && Directory.Exists(src))
+                                {
+                                    var latest = GetLatestWriteTime(src);
+                                    if (latest.HasValue && latest.Value > info.lastChange)
+                                    {
+                                        // Found newer files in source
+                                        lock (_lock) { 
+                                            info.lastChange = latest.Value; 
+                                            _logger?.Invoke($"[{node}][{share}] Обнаружены новые файлы: {latest.Value}");
+                                        }
+                                    }
+                                }
+                                
+                                lock (_lock) { info.lastDirScanTime = now; }
+                            }
+
+                                // update speed/progress by measuring destination size (throttle to every 10 seconds)
+                                var nowTime = DateTime.Now;
+                                if ((nowTime - info.lastSampleTime).TotalSeconds >= 10)
+                                {
                                     try
                                     {
-                                        currentDestBytes = TryParseRobocopyLogBytes(info.logPath);
-                                    }
-                                    catch { }
-
-                                    if (!currentDestBytes.HasValue)
-                                    {
-                                        // fallback to directory size scan — throttle scans to once every 5s per active
-                                        var nowT = DateTime.Now;
-                                        if ((nowT - info.lastDirScanTime).TotalSeconds > 5)
+                                        var destDir = Path.Combine(destRoot, project);
+                                        long currentDestBytes = 0;
+                                        
+                                        // Try to get bytes from robocopy log first
+                                        var logBytes = TryParseRobocopyLogBytes(info.logPath);
+                                        if (logBytes.HasValue)
                                         {
-                                            currentDestBytes = GetDirectorySize(destDir);
-                                            lock (_lock) { info.lastDirScanTime = nowT; }
+                                            currentDestBytes = logBytes.Value;
                                         }
                                         else
                                         {
-                                            // reuse last known destination bytes to avoid heavy IO
-                                            currentDestBytes = info.lastDestBytes;
+                                            // Fallback to directory size scan
+                                            currentDestBytes = GetDirectorySize(destDir);
                                         }
-                                    }
 
-                                    var nowTime = DateTime.Now;
-                                    var timeDiff = (nowTime - info.lastSampleTime).TotalSeconds;
-                                    if (timeDiff > 0.5)
-                                    {
-                                        var delta = currentDestBytes.GetValueOrDefault() - info.lastDestBytes;
-                                        info.speedBytesPerSec = delta / Math.Max(1.0, timeDiff);
-                                        info.lastDestBytes = currentDestBytes.GetValueOrDefault();
+                                        // Update file count from robocopy log
+                                        var fileCount = TryParseRobocopyLogFileCount(info.logPath);
+                                        if (fileCount.HasValue)
+                                        {
+                                            info.filesDownloaded = fileCount.Value;
+                                        }
+
+                                        info.lastDestBytes = currentDestBytes;
                                         info.lastSampleTime = nowTime;
                                     }
-
-                                    // check free space during copy and stop if very low
-                                    try
+                                    catch 
                                     {
-                                        var freeNow = GetAvailableFreeBytes(destDir);
-                                        const long minFree = 50L * 1024 * 1024; // 50 MB
-                                        if (freeNow < minFree)
-                                        {
-                                            _logger?.Invoke($"[{node}][{share}] Критически мало свободного места ({freeNow} байт) — останавливаю robocopy.");
-                                            try { if (info.proc != null && !info.proc.HasExited) info.proc.Kill(true); } catch { }
-                                            _active.TryRemove(key, out _);
-                                            continue;
-                                        }
+                                        // On error, keep current file count
                                     }
-                                    catch { }
+                                }
+
+                                // check free space during copy and stop if very low
+                                try
+                                {
+                                    var destDir = Path.Combine(destRoot, project);
+                                    var freeNow = GetAvailableFreeBytes(destDir);
+                                    const long minFree = 50L * 1024 * 1024; // 50 MB
+                                    if (freeNow < minFree)
+                                    {
+                                        _logger?.Invoke($"[{node}][{share}] Критически мало свободного места ({freeNow} байт) — останавливаю robocopy.");
+                                        try { if (info.proc != null && !info.proc.HasExited) info.proc.Kill(true); } catch { }
+                                        _active.TryRemove(key, out _);
+                                        continue;
+                                    }
                                 }
                                 catch { }
-
-                                // check idle time
-                                var last = info.lastChange;
-                                var idle = (DateTime.Now - last).TotalMinutes;
-                                if (idle >= idleMinutes)
-                                {
-                                    _logger?.Invoke($"[{node}][{share}] Нет новых файлов {idleMinutes} минут — останавливаю robocopy.");
-                                    try { if (info.proc != null && !info.proc.HasExited) info.proc.Kill(true); } catch { }
-                                    _active.TryRemove(key, out _);
-                                }
 
                             continue;
                         }
@@ -286,7 +373,7 @@ namespace UCXSyncTool.Services
 
                         var logPath = Path.Combine(logRoot, $"{node}_{share}.log");
 
-                        _logger?.Invoke($"[{node}][{share}] Найден проект, проверяю свободное место и запускаю синхронизацию...");
+                        _logger?.Invoke($"[{node}][{share}] Найден проект, проверяю свободное место и запускаю непрерывную синхронизацию с мониторингом...");
 
                         // estimate source size (may be slow) and check free space on destination drive
                         long sourceTotal = 0;
@@ -312,8 +399,8 @@ namespace UCXSyncTool.Services
                             continue;
                         }
 
-                        // build robocopy args
-                        var args = $"\"{src}\" \"{dest}\" /S /E /MON:1 /MOT:1 /FFT /R:2 /W:3 /Z /MT:{robocopyThreads} /XD \"System Volume Information\" \"RECYCLER\" \"RECYCLED\" /LOG+:\"{logPath}\"";
+                        // build robocopy args - preserve existing files, only copy newer/missing files
+                        var args = $"\"{src}\" \"{dest}\" /S /E /MON:1 /MOT:1 /XO /FFT /R:2 /W:3 /Z /MT:{robocopyThreads} /XD \"System Volume Information\" \"RECYCLER\" \"RECYCLED\" \"$RECYCLE.BIN\" /LOG+:\"{logPath}\"";
 
                         var psi = new ProcessStartInfo
                         {
@@ -327,17 +414,24 @@ namespace UCXSyncTool.Services
                         {
                             var proc = Process.Start(psi)!;
                             var now = DateTime.Now;
+                            
+                            // Get actual last change time from source
+                            var actualLastChange = GetLatestWriteTime(src) ?? now;
+                            
+                            _logger?.Invoke($"[{node}][{share}] Запущен robocopy PID={proc.Id} с непрерывным мониторингом. Последнее изменение: {actualLastChange}");
+                            
                             var infoObj = new ActiveInfo
                             {
                                 proc = proc,
-                                lastChange = now,
+                                lastChange = actualLastChange,
                                 node = node,
                                 share = share,
                                 logPath = logPath,
                                 totalBytes = sourceTotal,
                                 lastDestBytes = 0,
                                 lastSampleTime = DateTime.Now,
-                                speedBytesPerSec = 0
+                                lastDirScanTime = now,
+                                filesDownloaded = 0
                             };
 
                             // compute total source size asynchronously if unknown (may be slow)
@@ -391,14 +485,13 @@ namespace UCXSyncTool.Services
             if (!string.IsNullOrEmpty(existingCmdKeyList) &&
                 (existingCmdKeyList.IndexOf(node, StringComparison.OrdinalIgnoreCase) >= 0 || existingCmdKeyList.IndexOf("\\" + node, StringComparison.OrdinalIgnoreCase) >= 0))
             {
-                _logger?.Invoke($"cmdkey: credentials exist for {node}");
+                // Credential exists - skip silently
                 return;
             }
 
-            // Not found — add credential
+            // Not found — add credential silently
             var addArgs = $"/add:{node} /user:Administrator /pass:ultracam";
             var addOut = RunProcessCaptureOutput("cmdkey.exe", addArgs, TimeSpan.FromSeconds(5));
-            _logger?.Invoke($"cmdkey: added credentials for {node}");
         }
 
         private string RunProcessCaptureOutput(string fileName, string arguments, TimeSpan timeout)
@@ -435,14 +528,34 @@ namespace UCXSyncTool.Services
         {
             try
             {
-                var files = Directory.EnumerateFiles(root, "*", SearchOption.AllDirectories);
+                if (!Directory.Exists(root)) return null;
+                
                 DateTime? latest = null;
-                foreach (var f in files)
+                
+                // Check directory itself
+                var dirInfo = new DirectoryInfo(root);
+                latest = dirInfo.LastWriteTime;
+                
+                // Check files and subdirectories
+                var files = Directory.EnumerateFileSystemEntries(root, "*", SearchOption.AllDirectories);
+                foreach (var entry in files)
                 {
                     try
                     {
-                        var dt = File.GetLastWriteTime(f);
-                        if (!latest.HasValue || dt > latest.Value) latest = dt;
+                        DateTime dt;
+                        if (Directory.Exists(entry))
+                        {
+                            dt = Directory.GetLastWriteTime(entry);
+                        }
+                        else
+                        {
+                            dt = File.GetLastWriteTime(entry);
+                        }
+                        
+                        if (!latest.HasValue || dt > latest.Value) 
+                        {
+                            latest = dt;
+                        }
                     }
                     catch { }
                 }
@@ -475,19 +588,26 @@ namespace UCXSyncTool.Services
         // Try to parse the robocopy log file and extract the cumulative bytes copied.
         // Returns null if parsing fails or log not present.
     private static readonly Regex[] _robocopyRegexes = new[] {
-            new Regex(@"Bytes\s*[:=]\s*([\d\s,\.]+)", RegexOptions.Compiled | RegexOptions.IgnoreCase | RegexOptions.CultureInvariant),
-            new Regex(@"Байт[а-я]*\s*[:=]\s*([\d\s,\.]+)", RegexOptions.Compiled | RegexOptions.IgnoreCase | RegexOptions.CultureInvariant),
-            new Regex(@"Total\s+Bytes\s*[:=]\s*([\d\s,\.]+)", RegexOptions.Compiled | RegexOptions.IgnoreCase | RegexOptions.CultureInvariant),
-            new Regex(@"Copied\s*:\s*([\d\s,\.]+)\s*bytes", RegexOptions.Compiled | RegexOptions.IgnoreCase | RegexOptions.CultureInvariant)
+            // English robocopy patterns
+            new Regex(@"Total\s+Copied\s+Skipped\s+Mismatch\s+FAILED\s+Extras.*?Files\s*:\s*\d+\s+(\d+)", RegexOptions.Compiled | RegexOptions.IgnoreCase | RegexOptions.Singleline),
+            new Regex(@"Bytes\s*:\s*[\d\s,\.]+\s+(\d[\d\s,\.]*)", RegexOptions.Compiled | RegexOptions.IgnoreCase),
+            new Regex(@"Total\s+Bytes\s*[:=]\s*([\d\s,\.]+)", RegexOptions.Compiled | RegexOptions.IgnoreCase),
+            new Regex(@"Copied\s*:\s*([\d\s,\.]+)\s*bytes", RegexOptions.Compiled | RegexOptions.IgnoreCase),
+            // Russian robocopy patterns  
+            new Regex(@"Байт[а-я]*\s*[:=]\s*([\d\s,\.]+)", RegexOptions.Compiled | RegexOptions.IgnoreCase),
+            new Regex(@"Скопировано\s*:\s*([\d\s,\.]+)", RegexOptions.Compiled | RegexOptions.IgnoreCase),
+            // Progress patterns
+            new Regex(@"(\d+)%\s+(\d[\d\s,\.]*)\s*байт", RegexOptions.Compiled | RegexOptions.IgnoreCase),
+            new Regex(@"(\d+)%\s+(\d[\d\s,\.]*)\s*bytes", RegexOptions.Compiled | RegexOptions.IgnoreCase)
         };
 
-    private long? TryParseRobocopyLogBytes(string? logPath)
+    private int? TryParseRobocopyLogFileCount(string? logPath)
     {
         try
         {
             if (string.IsNullOrEmpty(logPath) || !File.Exists(logPath)) return null;
 
-            const int readSize = 256 * 1024; // read last 256KB
+            const int readSize = 256 * 1024; // read last 256KB 
             using var fs = new FileStream(logPath, FileMode.Open, FileAccess.Read, FileShare.ReadWrite);
             var length = fs.Length;
             var toRead = (int)Math.Min(readSize, length);
@@ -495,26 +615,87 @@ namespace UCXSyncTool.Services
             using var sr = new StreamReader(fs);
             var tail = sr.ReadToEnd();
 
-            // Try compiled regexes, take last match when available
-            foreach (var rx in _robocopyRegexes)
+            // Count individual file copy operations in the log
+            // Look for lines indicating successful file copies
+            var fileLines = tail.Split('\n');
+            int fileCount = 0;
+            
+            foreach (var line in fileLines)
             {
-                var matches = rx.Matches(tail);
-                if (matches.Count > 0)
+                var trimmed = line.Trim();
+                // Match lines that show actual file copies (not directories or summary)
+                // Robocopy shows copied files with timestamps or "New File" indicators
+                if (trimmed.Length > 10 && 
+                    (trimmed.Contains("New File") || 
+                     trimmed.Contains("Newer") ||
+                     (Regex.IsMatch(trimmed, @"^\d{2}:\d{2}:\d{2}") && trimmed.Contains(".")) ||
+                     (trimmed.StartsWith("*EXTRA File") == false && 
+                      trimmed.Contains("100%") && 
+                      !trimmed.Contains("Dir") && 
+                      !trimmed.Contains("Total") &&
+                      !trimmed.Contains("Files :") &&
+                      trimmed.Contains("."))))
                 {
-                    var m = matches[matches.Count - 1];
-                    var num = m.Groups[1].Value;
-                    var digits = Regex.Replace(num, "\\D", "");
-                    if (long.TryParse(digits, out var val)) return val;
+                    fileCount++;
                 }
             }
 
-            // fallback: last large integer
-            var fallback = Regex.Matches(tail, "(\\d{4,})");
-            if (fallback.Count > 0)
+            return fileCount > 0 ? fileCount : null;
+        }
+        catch { }
+        return null;
+    }
+
+    private long? TryParseRobocopyLogBytes(string? logPath)
+    {
+        try
+        {
+            if (string.IsNullOrEmpty(logPath) || !File.Exists(logPath)) return null;
+
+            const int readSize = 512 * 1024; // read last 512KB for more comprehensive parsing
+            using var fs = new FileStream(logPath, FileMode.Open, FileAccess.Read, FileShare.ReadWrite);
+            var length = fs.Length;
+            var toRead = (int)Math.Min(readSize, length);
+            fs.Seek(-toRead, SeekOrigin.End);
+            using var sr = new StreamReader(fs);
+            var tail = sr.ReadToEnd();
+
+            long maxBytes = 0;
+
+            // Try compiled regexes, find the largest byte count
+            foreach (var rx in _robocopyRegexes)
             {
-                var s = fallback[fallback.Count - 1].Value;
-                if (long.TryParse(s, out var v2)) return v2;
+                var matches = rx.Matches(tail);
+                foreach (Match match in matches)
+                {
+                    // Try different groups that might contain the byte count
+                    for (int i = 1; i < match.Groups.Count; i++)
+                    {
+                        var num = match.Groups[i].Value;
+                        var digits = Regex.Replace(num, @"[^\d]", ""); // Remove all non-digits
+                        if (long.TryParse(digits, out var val) && val > maxBytes && val > 1000) // Ignore small numbers
+                        {
+                            maxBytes = val;
+                        }
+                    }
+                }
             }
+
+            if (maxBytes > 0) return maxBytes;
+
+            // Fallback: find percentage lines and extract bytes (e.g., "85.2%    1,234,567 bytes")
+            var percentMatches = Regex.Matches(tail, @"(\d+(?:\.\d+)?%)\s+([\d,\s\.]+)", RegexOptions.IgnoreCase);
+            foreach (Match match in percentMatches)
+            {
+                var bytesStr = match.Groups[2].Value;
+                var digits = Regex.Replace(bytesStr, @"[^\d]", "");
+                if (long.TryParse(digits, out var val) && val > maxBytes && val > 1000)
+                {
+                    maxBytes = val;
+                }
+            }
+
+            return maxBytes > 0 ? maxBytes : null;
         }
         catch { }
         return null;
