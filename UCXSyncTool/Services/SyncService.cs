@@ -12,23 +12,11 @@ namespace UCXSyncTool.Services
 {
     public class SyncService
     {
-        private readonly string[] Nodes = new[] { "WU01","WU02","WU03","WU04","WU05","WU06","WU07","WU08","WU09","WU10","WU11","WU12","WU13","CU" };
-        private readonly string[] Shares = new[] { "E$", "F$" };
+        private readonly string[] Nodes = Configuration.Nodes;
+        private readonly string[] Shares = Configuration.Shares;
 
         private CancellationTokenSource? _cts;
         private readonly object _lock = new();
-
-        // Map share names to friendly aliases
-        private static string GetShareAlias(string? share)
-        {
-            if (string.IsNullOrEmpty(share)) return string.Empty;
-            return share.ToUpperInvariant() switch
-            {
-                "E$" => "Fast",
-                "F$" => "Normal",
-                _ => share
-            };
-        }
 
         // key -> info
         private class ActiveInfo
@@ -80,19 +68,66 @@ namespace UCXSyncTool.Services
             lock (_lock)
             {
                 if (_cts == null) return;
+                
                 try
                 {
                     _cts.Cancel();
                 }
                 catch { }
-                _cts = null;
 
-                // kill processes
+                // Kill all robocopy processes first
                 foreach (var kv in _active.Values.ToList())
                 {
-                    try { if (kv.proc != null && !kv.proc.HasExited) kv.proc.Kill(true); } catch { }
+                    try
+                    {
+                        if (kv.proc != null && !kv.proc.HasExited)
+                        {
+                            _logger?.Invoke($"Останавливаю robocopy процесс PID={kv.proc.Id} для {kv.node}/{kv.share}");
+                            
+                            // Try graceful termination first
+                            kv.proc.CloseMainWindow();
+                            if (!kv.proc.WaitForExit(2000))
+                            {
+                                // Force kill if not responding
+                                kv.proc.Kill(true);
+                                kv.proc.WaitForExit(1000);
+                            }
+                        }
+                    }
+                    catch (Exception ex)
+                    {
+                        _logger?.Invoke($"Ошибка остановки процесса: {ex.Message}");
+                    }
                 }
+                
                 _active.Clear();
+                
+                // Additional safety: kill any remaining robocopy processes that might be orphaned
+                try
+                {
+                    var robocopyProcesses = Process.GetProcessesByName("robocopy");
+                    foreach (var proc in robocopyProcesses)
+                    {
+                        try
+                        {
+                            _logger?.Invoke($"Найден оставшийся процесс robocopy PID={proc.Id}, завершаю...");
+                            proc.Kill(true);
+                            proc.WaitForExit(1000);
+                            proc.Dispose();
+                        }
+                        catch { }
+                    }
+                }
+                catch { }
+                
+                // Dispose and null out CTS after processes are stopped
+                try
+                {
+                    _cts.Dispose();
+                }
+                catch { }
+                
+                _cts = null;
             }
         }
 
@@ -103,7 +138,7 @@ namespace UCXSyncTool.Services
                 return _active.Select(kv => new ActiveCopyViewModel
                 {
                     Node = kv.Value.node ?? string.Empty,
-                    Share = GetShareAlias(kv.Value.share),
+                    Share = Configuration.GetShareAlias(kv.Value.share),
                     Status = (kv.Value.proc == null || kv.Value.proc.HasExited) ? "Exited" : "Running",
                     LastChange = kv.Value.lastChange,
                     LogPath = kv.Value.logPath ?? string.Empty,
@@ -223,7 +258,7 @@ namespace UCXSyncTool.Services
             try
             {
                 // call once and pass listing to avoid calling cmdkey /list repeatedly
-                var cmdkeyList = RunProcessCaptureOutput("cmdkey.exe", "/list", TimeSpan.FromSeconds(5));
+                var cmdkeyList = RunProcessCaptureOutput("cmdkey.exe", "/list", TimeSpan.FromSeconds(Configuration.CmdKeyTimeoutSeconds));
                 EnsureCmdKeyCredentialsForAllNodes(cmdkeyList);
             }
             catch (Exception ex)
@@ -235,8 +270,14 @@ namespace UCXSyncTool.Services
             {
                 foreach (var node in Nodes)
                 {
+                    // Check for cancellation at the start of each node iteration
+                    if (token.IsCancellationRequested) break;
+                    
                     foreach (var share in Shares)
                     {
+                        // Check for cancellation at the start of each share iteration
+                        if (token.IsCancellationRequested) break;
+                        
                         var src = $"\\\\{node}\\{share}\\{project}";
                         var key = node + "-" + share;
 
@@ -251,14 +292,21 @@ namespace UCXSyncTool.Services
                         {
                             if (info.proc == null || info.proc.HasExited)
                             {
+                                // Don't restart if cancellation was requested
+                                if (token.IsCancellationRequested)
+                                {
+                                    _active.TryRemove(key, out _);
+                                    continue;
+                                }
+                                
                                 _logger?.Invoke($"[{node}][{share}] Процесс robocopy неожиданно завершился. Перезапуск...");
                                 _active.TryRemove(key, out _);
                                 continue; // Will restart in next iteration
                             }
 
-                            // update lastChange by checking robocopy log activity (every 30 seconds)
+                            // update lastChange by checking robocopy log activity (every N seconds)
                             var now = DateTime.Now;
-                            if ((now - info.lastDirScanTime).TotalSeconds > 30)
+                            if ((now - info.lastDirScanTime).TotalSeconds > Configuration.DirectoryScanIntervalSeconds)
                             {
                                 // Check if robocopy log shows recent activity
                                 bool hasRecentActivity = false;
@@ -268,8 +316,8 @@ namespace UCXSyncTool.Services
                                     if (File.Exists(info.logPath))
                                     {
                                         var logLastWrite = File.GetLastWriteTime(info.logPath);
-                                        // If log was written in last 2 minutes, consider it active
-                                        if ((now - logLastWrite).TotalMinutes < 2)
+                                        // If log was written recently, consider it active
+                                        if ((now - logLastWrite).TotalMinutes < Configuration.LogActivityThresholdMinutes)
                                         {
                                             hasRecentActivity = true;
                                             lock (_lock) { info.lastChange = now; }
@@ -295,9 +343,9 @@ namespace UCXSyncTool.Services
                                 lock (_lock) { info.lastDirScanTime = now; }
                             }
 
-                                // update speed/progress by measuring destination size (throttle to every 10 seconds)
+                                // update speed/progress by measuring destination size (throttle)
                                 var nowTime = DateTime.Now;
-                                if ((nowTime - info.lastSampleTime).TotalSeconds >= 10)
+                                if ((nowTime - info.lastSampleTime).TotalSeconds >= Configuration.RobocopyLogParseIntervalSeconds)
                                 {
                                     try
                                     {
@@ -337,8 +385,7 @@ namespace UCXSyncTool.Services
                                 {
                                     var destDir = Path.Combine(destRoot, project);
                                     var freeNow = GetAvailableFreeBytes(destDir);
-                                    const long minFree = 50L * 1024 * 1024; // 50 MB
-                                    if (freeNow < minFree)
+                                    if (freeNow < Configuration.MinimumFreeDiskSpace)
                                     {
                                         _logger?.Invoke($"[{node}][{share}] Критически мало свободного места ({freeNow} байт) — останавливаю robocopy.");
                                         try { if (info.proc != null && !info.proc.HasExited) info.proc.Kill(true); } catch { }
@@ -391,9 +438,7 @@ namespace UCXSyncTool.Services
                         catch { freeBytes = 0; }
 
                         // safety margin to avoid completely filling the disk
-                        const long safetyMargin = 100L * 1024 * 1024; // 100 MB
-
-                        if (sourceTotal > 0 && freeBytes < sourceTotal + safetyMargin)
+                        if (sourceTotal > 0 && freeBytes < sourceTotal + Configuration.DiskSpaceSafetyMargin)
                         {
                             _logger?.Invoke($"[{node}][{share}] Недостаточно свободного места на диске: требуется {sourceTotal} байт, доступно {freeBytes} байт. Пропускаю запуск.");
                             continue;
@@ -459,7 +504,7 @@ namespace UCXSyncTool.Services
                     }
                 }
 
-                await System.Threading.Tasks.Task.Delay(TimeSpan.FromSeconds(30), token);
+                await System.Threading.Tasks.Task.Delay(TimeSpan.FromSeconds(Configuration.ServiceLoopIntervalSeconds), token);
             }
         }
 
@@ -491,7 +536,7 @@ namespace UCXSyncTool.Services
 
             // Not found — add credential silently
             var addArgs = $"/add:{node} /user:Administrator /pass:ultracam";
-            var addOut = RunProcessCaptureOutput("cmdkey.exe", addArgs, TimeSpan.FromSeconds(5));
+            var addOut = RunProcessCaptureOutput("cmdkey.exe", addArgs, TimeSpan.FromSeconds(Configuration.CmdKeyTimeoutSeconds));
         }
 
         private string RunProcessCaptureOutput(string fileName, string arguments, TimeSpan timeout)
@@ -607,7 +652,7 @@ namespace UCXSyncTool.Services
         {
             if (string.IsNullOrEmpty(logPath) || !File.Exists(logPath)) return null;
 
-            const int readSize = 512 * 1024; // read last 512KB to get summary section
+            const int readSize = Configuration.RobocopyLogReadSize;
             using var fs = new FileStream(logPath, FileMode.Open, FileAccess.Read, FileShare.ReadWrite);
             var length = fs.Length;
             var toRead = (int)Math.Min(readSize, length);
@@ -655,7 +700,7 @@ namespace UCXSyncTool.Services
         {
             if (string.IsNullOrEmpty(logPath) || !File.Exists(logPath)) return null;
 
-            const int readSize = 512 * 1024; // read last 512KB to get summary section
+            const int readSize = Configuration.RobocopyLogReadSize;
             using var fs = new FileStream(logPath, FileMode.Open, FileAccess.Read, FileShare.ReadWrite);
             var length = fs.Length;
             var toRead = (int)Math.Min(readSize, length);
