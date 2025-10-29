@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("UCX.SyncTool")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+185fdb9c5ce3739219ace1bf17463c752f59c4ab")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+15b257e754be1e440b46c7f191e1194fd20a0b61")]
 [assembly: System.Reflection.AssemblyProductAttribute("UCX.SyncTool")]
 [assembly: System.Reflection.AssemblyTitleAttribute("UCX.SyncTool")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

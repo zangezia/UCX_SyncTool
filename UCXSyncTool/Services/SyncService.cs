@@ -607,7 +607,7 @@ namespace UCXSyncTool.Services
         {
             if (string.IsNullOrEmpty(logPath) || !File.Exists(logPath)) return null;
 
-            const int readSize = 256 * 1024; // read last 256KB 
+            const int readSize = 512 * 1024; // read last 512KB to get summary section
             using var fs = new FileStream(logPath, FileMode.Open, FileAccess.Read, FileShare.ReadWrite);
             var length = fs.Length;
             var toRead = (int)Math.Min(readSize, length);
@@ -615,32 +615,35 @@ namespace UCXSyncTool.Services
             using var sr = new StreamReader(fs);
             var tail = sr.ReadToEnd();
 
-            // Count individual file copy operations in the log
-            // Look for lines indicating successful file copies
-            var fileLines = tail.Split('\n');
-            int fileCount = 0;
+            // Robocopy outputs summary statistics at the end in this format:
+            //               Total    Copied   Skipped  Mismatch    FAILED    Extras
+            //    Dirs :        10         0        10         0         0         0
+            //   Files :       150        25       125         0         0         0
+            //   Bytes :   1.5 g     500 m    1.0 g         0         0         0
             
-            foreach (var line in fileLines)
+            // Parse "Files :" line to get "Copied" column (second number after "Files :")
+            // Support both English and Russian robocopy output
+            var filePatterns = new[]
             {
-                var trimmed = line.Trim();
-                // Match lines that show actual file copies (not directories or summary)
-                // Robocopy shows copied files with timestamps or "New File" indicators
-                if (trimmed.Length > 10 && 
-                    (trimmed.Contains("New File") || 
-                     trimmed.Contains("Newer") ||
-                     (Regex.IsMatch(trimmed, @"^\d{2}:\d{2}:\d{2}") && trimmed.Contains(".")) ||
-                     (trimmed.StartsWith("*EXTRA File") == false && 
-                      trimmed.Contains("100%") && 
-                      !trimmed.Contains("Dir") && 
-                      !trimmed.Contains("Total") &&
-                      !trimmed.Contains("Files :") &&
-                      trimmed.Contains("."))))
+                @"Files\s*:\s*(\d+)\s+(\d+)",           // English: Files :   150    25
+                @"Файлы\s*:\s*(\d+)\s+(\d+)",           // Russian: Файлы :   150    25
+                @"Файлов\s*:\s*(\d+)\s+(\d+)"           // Russian alternative
+            };
+
+            foreach (var pattern in filePatterns)
+            {
+                var match = Regex.Match(tail, pattern, RegexOptions.IgnoreCase | RegexOptions.RightToLeft);
+                if (match.Success && match.Groups.Count >= 3)
                 {
-                    fileCount++;
+                    // Group 1 = Total, Group 2 = Copied
+                    if (int.TryParse(match.Groups[2].Value, out var copied))
+                    {
+                        return copied;
+                    }
                 }
             }
 
-            return fileCount > 0 ? fileCount : null;
+            return null;
         }
         catch { }
         return null;
@@ -652,7 +655,7 @@ namespace UCXSyncTool.Services
         {
             if (string.IsNullOrEmpty(logPath) || !File.Exists(logPath)) return null;
 
-            const int readSize = 512 * 1024; // read last 512KB for more comprehensive parsing
+            const int readSize = 512 * 1024; // read last 512KB to get summary section
             using var fs = new FileStream(logPath, FileMode.Open, FileAccess.Read, FileShare.ReadWrite);
             var length = fs.Length;
             var toRead = (int)Math.Min(readSize, length);
@@ -660,38 +663,62 @@ namespace UCXSyncTool.Services
             using var sr = new StreamReader(fs);
             var tail = sr.ReadToEnd();
 
-            long maxBytes = 0;
-
-            // Try compiled regexes, find the largest byte count
-            foreach (var rx in _robocopyRegexes)
+            // First, try to parse from robocopy summary statistics:
+            //   Bytes :   1.5 g     500 m    1.0 g         0         0         0
+            //             Total   Copied  Skipped  ...
+            
+            // Parse "Bytes :" line and extract the "Copied" value (second column)
+            var bytesPatterns = new[]
             {
-                var matches = rx.Matches(tail);
-                foreach (Match match in matches)
+                @"Bytes\s*:\s*[\d\s,\.]+\s*[kmgtKMGT]?\s+([\d\s,\.]+)\s*([kmgtKMGT])?",  // English
+                @"Байт[а-я]*\s*:\s*[\d\s,\.]+\s*[кмгтКМГТ]?\s+([\d\s,\.]+)\s*([кмгтКМГТ])?"  // Russian
+            };
+
+            foreach (var pattern in bytesPatterns)
+            {
+                var match = Regex.Match(tail, pattern, RegexOptions.IgnoreCase | RegexOptions.RightToLeft);
+                if (match.Success && match.Groups.Count >= 2)
                 {
-                    // Try different groups that might contain the byte count
-                    for (int i = 1; i < match.Groups.Count; i++)
+                    // Extract number and unit
+                    var numberStr = match.Groups[1].Value.Replace(",", "").Replace(" ", "").Trim();
+                    var unit = match.Groups.Count > 2 ? match.Groups[2].Value.ToLowerInvariant() : "";
+                    
+                    if (double.TryParse(numberStr, System.Globalization.NumberStyles.Float, System.Globalization.CultureInfo.InvariantCulture, out var number))
                     {
-                        var num = match.Groups[i].Value;
-                        var digits = Regex.Replace(num, @"[^\d]", ""); // Remove all non-digits
-                        if (long.TryParse(digits, out var val) && val > maxBytes && val > 1000) // Ignore small numbers
+                        // Convert based on unit suffix
+                        long bytes = unit switch
                         {
-                            maxBytes = val;
+                            "k" or "к" => (long)(number * 1024),
+                            "m" or "м" => (long)(number * 1024 * 1024),
+                            "g" or "г" => (long)(number * 1024 * 1024 * 1024),
+                            "t" or "т" => (long)(number * 1024L * 1024 * 1024 * 1024),
+                            _ => (long)number
+                        };
+                        
+                        if (bytes > 1000)
+                        {
+                            return bytes;
                         }
                     }
                 }
             }
 
-            if (maxBytes > 0) return maxBytes;
-
-            // Fallback: find percentage lines and extract bytes (e.g., "85.2%    1,234,567 bytes")
-            var percentMatches = Regex.Matches(tail, @"(\d+(?:\.\d+)?%)\s+([\d,\s\.]+)", RegexOptions.IgnoreCase);
-            foreach (Match match in percentMatches)
+            // Fallback: use existing regex patterns for progress lines
+            long maxBytes = 0;
+            foreach (var rx in _robocopyRegexes)
             {
-                var bytesStr = match.Groups[2].Value;
-                var digits = Regex.Replace(bytesStr, @"[^\d]", "");
-                if (long.TryParse(digits, out var val) && val > maxBytes && val > 1000)
+                var matches = rx.Matches(tail);
+                foreach (Match match in matches)
                 {
-                    maxBytes = val;
+                    for (int i = 1; i < match.Groups.Count; i++)
+                    {
+                        var num = match.Groups[i].Value;
+                        var digits = Regex.Replace(num, @"[^\d]", "");
+                        if (long.TryParse(digits, out var val) && val > maxBytes && val > 1000)
+                        {
+                            maxBytes = val;
+                        }
+                    }
                 }
             }
 

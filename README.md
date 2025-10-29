@@ -1,134 +1,138 @@
 # UCX SyncTool
 
-A small set of utilities and a WPF client used to manage and monitor file synchronization for UCX projects. This repository contains:
+A WPF application for monitoring and managing file synchronization in UCX projects using robocopy.
 
-- `UCXSyncTool/` — a WPF application (UI) for monitoring and managing sync operations.
-- `tools/icon-gen/` — a small console utility used to generate or process icons (example tool included).
-- `DUSync-4.ps1` — a PowerShell script for real-time project synchronization using `robocopy` across multiple worker nodes.
+## Overview
 
-This README explains what each part does, how to build and run the projects on Windows, and quick usage examples.
+UCX SyncTool is a graphical WPF application (.NET 8) that provides:
 
-## Project highlights
+- Start and stop file synchronization processes via robocopy
+- Monitor system performance (CPU load, memory usage, and disk activity)
+- Track synchronization progress in real-time
+- Automatically parse robocopy logs to display statistics
+- Configure synchronization parameters through a user-friendly interface
 
-- Lightweight WPF monitoring UI built for .NET 8 targeting Windows (see `UCXSyncTool/`).
-- A small .NET console tool in `tools/icon-gen/` for icon generation tasks used by the project.
-- A pragmatic, battle-tested PowerShell script `DUSync-4.ps1` that runs multiple `robocopy` instances (one per source) and auto-stops them after an idle timeout.
+## Key Features
 
-## Repository layout
+- **Performance Monitoring**: displays CPU load, memory usage, and disk activity using `PerformanceCounter` with moving average smoothing
+- **Robocopy Log Parsing**: accurate extraction of statistics from robocopy log summary sections (supports English and Russian localization)
+- **Automatic Management**: automatic robocopy shutdown after idle timeout
+- **Configuration**: persist settings between sessions (source paths, synchronization settings)
+
+## Project Structure
 
 ```
-/ (repo root)
-├─ UCXSyncTool/          # WPF application (UI)
+UCX_SyncTool/
+├─ UCXSyncTool/              # Main WPF application
+│  ├─ Assets/
+│  │  └─ icon.ico           # Application icon (multi-resolution)
+│  ├─ Models/
+│  │  ├─ ActiveCopyViewModel.cs
+│  │  └─ AppSettings.cs
+│  ├─ Services/
+│  │  ├─ SettingsService.cs
+│  │  └─ SyncService.cs     # Core synchronization logic
 │  ├─ App.xaml
 │  ├─ MainWindow.xaml
-│  ├─ UCX.SyncTool.csproj
-│  └─ ...
-├─ tools/
-│  └─ icon-gen/          # small console app (IconGen)
-│     ├─ Program.cs
-│     └─ IconGen.csproj
-└─ DUSync-4.ps1          # PowerShell realtime sync script
+│  └─ UCX.SyncTool.csproj
+├─ logo.tif                  # Source logo image
+├─ UCX.SyncTool.sln
+└─ README.md
+
 ```
 
-## Requirements
+## System Requirements
 
-- Windows 10/11 (WPF UI)
-- .NET 8 SDK (or matching SDK used to build the project)
-- PowerShell (pwsh / PowerShell 7+ recommended) for `DUSync-4.ps1`
+- **OS**: Windows 10/11
+- **.NET**: .NET 8 SDK
+- **Robocopy**: built into Windows (uses the standard `robocopy.exe` utility)
 
-You can download .NET SDK from: https://dotnet.microsoft.com/en-us/download
+Download .NET 8 SDK: https://dotnet.microsoft.com/download/dotnet/8.0
 
-## Build and run
+## Build and Run
 
-All commands below assume you run them from a PowerShell (pwsh) prompt on Windows.
-
-### Build the WPF application (`UCXSyncTool`)
-
-1. Open a PowerShell terminal and go to the `UCXSyncTool` folder:
+### Building the Project
 
 ```powershell
-cd .\UCXSyncTool
-```
-
-2. Restore and build with `dotnet`:
-
-```powershell
+# From the project root directory
 dotnet restore
 dotnet build -c Release
 ```
 
-3. Run the app (use the appropriate runtime if you built for `net8.0-windows`):
+### Running the Application
 
 ```powershell
-dotnet run --project .\UCX.SyncTool.csproj
+# From the project root directory
+dotnet run --project UCXSyncTool\UCX.SyncTool.csproj
 ```
 
-Or launch the compiled executable from `UCXSyncTool\bin\Debug\net8.0-windows` after building.
+Or run the compiled executable from `UCXSyncTool\bin\Release\net8.0-windows\`.
 
-### Build the icon generator (`tools/icon-gen`)
+## Usage
 
-```powershell
-cd .\tools\icon-gen
-dotnet restore
-dotnet build -c Release
-dotnet run --project .\IconGen.csproj
-```
+1. **Configure Sources**: add paths to source folders that need synchronization
+2. **Select Project**: specify the project name for synchronization
+3. **Set Destination**: choose the destination folder for synchronized files
+4. **Robocopy Parameters**: configure additional synchronization parameters (exclusions, multithreading, etc.)
+5. **Start**: click the start button to begin synchronization
+6. **Monitor**: track progress in real-time through the UI
 
-The `icon-gen` utility shipped here is an example console tool; adapt its arguments or code to your needs.
+## Technical Details
 
-## Using the real-time sync script (`DUSync-4.ps1`)
+### Performance Monitoring
 
-`DUSync-4.ps1` is a PowerShell script that runs `robocopy` in the background for multiple worker sources. It:
+- **CPU**: uses `Processor Information\% Processor Utility` with fallback to `Processor\% Processor Time`, applies moving average (3 samples) for stable readings
+- **Memory**: tracks physical memory usage
+- **Disk**: monitors disk read/write speeds
 
-- Monitors a list of worker nodes and shares
-- Starts a `robocopy` process for each source when the project folder appears
-- Tracks the time of last file change and forcibly stops `robocopy` for a source if no new files appear for the configured idle timeout
-- Writes per-node logs under a `Logs` folder inside the destination root
+### Robocopy Log Parsing
 
-Basic usage:
+The application uses a structured approach to extract statistics from robocopy log summary sections:
 
-```powershell
-# Example: sync project "Flight_001" into D:\Collected with a 5-minute idle timeout
-pwsh.exe -File .\DUSync-4.ps1 -Project "Flight_001" -DestRoot "D:\Collected" -IdleTimeoutMinutes 5
-```
+- **Files**: parses the `Files : <Total> <Copied> <Skipped>` line, extracts the number of copied files
+- **Bytes**: parses the `Bytes : <Total> <Copied> <Skipped>` line with unit support (k, m, g, t)
+- **Localization**: supports English (`Files`, `Bytes`) and Russian (`Файлы`, `Байт`) versions of robocopy
 
-Important notes:
+### Update Intervals
 
-- The script contains a hard-coded list of worker `Nodes` and `Shares` near the top. Edit the script to match your environment.
-- `robocopy` arguments used: `/S /E /MON:1 /MOT:2 /FFT /R:2 /W:3 /Z /MT:8` plus excluded folders. Adjust these for your environment.
-- The script expects administrative/shared access to remote admin shares like `E$`/`F$`. Consider using proper credentials or network shares as appropriate.
+- **UI**: interface updates every 2 seconds
+- **Performance**: performance counter updates every 1 second
+- **Robocopy logs**: log parsing every 10 seconds
 
-## Configuration and customization
+## Configuration
 
-- UCXSyncTool: open `UCXSyncTool` in Visual Studio or your preferred editor to change UI, view models and services (`Services/SettingsService.cs`, `Services/SyncService.cs`).
-- `DUSync-4.ps1`: modify the `$Nodes`, `$Shares`, and other parameters at the top. You can also pass parameters to the script when launching.
-- `tools/icon-gen`: modify `Program.cs` to change how icons are generated or handled.
+Application settings are stored in `AppSettings` and automatically persisted between sessions:
+
+- List of synchronization sources
+- Destination folder path
+- Robocopy parameters
+- UI settings
+
+To modify default settings, edit `Services/SettingsService.cs`.
+
+## Development
+
+### Architecture
+
+- **MVVM pattern**: uses Model-View-ViewModel pattern to separate logic and UI
+- **Services**: isolated services for settings (`SettingsService`) and synchronization (`SyncService`)
+- **Performance monitoring**: uses `System.Diagnostics.PerformanceCounter`
+- **Async/await**: asynchronous processing to prevent UI blocking
+
+### Key Components
+
+- `MainWindow.xaml.cs`: main UI logic and component coordination
+- `SyncService.cs`: robocopy process management and log parsing
+- `SettingsService.cs`: application settings persistence
+- `ActiveCopyViewModel.cs`: data model for active copy operations
 
 ## Troubleshooting
 
-- If the WPF app won't start, ensure you have the .NET 8 runtime installed and that you built for `net8.0-windows`.
-- If `DUSync-4.ps1` cannot access remote shares, verify network connectivity, credentials, and that the target machines export the expected admin shares or UNC paths.
-- Check log files produced by the script under the destination `Logs` folder to inspect `robocopy` output per source.
-
-## Contributing
-
-Contributions are welcome. Small suggestions:
-
-- Open an issue describing the change you want.
-- Send a PR with a clear description and focused commits.
-
-Please keep UI changes, services and scripts separated and add/update tests where appropriate.
+- **Application won't start**: ensure .NET 8 Runtime for Windows is installed
+- **Inaccurate CPU readings**: verify the application has permissions to access `PerformanceCounter`
+- **Robocopy logs not parsing**: ensure robocopy writes logs in standard format (don't use `/NJH` or `/NJS`)
+- **Files not synchronizing**: check access permissions to source and destination folders
 
 ## License
 
-This repository does not contain an explicit license file. If you plan to publish this project, consider adding a `LICENSE` file (e.g. MIT) to make the intended license explicit.
-
----
-
-If you'd like, I can:
-
-- Add a top-level `LICENSE` file (MIT/Apache/BSD)
-- Improve `README` with screenshots and usage examples from the WPF UI
-- Convert the `DUSync-4.ps1` script into a parameterized module with logging and email alerts
-
-Tell me which of the above you'd like next and I will make the changes and test them locally where possible.
+This project is distributed without an explicit license. For commercial use, it is recommended to add a `LICENSE` file.

@@ -1,4 +1,5 @@
 using System;
+using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.IO;
 using System.Linq;
@@ -32,6 +33,9 @@ namespace UCXSyncTool
     private DateTime _lastNetTime = DateTime.MinValue;
     // assumption for disk percent scaling (MB/s). Adjust if needed.
     private const double MaxDiskMBps = 200.0;
+    // CPU smoothing
+    private readonly Queue<float> _cpuReadings = new();
+    private const int CpuSmoothingSamples = 3;
 
         public MainWindow()
         {
@@ -215,7 +219,16 @@ namespace UCXSyncTool
         {
             try
             {
-                _cpuCounter = new PerformanceCounter("Processor", "% Processor Time", "_Total");
+                // Use "Processor Information" for more accurate CPU readings on modern systems
+                // Fall back to "Processor" if not available
+                try
+                {
+                    _cpuCounter = new PerformanceCounter("Processor Information", "% Processor Utility", "_Total");
+                }
+                catch
+                {
+                    _cpuCounter = new PerformanceCounter("Processor", "% Processor Time", "_Total");
+                }
                 // Disk counters will be initialized when target path is set
                 _diskReadCounter = null;
                 _diskWriteCounter = null;
@@ -265,7 +278,15 @@ namespace UCXSyncTool
                 {
                     try
                     {
-                        float cpu = _cpuCounter?.NextValue() ?? 0f;
+                        float cpuRaw = _cpuCounter?.NextValue() ?? 0f;
+                        
+                        // Smooth CPU readings using moving average
+                        _cpuReadings.Enqueue(cpuRaw);
+                        if (_cpuReadings.Count > CpuSmoothingSamples)
+                        {
+                            _cpuReadings.Dequeue();
+                        }
+                        float cpu = _cpuReadings.Average();
 
                         // disk throughput (bytes/sec) from read + write counters -> convert to MB/s
                         float diskRead = _diskReadCounter?.NextValue() ?? 0f;

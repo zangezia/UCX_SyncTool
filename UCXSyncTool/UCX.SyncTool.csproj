@@ -7,17 +7,17 @@
     <Nullable>enable</Nullable>
     <AssemblyName>UCX.SyncTool</AssemblyName>
     <RootNamespace>UCXSyncTool</RootNamespace>
-    <!-- Application icon generated from logo.jpg -->
-    <ApplicationIcon>Assets\app_icon.ico</ApplicationIcon>
+    <!-- Application icon generated from logo.tif -->
+    <ApplicationIcon>Assets\icon.ico</ApplicationIcon>
   </PropertyGroup>
   <ItemGroup>
     <!-- Embed the app icon as a resource so it can be used via pack URI at runtime -->
-    <Resource Include="Assets\app_icon.ico" />
+    <Resource Include="Assets\icon.ico" />
   </ItemGroup>
   <ItemGroup>
-    <!-- Use the original high-resolution logo.jpg from repository root and copy it into the app output under Assets\logo.jpg -->
-    <Content Include="..\logo.jpg">
-      <Link>Assets\logo.jpg</Link>
+    <!-- Use the original high-resolution logo.tif from repository root and copy it into the app output under Assets\logo.tif -->
+    <Content Include="..\logo.tif">
+      <Link>Assets\logo.tif</Link>
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
   </ItemGroup>
