@@ -55,7 +55,7 @@ namespace UCXSyncTool
             }
             if (!string.IsNullOrEmpty(_settings.LastProject)) ProjectCombo.Text = _settings.LastProject;
             if (!string.IsNullOrEmpty(_settings.DestRoot)) DestRootText.Text = _settings.DestRoot;
-            ThreadsText.Text = _settings.RobocopyThreads.ToString();
+            ThreadsText.Text = _settings.MaxParallelism.ToString();
 
             // Setup UI timer
             _uiTimer = new DispatcherTimer { Interval = TimeSpan.FromSeconds(Configuration.UiUpdateIntervalSeconds) };
@@ -91,7 +91,7 @@ namespace UCXSyncTool
                 _settings.DestRoot = DestRootText.Text;
                 if (int.TryParse(ThreadsText.Text, out var threadsVal))
                 {
-                    _settings.RobocopyThreads = threadsVal;
+                    _settings.MaxParallelism = threadsVal;
                 }
                 
                 // Capture current items in combo
@@ -218,7 +218,7 @@ namespace UCXSyncTool
             _settings.DestRoot = dest;
             if (int.TryParse(ThreadsText.Text, out var threadsVal))
             {
-                _settings.RobocopyThreads = threadsVal;
+                _settings.MaxParallelism = threadsVal;
             }
             SettingsService.Save(_settings);
 
@@ -227,7 +227,7 @@ namespace UCXSyncTool
 
             LogText.AppendText($"Запуск синхронизации проекта {project} -> {dest}\n");
 
-            await Task.Run(() => _syncService.Start(project, dest, AppendLog, _settings.RobocopyThreads));
+            await Task.Run(() => _syncService.Start(project, dest, AppendLog, _settings.MaxParallelism));
         }
 
         private void PerfTimer_Tick(object? sender, EventArgs e)

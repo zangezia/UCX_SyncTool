@@ -141,7 +141,6 @@ namespace UCXSyncTool.Services
                     Share = Configuration.GetShareAlias(kv.Value.share),
                     Status = (kv.Value.proc == null || kv.Value.proc.HasExited) ? "Exited" : "Running",
                     LastChange = kv.Value.lastChange,
-                    LogPath = kv.Value.logPath ?? string.Empty,
                     FilesDownloaded = kv.Value.filesDownloaded,
                     ProgressPercent = (kv.Value.totalBytes > 0) ? (double?)((kv.Value.lastDestBytes * 100.0) / kv.Value.totalBytes) : null
                 }).ToList();

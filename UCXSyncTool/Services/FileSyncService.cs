@@ -132,8 +132,7 @@ namespace UCXSyncTool.Services
                     FilesDownloaded = kv.Value.CopiedFiles,
                     ProgressPercent = kv.Value.TotalBytes > 0 
                         ? (double)(kv.Value.CopiedBytes * 100.0 / kv.Value.TotalBytes) 
-                        : null,
-                    LogPath = string.Empty // No log files in this implementation
+                        : null
                 }).ToList();
             }
         }
@@ -203,8 +202,14 @@ namespace UCXSyncTool.Services
                         var key = $"{node}-{share}";
 
                         // Check if task already exists
+                        SyncTaskInfo? taskInfo = null;
+                        int previouslyCopiedFiles = 0;
+                        
                         if (_activeTasks.TryGetValue(key, out var existingTask))
                         {
+                            // Save the file counter before removing
+                            previouslyCopiedFiles = existingTask.CopiedFiles;
+                            
                             // Check if task is still running
                             if (existingTask.SyncTask != null && 
                                 !existingTask.SyncTask.IsCompleted &&
@@ -214,7 +219,7 @@ namespace UCXSyncTool.Services
                                 continue; // Task still active
                             }
 
-                            // Task completed or faulted, remove it
+                            // Task completed, will be replaced with new one
                             _activeTasks.TryRemove(key, out _);
                         }
 
@@ -236,14 +241,15 @@ namespace UCXSyncTool.Services
                         }
                         catch { }
 
-                        // Create new sync task
+                        // Create new sync task, preserving cumulative file counter
                         var taskCts = CancellationTokenSource.CreateLinkedTokenSource(token);
-                        var taskInfo = new SyncTaskInfo
+                        taskInfo = new SyncTaskInfo
                         {
                             Node = node,
                             Share = share,
                             LastActivity = DateTime.Now,
-                            TaskCts = taskCts
+                            TaskCts = taskCts,
+                            CopiedFiles = previouslyCopiedFiles // Preserve counter across sync sessions
                         };
 
                         var syncTask = Task.Run(async () =>
@@ -332,7 +338,12 @@ namespace UCXSyncTool.Services
                     try
                     {
                         var fileInfo = new FileInfo(filePath);
-                        files.Add(fileInfo);
+                        
+                        // Only add files that need to be copied
+                        if (ShouldCopyFile(fileInfo, rootSource, rootDest))
+                        {
+                            files.Add(fileInfo);
+                        }
                     }
                     catch { }
                 }
@@ -364,6 +375,36 @@ namespace UCXSyncTool.Services
             catch { }
         }
 
+        private bool ShouldCopyFile(FileInfo sourceFile, string sourceRoot, string destRoot)
+        {
+            try
+            {
+                var relativePath = Path.GetRelativePath(sourceRoot, sourceFile.FullName);
+                var destPath = Path.Combine(destRoot, relativePath);
+                var destFileInfo = new FileInfo(destPath);
+
+                // Copy if destination doesn't exist
+                if (!destFileInfo.Exists)
+                {
+                    return true;
+                }
+
+                // Copy if size differs or source is newer (with 2 second tolerance for FAT32)
+                if (destFileInfo.Length != sourceFile.Length ||
+                    destFileInfo.LastWriteTimeUtc < sourceFile.LastWriteTimeUtc.AddSeconds(-2))
+                {
+                    return true;
+                }
+
+                return false;
+            }
+            catch
+            {
+                // If we can't determine, assume we should copy
+                return true;
+            }
+        }
+
         private async Task CopyFileWithRetry(FileInfo sourceFile, string sourceRoot, string destRoot, SyncTaskInfo taskInfo, CancellationToken token)
         {
             const int maxRetries = 3;
@@ -373,18 +414,6 @@ namespace UCXSyncTool.Services
             var relativePath = Path.GetRelativePath(sourceRoot, sourceFile.FullName);
             var destPath = Path.Combine(destRoot, relativePath);
             var destFileInfo = new FileInfo(destPath);
-
-            // Check if file needs to be copied
-            if (destFileInfo.Exists)
-            {
-                // Skip if same size and newer or same write time
-                if (destFileInfo.Length == sourceFile.Length &&
-                    destFileInfo.LastWriteTimeUtc >= sourceFile.LastWriteTimeUtc.AddSeconds(-2)) // 2 second tolerance
-                {
-                    Interlocked.Increment(ref taskInfo.SkippedFiles);
-                    return;
-                }
-            }
 
             // Ensure destination directory exists
             Directory.CreateDirectory(destFileInfo.DirectoryName ?? destRoot);

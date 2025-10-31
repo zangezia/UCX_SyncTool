@@ -39,26 +39,26 @@
                     <Button x:Name="CredentialsBtn" Content="Авторизация" Width="80" Margin="6,0" Click="CredentialsBtn_Click" />
                 </StackPanel>
 
-                <Label Grid.Column="2" Content="Папка назначения:" VerticalAlignment="Center" />
+                <Label Grid.Column="2" Content="Папка назначения:" VerticalAlignment="Center" Padding="5,0" />
 
                 <!-- dest path fills available space so Browse button stays visible -->
-                <TextBox Grid.Column="3" x:Name="DestRootText" Margin="6,0" />
+                <TextBox Grid.Column="3" x:Name="DestRootText" Margin="6,0" VerticalAlignment="Center" Height="22" />
 
-                <Button Grid.Column="4" x:Name="BrowseDestBtn" Content="Обзор..." Width="90" Margin="6,0,0,0" Click="BrowseDestBtn_Click" />
+                <Button Grid.Column="4" x:Name="BrowseDestBtn" Content="Обзор..." Width="90" Height="22" Margin="6,0,0,0" Click="BrowseDestBtn_Click" />
             </Grid>
 
             <!-- Row 1: grouped settings and actions -->
             <DockPanel Grid.Row="1" LastChildFill="False" VerticalAlignment="Center">
                 <StackPanel Orientation="Horizontal" DockPanel.Dock="Left" VerticalAlignment="Center">
                     <StackPanel Orientation="Horizontal" Margin="0,4,12,0" VerticalAlignment="Center">
-                        <Label Content="Потоки (/MT):" VerticalAlignment="Center"/>
+                        <Label Content="Параллельных потоков:" VerticalAlignment="Center"/>
                         <TextBox x:Name="ThreadsText" Width="60" Margin="6,0" Text="8" />
                     </StackPanel>
                 </StackPanel>
 
                 <StackPanel Orientation="Horizontal" DockPanel.Dock="Right" VerticalAlignment="Center">
-                    <Button x:Name="StartBtn" Content="Запустить" Width="90" Margin="10,0" Click="StartBtn_Click" />
-                    <Button x:Name="StopBtn" Content="Остановить" Width="90" Margin="6,0" Click="StopBtn_Click" IsEnabled="False" />
+                    <Button x:Name="StartBtn" Content="Запустить" Width="110" Height="28" Margin="10,0" Click="StartBtn_Click" />
+                    <Button x:Name="StopBtn" Content="Остановить" Width="110" Height="28" Margin="6,0" Click="StopBtn_Click" IsEnabled="False" />
                     <Button x:Name="ExitBtn" Content="Выход" Width="90" Margin="6,0" Click="ExitBtn_Click" />
                 </StackPanel>
             </DockPanel>
@@ -68,23 +68,23 @@
             <TextBox x:Name="LogText" Height="80" IsReadOnly="True" VerticalScrollBarVisibility="Auto" TextWrapping="Wrap" />
 
             <StackPanel Orientation="Horizontal" Margin="0,6,0,6">
-                <StackPanel Width="250">
+                <StackPanel Width="220">
                     <TextBlock Text="CPU" />
                     <ProgressBar x:Name="CpuBar" Height="16" Minimum="0" Maximum="100" />
                     <TextBlock x:Name="CpuLabel" FontSize="11" />
                 </StackPanel>
-                <StackPanel Width="250" Margin="10,0">
-                    <TextBlock Text="Диск (I/O)" />
+                <StackPanel Width="220" Margin="10,0">
+                    <TextBlock Text="Диск" />
                     <ProgressBar x:Name="DiskBar" Height="16" Minimum="0" Maximum="100" />
                     <TextBlock x:Name="DiskLabel" FontSize="11" />
                 </StackPanel>
-                <StackPanel Width="250" Margin="10,0">
+                <StackPanel Width="220" Margin="10,0">
                     <TextBlock Text="Сеть" />
                     <ProgressBar x:Name="NetBar" Height="16" Minimum="0" Maximum="100" />
                     <TextBlock x:Name="NetLabel" FontSize="11" />
                 </StackPanel>
-                <StackPanel Width="250" Margin="10,0">
-                    <TextBlock Text="Свободно на диске назначения" />
+                <StackPanel Width="220" Margin="10,0">
+                    <TextBlock Text="Свободно на диске" TextWrapping="Wrap" />
                     <TextBlock x:Name="DestFreeLabel" FontSize="11" />
                 </StackPanel>
             </StackPanel>
@@ -97,7 +97,13 @@
                 <DataGridTextColumn Header="Состояние" Binding="{Binding Status}" Width="120" />
                 <DataGridTextColumn Header="Последнее изменение" Binding="{Binding LastChange}" Width="180" />
                 <DataGridTextColumn Header="Файлов скачано" Binding="{Binding FilesDownloaded}" Width="120" />
-                <DataGridTextColumn Header="Лог" Binding="{Binding LogPath}" Width="*" />
+                <DataGridTemplateColumn Header="Прогресс" Width="*">
+                    <DataGridTemplateColumn.CellTemplate>
+                        <DataTemplate>
+                            <ProgressBar Minimum="0" Maximum="100" Value="{Binding ProgressPercent}" Height="16" />
+                        </DataTemplate>
+                    </DataGridTemplateColumn.CellTemplate>
+                </DataGridTemplateColumn>
             </DataGrid.Columns>
         </DataGrid>
 

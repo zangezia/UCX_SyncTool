@@ -52,12 +52,12 @@ namespace UCXSyncTool
         /// <summary>
         /// Main service loop check interval in seconds.
         /// </summary>
-        public const int ServiceLoopIntervalSeconds = 30;
+        public const int ServiceLoopIntervalSeconds = 10;
 
         /// <summary>
         /// Directory scan throttle interval in seconds.
         /// </summary>
-        public const int DirectoryScanIntervalSeconds = 30;
+        public const int DirectoryScanIntervalSeconds = 10;
 
         /// <summary>
         /// Minimum free disk space in bytes before stopping copy operations.
