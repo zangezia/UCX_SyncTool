@@ -15,7 +15,7 @@ namespace UCXSyncTool
 {
     public partial class MainWindow : Window
     {
-        private readonly SyncService _syncService;
+        private readonly FileSyncService _syncService;
         private readonly PerformanceMonitoringService _perfMonService;
         private readonly NetworkCredentialsService _credService;
         private readonly DispatcherTimer _uiTimer;
@@ -28,7 +28,7 @@ namespace UCXSyncTool
             InitializeComponent();
 
             // Initialize services
-            _syncService = new SyncService();
+            _syncService = new FileSyncService();
             _perfMonService = new PerformanceMonitoringService();
             _credService = new NetworkCredentialsService(
                 Configuration.Nodes,
