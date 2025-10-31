@@ -192,6 +192,14 @@ namespace UCXSyncTool
             {
                 _active_list_add(item);
             }
+            
+            // Update capture counters
+            SnapshotsCountLabel.Text = _syncService.GetCompletedCapturesCount().ToString();
+            var lastCapture = _syncService.GetLastCaptureNumber();
+            LastSnapshotLabel.Text = lastCapture ?? "-";
+            
+            // Update test capture counter
+            TestSnapshotsCountLabel.Text = _syncService.GetCompletedTestCapturesCount().ToString();
         }
 
         // helper to preserve strong typing when adding

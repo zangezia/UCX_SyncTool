@@ -3,6 +3,7 @@ using System.Collections.Concurrent;
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
+using System.Text.RegularExpressions;
 using System.Threading;
 using System.Threading.Tasks;
 using UCXSyncTool.Models;
@@ -20,7 +21,14 @@ namespace UCXSyncTool.Services
         private CancellationTokenSource? _cts;
         private readonly object _lock = new();
         private readonly ConcurrentDictionary<string, SyncTaskInfo> _activeTasks = new();
+        private readonly ConcurrentDictionary<string, ConcurrentDictionary<string, int>> _captureTracker = new();
         private Action<string>? _logger;
+        
+        // Capture statistics
+        private int _completedCaptures = 0;
+        private int _completedTestCaptures = 0;
+        private string? _lastCaptureNumber = null;
+        private string? _lastTestCaptureNumber = null;
 
         private class SyncTaskInfo
         {
@@ -114,6 +122,38 @@ namespace UCXSyncTool.Services
                 _cts = null;
                 _logger?.Invoke("All synchronization tasks stopped");
             }
+        }
+
+        /// <summary>
+        /// Get the number of completed captures in current session.
+        /// </summary>
+        public int GetCompletedCapturesCount()
+        {
+            return _completedCaptures;
+        }
+
+        /// <summary>
+        /// Get the number of completed test captures in current session.
+        /// </summary>
+        public int GetCompletedTestCapturesCount()
+        {
+            return _completedTestCaptures;
+        }
+
+        /// <summary>
+        /// Get the last completed capture number.
+        /// </summary>
+        public string? GetLastCaptureNumber()
+        {
+            return _lastCaptureNumber;
+        }
+
+        /// <summary>
+        /// Get the last completed test capture number.
+        /// </summary>
+        public string? GetLastTestCaptureNumber()
+        {
+            return _lastTestCaptureNumber;
         }
 
         /// <summary>
@@ -440,6 +480,9 @@ namespace UCXSyncTool.Services
                     Interlocked.Add(ref taskInfo.CopiedBytes, sourceFile.Length);
                     taskInfo.LastActivity = DateTime.Now;
 
+                    // Track capture completion
+                    TrackCaptureCompletion(sourceFile.Name, taskInfo.Node);
+
                     return; // Success
                 }
                 catch (OperationCanceledException)
@@ -476,6 +519,80 @@ namespace UCXSyncTool.Services
             };
 
             return excluded.Any(e => dirName.Equals(e, StringComparison.OrdinalIgnoreCase));
+        }
+
+        private class CaptureInfo
+        {
+            public string? DataType { get; set; }
+            public string? CaptureNumber { get; set; }
+            public string? ProjectName { get; set; }
+            public string? SessionId { get; set; }
+            public bool IsTest { get; set; }
+        }
+
+        private CaptureInfo? ParseCaptureFileName(string fileName)
+        {
+            // Pattern: Lvl0X-00001-T-Test1-00-00-AA66B5AD_9209_4D88_A41B_DFFD3CD97D40.raw
+            // Group 1: Lvl0X (data type)
+            // Group 2: 00001 (capture number)
+            // Group 3: T or empty (test marker)
+            // Group 4: Test1 (project name)
+            // Group 5: AA66B5AD_9209_4D88_A41B_DFFD3CD97D40 (session ID)
+            
+            var match = Regex.Match(fileName, @"^(Lvl\d+X)-(\d+)-(T-)?([^-]+)-\d+-\d+-([A-F0-9_]+)\.raw$", RegexOptions.IgnoreCase);
+            
+            if (match.Success)
+            {
+                return new CaptureInfo
+                {
+                    DataType = match.Groups[1].Value,
+                    CaptureNumber = match.Groups[2].Value,
+                    IsTest = !string.IsNullOrEmpty(match.Groups[3].Value),
+                    ProjectName = match.Groups[4].Value,
+                    SessionId = match.Groups[5].Value
+                };
+            }
+
+            return null;
+        }
+
+        private void TrackCaptureCompletion(string fileName, string node)
+        {
+            var info = ParseCaptureFileName(fileName);
+            if (info == null || string.IsNullOrEmpty(info.CaptureNumber))
+            {
+                return;
+            }
+
+            // Key: capture number
+            var captureKey = info.CaptureNumber;
+            
+            // Get or create tracker for this capture
+            var nodeTracker = _captureTracker.GetOrAdd(captureKey, _ => new ConcurrentDictionary<string, int>());
+            
+            // Mark this node as having completed this capture
+            nodeTracker[node] = 1;
+            
+            // Check if all 13 nodes have completed this capture
+            if (nodeTracker.Count == 13)
+            {
+                // Update counters based on capture type
+                if (info.IsTest)
+                {
+                    Interlocked.Increment(ref _completedTestCaptures);
+                    _lastTestCaptureNumber = info.CaptureNumber;
+                    _logger?.Invoke($"✓ ТЕСТ снимок #{info.CaptureNumber} проекта '{info.ProjectName}' скачан полностью (13/13 файлов) [Тестовых: {_completedTestCaptures}]");
+                }
+                else
+                {
+                    Interlocked.Increment(ref _completedCaptures);
+                    _lastCaptureNumber = info.CaptureNumber;
+                    _logger?.Invoke($"✓ Снимок #{info.CaptureNumber} проекта '{info.ProjectName}' скачан полностью (13/13 файлов) [Всего: {_completedCaptures}]");
+                }
+                
+                // Remove from tracker to free memory
+                _captureTracker.TryRemove(captureKey, out _);
+            }
         }
 
         private static bool IsValidProjectName(string name)

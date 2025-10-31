@@ -67,6 +67,15 @@
         <StackPanel Grid.Row="1">
             <TextBox x:Name="LogText" Height="80" IsReadOnly="True" VerticalScrollBarVisibility="Auto" TextWrapping="Wrap" />
 
+            <StackPanel Orientation="Horizontal" Margin="0,6,0,0">
+                <TextBlock Text="Снимков скачано: " FontWeight="Bold" VerticalAlignment="Center" />
+                <TextBlock x:Name="SnapshotsCountLabel" Text="0" VerticalAlignment="Center" Margin="0,0,20,0" />
+                <TextBlock Text="Последний: " FontWeight="Bold" VerticalAlignment="Center" />
+                <TextBlock x:Name="LastSnapshotLabel" Text="-" VerticalAlignment="Center" Margin="0,0,30,0" />
+                <TextBlock Text="Тестовых снимков: " FontWeight="Bold" VerticalAlignment="Center" />
+                <TextBlock x:Name="TestSnapshotsCountLabel" Text="0" VerticalAlignment="Center" />
+            </StackPanel>
+
             <StackPanel Orientation="Horizontal" Margin="0,6,0,6">
                 <StackPanel Width="220">
                     <TextBlock Text="CPU" />
