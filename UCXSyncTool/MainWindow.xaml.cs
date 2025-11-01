@@ -22,10 +22,30 @@ namespace UCXSyncTool
         private readonly DispatcherTimer _perfTimer;
         private readonly ObservableCollection<ActiveCopyViewModel> _activeList = new();
         private AppSettings _settings;
+        private StreamWriter? _logWriter;
+        private readonly string _logFilePath;
 
         public MainWindow()
         {
             InitializeComponent();
+
+            // Initialize log file
+            var appDir = AppDomain.CurrentDomain.BaseDirectory;
+            var logsDir = Path.Combine(appDir, "Logs");
+            Directory.CreateDirectory(logsDir);
+            var timestamp = DateTime.Now.ToString("yyyy-MM-dd_HH-mm-ss");
+            _logFilePath = Path.Combine(logsDir, $"sync_{timestamp}.log");
+            
+            try
+            {
+                _logWriter = new StreamWriter(_logFilePath, append: false) { AutoFlush = true };
+                _logWriter.WriteLine($"=== UCX SyncTool Log Started: {DateTime.Now:yyyy-MM-dd HH:mm:ss} ===");
+                _logWriter.WriteLine();
+            }
+            catch (Exception ex)
+            {
+                System.Windows.MessageBox.Show($"Failed to create log file: {ex.Message}", "Warning", MessageBoxButton.OK, MessageBoxImage.Warning);
+            }
 
             // Initialize services
             _syncService = new FileSyncService();
@@ -116,6 +136,16 @@ namespace UCXSyncTool
             }
             catch { }
 
+            // Close log file
+            try
+            {
+                _logWriter?.WriteLine();
+                _logWriter?.WriteLine($"=== UCX SyncTool Log Ended: {DateTime.Now:yyyy-MM-dd HH:mm:ss} ===");
+                _logWriter?.Close();
+                _logWriter?.Dispose();
+            }
+            catch { }
+
             // Close all network connections
             _credService.CloseAllConnections();
         }
@@ -158,7 +188,7 @@ namespace UCXSyncTool
         private async void RefreshProjectsBtn_Click(object sender, RoutedEventArgs e)
         {
             RefreshProjectsBtn.IsEnabled = false;
-            LogText.AppendText("Сканирование узлов и шар для проектов...\n");
+            LogText.AppendText("Обновление списка проектов...\n");
             try
             {
                 var projects = await Task.Run(() => _syncService.FindAvailableProjects(AppendLog));
@@ -306,6 +336,13 @@ namespace UCXSyncTool
                 LogText.AppendText(text + "\n");
                 LogText.ScrollToEnd();
             });
+            
+            // Write to log file
+            try
+            {
+                _logWriter?.WriteLine($"[{DateTime.Now:HH:mm:ss}] {text}");
+            }
+            catch { }
         }
 
         private void CredentialsBtn_Click(object sender, RoutedEventArgs e)

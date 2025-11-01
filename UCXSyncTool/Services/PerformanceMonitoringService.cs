@@ -85,7 +85,7 @@ namespace UCXSyncTool.Services
                         _diskReadCounter.NextValue();
                         _diskWriteCounter.NextValue();
                         
-                        _logger?.Invoke($"Disk monitoring: {instanceName}");
+                        _logger?.Invoke($"Диск назначения: {driveLetter}:");
                         break;
                     }
                 }
@@ -235,9 +235,9 @@ namespace UCXSyncTool.Services
                         .Where(addr => addr.Address.AddressFamily == System.Net.Sockets.AddressFamily.InterNetwork)
                         .Select(addr => addr.Address.ToString())
                         .ToList();
-                    var has200Ip = targetIps.Any(ip => ip.StartsWith("192.168.200."));
-                    var priority = has200Ip ? " (priority: 192.168.200.*)" : "";
-                    _logger?.Invoke($"Selected network interface: {_netInterface.Name} [{string.Join(", ", targetIps)}]{priority}");
+                    var speedGbps = _netInterface.Speed / 1_000_000_000.0;
+                    var ipList = string.Join(", ", targetIps);
+                    _logger?.Invoke($"Сеть: {ipList} - {speedGbps:F1} Gbps");
                 }
                 catch
                 {

@@ -40,7 +40,6 @@ namespace UCXSyncTool.Services
             public long CopiedBytes;
             public int TotalFiles;
             public int CopiedFiles;
-            public int SkippedFiles;
             public int FailedFiles;
             public CancellationTokenSource? TaskCts { get; set; }
         }
@@ -88,7 +87,6 @@ namespace UCXSyncTool.Services
 
                 try
                 {
-                    _logger?.Invoke("Stopping all synchronization tasks...");
                     _cts.Cancel();
                 }
                 catch { }
@@ -120,7 +118,6 @@ namespace UCXSyncTool.Services
                 catch { }
 
                 _cts = null;
-                _logger?.Invoke("All synchronization tasks stopped");
             }
         }
 
@@ -300,7 +297,7 @@ namespace UCXSyncTool.Services
                             }
                             catch (OperationCanceledException)
                             {
-                                _logger?.Invoke($"[{node}][{share}] Sync cancelled");
+                                // Cancelled - no message needed
                             }
                             catch (Exception ex)
                             {
@@ -310,8 +307,6 @@ namespace UCXSyncTool.Services
 
                         taskInfo.SyncTask = syncTask;
                         _activeTasks[key] = taskInfo;
-
-                        _logger?.Invoke($"[{node}][{share}] Started sync task for project {project}");
                     }
                 }
 
@@ -340,8 +335,6 @@ namespace UCXSyncTool.Services
             taskInfo.TotalFiles = filesToSync.Count;
             taskInfo.TotalBytes = filesToSync.Sum(f => f.Length);
 
-            _logger?.Invoke($"[{taskInfo.Node}][{taskInfo.Share}] Found {taskInfo.TotalFiles} files ({FormatBytes(taskInfo.TotalBytes)})");
-
             // Process files in parallel
             var options = new ParallelOptions
             {
@@ -360,8 +353,6 @@ namespace UCXSyncTool.Services
             {
                 return;
             }
-
-            _logger?.Invoke($"[{taskInfo.Node}][{taskInfo.Share}] Sync completed: {taskInfo.CopiedFiles} copied, {taskInfo.SkippedFiles} skipped, {taskInfo.FailedFiles} failed");
         }
 
         private void ScanDirectory(string rootSource, string currentSource, string rootDest, List<FileInfo> files, CancellationToken token)

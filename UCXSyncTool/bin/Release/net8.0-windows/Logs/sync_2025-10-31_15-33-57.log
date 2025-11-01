@@ -1,0 +1,3116 @@
+=== UCX SyncTool Log Started: 2025-10-31 15:33:57 ===
+
+[15:34:02] Сеть: 192.168.200.249 - 1,0 Gbps
+[15:34:02] Диск назначения: E:
+[15:34:38] Диск назначения: G:
+[15:35:20] Найдено проектов: 1
+[15:35:29] Диск назначения: G:
+[15:35:29] [WU01][E$] Started sync task for project UCSync_Test1
+[15:35:29] [WU01][E$] Found 1 files (46,27 MB)
+[15:35:29] [WU02][E$] Started sync task for project UCSync_Test1
+[15:35:29] [WU03][E$] Started sync task for project UCSync_Test1
+[15:35:29] [WU02][E$] Found 1 files (46,27 MB)
+[15:35:29] [WU04][E$] Started sync task for project UCSync_Test1
+[15:35:29] [WU03][E$] Found 1 files (46,27 MB)
+[15:35:29] [WU05][E$] Started sync task for project UCSync_Test1
+[15:35:29] [WU04][E$] Found 1 files (46,27 MB)
+[15:35:29] [WU06][E$] Started sync task for project UCSync_Test1
+[15:35:29] [WU07][E$] Started sync task for project UCSync_Test1
+[15:35:29] [WU05][E$] Found 1 files (46,27 MB)
+[15:35:29] [WU08][E$] Started sync task for project UCSync_Test1
+[15:35:29] [WU06][E$] Found 1 files (46,27 MB)
+[15:35:29] [WU09][E$] Started sync task for project UCSync_Test1
+[15:35:29] [WU07][E$] Found 1 files (46,27 MB)
+[15:35:29] [WU10][E$] Started sync task for project UCSync_Test1
+[15:35:29] [WU11][E$] Started sync task for project UCSync_Test1
+[15:35:29] [WU12][E$] Started sync task for project UCSync_Test1
+[15:35:29] [WU13][E$] Started sync task for project UCSync_Test1
+[15:35:29] [CU][E$] Started sync task for project UCSync_Test1
+[15:35:29] [CU][E$] Found 2 files (211,63 KB)
+[15:35:29] [WU13][E$] Found 1 files (46,27 MB)
+[15:35:29] [WU12][E$] Found 1 files (46,27 MB)
+[15:35:29] [WU11][E$] Found 1 files (46,27 MB)
+[15:35:29] [WU10][E$] Found 1 files (46,27 MB)
+[15:35:29] [WU09][E$] Found 1 files (46,27 MB)
+[15:35:29] [WU08][E$] Found 1 files (46,27 MB)
+[15:35:31] [WU07][E$] Sync completed: 1 copied, 0 skipped, 0 failed
+[15:35:33] [CU][E$] Sync completed: 2 copied, 0 skipped, 0 failed
+[15:35:33] [WU02][E$] Sync completed: 1 copied, 0 skipped, 0 failed
+[15:35:33] [WU01][E$] Sync completed: 1 copied, 0 skipped, 0 failed
+[15:35:33] [WU03][E$] Sync completed: 1 copied, 0 skipped, 0 failed
+[15:35:33] [WU04][E$] Sync completed: 1 copied, 0 skipped, 0 failed
+[15:35:33] [WU05][E$] Sync completed: 1 copied, 0 skipped, 0 failed
+[15:35:33] [WU06][E$] Sync completed: 1 copied, 0 skipped, 0 failed
+[15:35:34] [WU10][E$] Sync completed: 1 copied, 0 skipped, 0 failed
+[15:35:34] [WU12][E$] Sync completed: 1 copied, 0 skipped, 0 failed
+[15:35:34] [WU13][E$] Sync completed: 1 copied, 0 skipped, 0 failed
+[15:35:34] [WU11][E$] Sync completed: 1 copied, 0 skipped, 0 failed
+[15:35:34] [WU08][E$] Sync completed: 1 copied, 0 skipped, 0 failed
+[15:35:34] ✓ ТЕСТ снимок #00001 проекта 'UCSync_Test1' скачан полностью (13/13 файлов) [Тестовых: 1]
+[15:35:34] [WU09][E$] Sync completed: 1 copied, 0 skipped, 0 failed
+[15:35:39] [WU01][E$] Started sync task for project UCSync_Test1
+[15:35:39] [WU02][E$] Started sync task for project UCSync_Test1
+[15:35:39] [WU03][E$] Started sync task for project UCSync_Test1
+[15:35:39] [WU04][E$] Started sync task for project UCSync_Test1
+[15:35:39] [WU01][E$] Found 1 files (46,27 MB)
+[15:35:39] [WU05][E$] Started sync task for project UCSync_Test1
+[15:35:39] [WU06][E$] Started sync task for project UCSync_Test1
+[15:35:39] [WU02][E$] Found 1 files (46,27 MB)
+[15:35:39] [WU07][E$] Started sync task for project UCSync_Test1
+[15:35:39] [WU03][E$] Found 1 files (46,27 MB)
+[15:35:39] [WU08][E$] Started sync task for project UCSync_Test1
+[15:35:39] [WU04][E$] Found 1 files (46,27 MB)
+[15:35:39] [WU09][E$] Started sync task for project UCSync_Test1
+[15:35:39] [WU05][E$] Found 1 files (46,27 MB)
+[15:35:39] [WU10][E$] Started sync task for project UCSync_Test1
+[15:35:39] [WU06][E$] Found 1 files (46,27 MB)
+[15:35:39] [WU11][E$] Started sync task for project UCSync_Test1
+[15:35:39] [WU07][E$] Found 1 files (46,27 MB)
+[15:35:39] [WU12][E$] Started sync task for project UCSync_Test1
+[15:35:39] [WU08][E$] Found 1 files (46,27 MB)
+[15:35:39] [WU13][E$] Started sync task for project UCSync_Test1
+[15:35:39] [WU09][E$] Found 1 files (46,27 MB)
+[15:35:39] [CU][E$] Started sync task for project UCSync_Test1
+[15:35:39] [WU10][E$] Found 1 files (46,27 MB)
+[15:35:39] [WU11][E$] Found 1 files (46,27 MB)
+[15:35:39] [WU12][E$] Found 1 files (46,27 MB)
+[15:35:39] [CU][E$] Found 2 files (211,63 KB)
+[15:35:39] [WU13][E$] Found 1 files (46,27 MB)
+[15:35:40] [CU][E$] Sync completed: 4 copied, 0 skipped, 0 failed
+[15:35:44] [WU01][E$] Sync completed: 2 copied, 0 skipped, 0 failed
+[15:35:44] [WU03][E$] Sync completed: 2 copied, 0 skipped, 0 failed
+[15:35:44] [WU02][E$] Sync completed: 2 copied, 0 skipped, 0 failed
+[15:35:44] [WU04][E$] Sync completed: 2 copied, 0 skipped, 0 failed
+[15:35:44] [WU05][E$] Sync completed: 2 copied, 0 skipped, 0 failed
+[15:35:44] [WU06][E$] Sync completed: 2 copied, 0 skipped, 0 failed
+[15:35:44] [WU07][E$] Sync completed: 2 copied, 0 skipped, 0 failed
+[15:35:44] [WU08][E$] Sync completed: 2 copied, 0 skipped, 0 failed
+[15:35:44] [WU10][E$] Sync completed: 2 copied, 0 skipped, 0 failed
+[15:35:44] [WU09][E$] Sync completed: 2 copied, 0 skipped, 0 failed
+[15:35:44] [WU11][E$] Sync completed: 2 copied, 0 skipped, 0 failed
+[15:35:44] [WU12][E$] Sync completed: 2 copied, 0 skipped, 0 failed
+[15:35:44] ✓ Снимок #00002 проекта 'UCSync_Test1' скачан полностью (13/13 файлов) [Всего: 1]
+[15:35:44] [WU13][E$] Sync completed: 2 copied, 0 skipped, 0 failed
+[15:35:49] [WU01][E$] Started sync task for project UCSync_Test1
+[15:35:49] [WU02][E$] Started sync task for project UCSync_Test1
+[15:35:49] [WU03][E$] Started sync task for project UCSync_Test1
+[15:35:49] [WU04][E$] Started sync task for project UCSync_Test1
+[15:35:49] [WU05][E$] Started sync task for project UCSync_Test1
+[15:35:49] [WU01][E$] Found 2 files (92,53 MB)
+[15:35:49] [WU02][E$] Found 2 files (92,53 MB)
+[15:35:49] [WU06][E$] Started sync task for project UCSync_Test1
+[15:35:49] [WU07][E$] Started sync task for project UCSync_Test1
+[15:35:49] [WU03][E$] Found 2 files (92,53 MB)
+[15:35:49] [WU08][E$] Started sync task for project UCSync_Test1
+[15:35:49] [WU09][E$] Started sync task for project UCSync_Test1
+[15:35:49] [WU10][E$] Started sync task for project UCSync_Test1
+[15:35:49] [WU04][E$] Found 2 files (92,53 MB)
+[15:35:49] [WU05][E$] Found 2 files (92,53 MB)
+[15:35:49] [WU06][E$] Found 2 files (92,53 MB)
+[15:35:49] [WU11][E$] Started sync task for project UCSync_Test1
+[15:35:49] [WU12][E$] Started sync task for project UCSync_Test1
+[15:35:49] [WU07][E$] Found 2 files (92,53 MB)
+[15:35:49] [WU13][E$] Started sync task for project UCSync_Test1
+[15:35:49] [WU08][E$] Found 2 files (92,53 MB)
+[15:35:49] [CU][E$] Started sync task for project UCSync_Test1
+[15:35:49] [WU09][E$] Found 2 files (92,53 MB)
+[15:35:49] [WU10][E$] Found 2 files (92,53 MB)
+[15:35:49] [CU][E$] Found 4 files (423,26 KB)
+[15:35:49] [WU13][E$] Found 2 files (92,53 MB)
+[15:35:49] [WU12][E$] Found 2 files (92,53 MB)
+[15:35:49] [WU11][E$] Found 2 files (92,53 MB)
+[15:35:56] [CU][E$] Sync completed: 8 copied, 0 skipped, 0 failed
+[15:35:58] [WU01][E$] Sync completed: 4 copied, 0 skipped, 0 failed
+[15:35:58] [WU02][E$] Sync completed: 4 copied, 0 skipped, 0 failed
+[15:35:58] [WU03][E$] Sync completed: 4 copied, 0 skipped, 0 failed
+[15:35:58] [WU04][E$] Sync completed: 4 copied, 0 skipped, 0 failed
+[15:35:58] [WU06][E$] Sync completed: 4 copied, 0 skipped, 0 failed
+[15:35:58] [WU07][E$] Sync completed: 4 copied, 0 skipped, 0 failed
+[15:35:58] [WU08][E$] Sync completed: 4 copied, 0 skipped, 0 failed
+[15:35:58] [WU05][E$] Sync completed: 4 copied, 0 skipped, 0 failed
+[15:35:59] [WU09][E$] Sync completed: 4 copied, 0 skipped, 0 failed
+[15:35:59] ✓ Снимок #00003 проекта 'UCSync_Test1' скачан полностью (13/13 файлов) [Всего: 2]
+[15:35:59] [WU01][E$] Started sync task for project UCSync_Test1
+[15:35:59] [WU02][E$] Started sync task for project UCSync_Test1
+[15:35:59] [WU03][E$] Started sync task for project UCSync_Test1
+[15:35:59] [WU04][E$] Started sync task for project UCSync_Test1
+[15:35:59] [WU05][E$] Started sync task for project UCSync_Test1
+[15:35:59] [WU06][E$] Started sync task for project UCSync_Test1
+[15:35:59] [WU07][E$] Started sync task for project UCSync_Test1
+[15:35:59] [WU01][E$] Found 2 files (92,53 MB)
+[15:35:59] [WU08][E$] Started sync task for project UCSync_Test1
+[15:35:59] [WU09][E$] Started sync task for project UCSync_Test1
+[15:35:59] [WU02][E$] Found 2 files (92,53 MB)
+[15:35:59] [WU03][E$] Found 2 files (92,53 MB)
+[15:35:59] [WU04][E$] Found 2 files (92,53 MB)
+[15:35:59] [WU05][E$] Found 2 files (92,53 MB)
+[15:35:59] [WU06][E$] Found 2 files (92,53 MB)
+[15:35:59] [WU07][E$] Found 2 files (92,53 MB)
+[15:35:59] [WU08][E$] Found 2 files (92,53 MB)
+[15:35:59] [WU09][E$] Found 2 files (92,53 MB)
+[15:35:59] [WU10][E$] Sync completed: 4 copied, 0 skipped, 0 failed
+[15:35:59] [CU][E$] Started sync task for project UCSync_Test1
+[15:35:59] [CU][E$] Found 4 files (423,26 KB)
+[15:36:00] [CU][E$] Sync completed: 12 copied, 0 skipped, 0 failed
+[15:36:00] [WU13][E$] Sync completed: 4 copied, 0 skipped, 0 failed
+[15:36:01] [WU12][E$] Sync completed: 4 copied, 0 skipped, 0 failed
+[15:36:02] ✓ Снимок #00004 проекта 'UCSync_Test1' скачан полностью (13/13 файлов) [Всего: 3]
+[15:36:02] [WU11][E$] Sync completed: 4 copied, 0 skipped, 0 failed
+[15:36:06] [WU06][E$] Sync completed: 6 copied, 0 skipped, 0 failed
+[15:36:07] [WU03][E$] Sync completed: 6 copied, 0 skipped, 0 failed
+[15:36:07] [WU09][E$] Sync completed: 6 copied, 0 skipped, 0 failed
+[15:36:07] [WU02][E$] Sync completed: 6 copied, 0 skipped, 0 failed
+[15:36:08] [WU01][E$] Sync completed: 6 copied, 0 skipped, 0 failed
+[15:36:08] [WU05][E$] Sync completed: 6 copied, 0 skipped, 0 failed
+[15:36:08] [WU07][E$] Sync completed: 6 copied, 0 skipped, 0 failed
+[15:36:08] [WU04][E$] Sync completed: 6 copied, 0 skipped, 0 failed
+[15:36:08] [WU08][E$] Sync completed: 6 copied, 0 skipped, 0 failed
+[15:36:09] [WU01][E$] Started sync task for project UCSync_Test1
+[15:36:09] [WU02][E$] Started sync task for project UCSync_Test1
+[15:36:09] [WU03][E$] Started sync task for project UCSync_Test1
+[15:36:09] [WU04][E$] Started sync task for project UCSync_Test1
+[15:36:09] [WU05][E$] Started sync task for project UCSync_Test1
+[15:36:09] [WU06][E$] Started sync task for project UCSync_Test1
+[15:36:09] [WU07][E$] Started sync task for project UCSync_Test1
+[15:36:09] [WU08][E$] Started sync task for project UCSync_Test1
+[15:36:09] [WU01][E$] Found 2 files (92,53 MB)
+[15:36:09] [WU09][E$] Started sync task for project UCSync_Test1
+[15:36:09] [WU10][E$] Started sync task for project UCSync_Test1
+[15:36:09] [WU02][E$] Found 2 files (92,53 MB)
+[15:36:09] [WU11][E$] Started sync task for project UCSync_Test1
+[15:36:09] [WU03][E$] Found 2 files (92,53 MB)
+[15:36:09] [WU12][E$] Started sync task for project UCSync_Test1
+[15:36:09] [WU04][E$] Found 2 files (92,53 MB)
+[15:36:09] [WU13][E$] Started sync task for project UCSync_Test1
+[15:36:09] [WU05][E$] Found 2 files (92,53 MB)
+[15:36:09] [CU][E$] Started sync task for project UCSync_Test1
+[15:36:09] [WU06][E$] Found 2 files (92,53 MB)
+[15:36:09] [WU07][E$] Found 2 files (92,53 MB)
+[15:36:09] [WU08][E$] Found 2 files (92,53 MB)
+[15:36:09] [WU09][E$] Found 2 files (92,53 MB)
+[15:36:09] [WU10][E$] Found 4 files (185,06 MB)
+[15:36:09] [WU11][E$] Found 4 files (185,06 MB)
+[15:36:10] [WU12][E$] Found 4 files (185,06 MB)
+[15:36:10] [WU13][E$] Found 4 files (185,06 MB)
+[15:36:10] [CU][E$] Found 4 files (423,26 KB)
+[15:36:16] [CU][E$] Sync completed: 16 copied, 0 skipped, 0 failed
+[15:36:20] [WU01][E$] Sync completed: 8 copied, 0 skipped, 0 failed
+[15:36:20] [WU02][E$] Sync completed: 8 copied, 0 skipped, 0 failed
+[15:36:20] [WU03][E$] Sync completed: 8 copied, 0 skipped, 0 failed
+[15:36:20] [WU04][E$] Sync completed: 8 copied, 0 skipped, 0 failed
+[15:36:20] [WU05][E$] Sync completed: 8 copied, 0 skipped, 0 failed
+[15:36:20] [WU06][E$] Sync completed: 8 copied, 0 skipped, 0 failed
+[15:36:20] [WU07][E$] Sync completed: 8 copied, 0 skipped, 0 failed
+[15:36:20] [WU08][E$] Sync completed: 8 copied, 0 skipped, 0 failed
+[15:36:20] [WU09][E$] Sync completed: 8 copied, 0 skipped, 0 failed
+[15:36:20] [CU][E$] Started sync task for project UCSync_Test1
+[15:36:20] [CU][E$] Found 4 files (423,26 KB)
+[15:36:20] [CU][E$] Sync completed: 20 copied, 0 skipped, 0 failed
+[15:36:22] ✓ Снимок #00005 проекта 'UCSync_Test1' скачан полностью (13/13 файлов) [Всего: 4]
+[15:36:23] ✓ Снимок #00006 проекта 'UCSync_Test1' скачан полностью (13/13 файлов) [Всего: 5]
+[15:36:23] [WU10][E$] Sync completed: 8 copied, 0 skipped, 0 failed
+[15:36:23] [WU11][E$] Sync completed: 8 copied, 0 skipped, 0 failed
+[15:36:23] [WU12][E$] Sync completed: 8 copied, 0 skipped, 0 failed
+[15:36:23] ✓ Снимок #00007 проекта 'UCSync_Test1' скачан полностью (13/13 файлов) [Всего: 6]
+[15:36:23] ✓ Снимок #00008 проекта 'UCSync_Test1' скачан полностью (13/13 файлов) [Всего: 7]
+[15:36:23] [WU13][E$] Sync completed: 8 copied, 0 skipped, 0 failed
+[15:36:30] [WU01][E$] Started sync task for project UCSync_Test1
+[15:36:30] [WU02][E$] Started sync task for project UCSync_Test1
+[15:36:30] [WU03][E$] Started sync task for project UCSync_Test1
+[15:36:30] [WU04][E$] Started sync task for project UCSync_Test1
+[15:36:30] [WU05][E$] Started sync task for project UCSync_Test1
+[15:36:30] [WU06][E$] Started sync task for project UCSync_Test1
+[15:36:30] [WU07][E$] Started sync task for project UCSync_Test1
+[15:36:30] [WU08][E$] Started sync task for project UCSync_Test1
+[15:36:30] [WU09][E$] Started sync task for project UCSync_Test1
+[15:36:30] [WU10][E$] Started sync task for project UCSync_Test1
+[15:36:30] [WU01][E$] Found 4 files (185,06 MB)
+[15:36:30] [WU11][E$] Started sync task for project UCSync_Test1
+[15:36:30] [WU02][E$] Found 4 files (185,06 MB)
+[15:36:30] [WU12][E$] Started sync task for project UCSync_Test1
+[15:36:30] [WU03][E$] Found 4 files (185,06 MB)
+[15:36:30] [WU13][E$] Started sync task for project UCSync_Test1
+[15:36:30] [WU04][E$] Found 4 files (185,06 MB)
+[15:36:30] [CU][E$] Started sync task for project UCSync_Test1
+[15:36:30] [WU06][E$] Found 4 files (185,06 MB)
+[15:36:30] [WU05][E$] Found 4 files (185,06 MB)
+[15:36:30] [WU07][E$] Found 4 files (185,06 MB)
+[15:36:30] [WU08][E$] Found 4 files (185,06 MB)
+[15:36:30] [WU09][E$] Found 4 files (185,06 MB)
+[15:36:30] [WU11][E$] Found 4 files (185,06 MB)
+[15:36:30] [WU10][E$] Found 4 files (185,06 MB)
+[15:36:30] [WU12][E$] Found 4 files (185,06 MB)
+[15:36:30] [WU13][E$] Found 4 files (185,06 MB)
+[15:36:30] [CU][E$] Found 4 files (423,27 KB)
+[15:36:40] [CU][E$] Sync completed: 24 copied, 0 skipped, 0 failed
+[15:36:42] [CU][E$] Started sync task for project UCSync_Test1
+[15:36:42] [CU][E$] Found 4 files (423,27 KB)
+[15:36:43] [CU][E$] Sync completed: 28 copied, 0 skipped, 0 failed
+[15:36:51] [WU03][E$] Sync completed: 12 copied, 0 skipped, 0 failed
+[15:36:51] [WU06][E$] Sync completed: 12 copied, 0 skipped, 0 failed
+[15:36:51] [WU01][E$] Sync completed: 12 copied, 0 skipped, 0 failed
+[15:36:51] [WU02][E$] Sync completed: 12 copied, 0 skipped, 0 failed
+[15:36:51] [WU09][E$] Sync completed: 12 copied, 0 skipped, 0 failed
+[15:36:52] [WU07][E$] Sync completed: 12 copied, 0 skipped, 0 failed
+[15:36:52] ✓ Снимок #00009 проекта 'UCSync_Test1' скачан полностью (13/13 файлов) [Всего: 8]
+[15:36:52] [WU04][E$] Sync completed: 12 copied, 0 skipped, 0 failed
+[15:36:52] ✓ Снимок #00010 проекта 'UCSync_Test1' скачан полностью (13/13 файлов) [Всего: 9]
+[15:36:52] [WU05][E$] Sync completed: 12 copied, 0 skipped, 0 failed
+[15:36:52] [WU08][E$] Sync completed: 12 copied, 0 skipped, 0 failed
+[15:36:52] [WU11][E$] Sync completed: 12 copied, 0 skipped, 0 failed
+[15:36:52] [WU01][E$] Started sync task for project UCSync_Test1
+[15:36:52] [WU02][E$] Started sync task for project UCSync_Test1
+[15:36:52] [WU03][E$] Started sync task for project UCSync_Test1
+[15:36:52] [WU04][E$] Started sync task for project UCSync_Test1
+[15:36:52] [WU12][E$] Sync completed: 12 copied, 0 skipped, 0 failed
+[15:36:52] [WU10][E$] Sync completed: 12 copied, 0 skipped, 0 failed
+[15:36:52] [WU05][E$] Started sync task for project UCSync_Test1
+[15:36:52] [WU06][E$] Started sync task for project UCSync_Test1
+[15:36:52] [WU07][E$] Started sync task for project UCSync_Test1
+[15:36:52] [WU08][E$] Started sync task for project UCSync_Test1
+[15:36:52] [WU09][E$] Started sync task for project UCSync_Test1
+[15:36:52] [WU10][E$] Started sync task for project UCSync_Test1
+[15:36:52] [WU11][E$] Started sync task for project UCSync_Test1
+[15:36:52] [WU12][E$] Started sync task for project UCSync_Test1
+[15:36:52] [WU01][E$] Found 4 files (185,06 MB)
+[15:36:52] [WU02][E$] Found 4 files (185,06 MB)
+[15:36:52] [CU][E$] Started sync task for project UCSync_Test1
+[15:36:52] [WU03][E$] Found 4 files (185,06 MB)
+[15:36:52] [WU04][E$] Found 4 files (185,06 MB)
+[15:36:52] [WU05][E$] Found 4 files (185,06 MB)
+[15:36:52] [WU06][E$] Found 4 files (185,06 MB)
+[15:36:52] [WU07][E$] Found 4 files (185,06 MB)
+[15:36:52] [WU08][E$] Found 4 files (185,06 MB)
+[15:36:52] [WU09][E$] Found 4 files (185,06 MB)
+[15:36:52] [WU10][E$] Found 4 files (185,06 MB)
+[15:36:52] [WU11][E$] Found 4 files (185,06 MB)
+[15:36:52] [WU12][E$] Found 4 files (185,06 MB)
+[15:36:52] [CU][E$] Found 4 files (423,27 KB)
+[15:36:52] ✓ Снимок #00011 проекта 'UCSync_Test1' скачан полностью (13/13 файлов) [Всего: 10]
+[15:36:53] [CU][E$] Sync completed: 32 copied, 0 skipped, 0 failed
+[15:36:54] ✓ Снимок #00012 проекта 'UCSync_Test1' скачан полностью (13/13 файлов) [Всего: 11]
+[15:36:54] [WU13][E$] Sync completed: 12 copied, 0 skipped, 0 failed
+[15:37:03] [WU13][E$] Started sync task for project UCSync_Test1
+[15:37:03] [CU][E$] Started sync task for project UCSync_Test1
+[15:37:03] [WU13][E$] Found 7 files (323,86 MB)
+[15:37:03] [CU][E$] Found 4 files (423,27 KB)
+[15:37:05] [CU][E$] Sync completed: 36 copied, 0 skipped, 0 failed
+[15:37:12] [WU07][E$] Sync completed: 16 copied, 0 skipped, 0 failed
+[15:37:12] [WU04][E$] Sync completed: 16 copied, 0 skipped, 0 failed
+[15:37:12] [WU03][E$] Sync completed: 16 copied, 0 skipped, 0 failed
+[15:37:13] [WU03][E$] Started sync task for project UCSync_Test1
+[15:37:13] [WU04][E$] Started sync task for project UCSync_Test1
+[15:37:13] [WU05][E$] Sync completed: 16 copied, 0 skipped, 0 failed
+[15:37:13] [WU07][E$] Started sync task for project UCSync_Test1
+[15:37:13] [WU06][E$] Sync completed: 16 copied, 0 skipped, 0 failed
+[15:37:13] [WU03][E$] Found 5 files (231,33 MB)
+[15:37:13] [WU04][E$] Found 5 files (231,33 MB)
+[15:37:13] [WU10][E$] Sync completed: 16 copied, 0 skipped, 0 failed
+[15:37:13] [WU07][E$] Found 5 files (231,33 MB)
+[15:37:13] [WU09][E$] Sync completed: 16 copied, 0 skipped, 0 failed
+[15:37:13] [WU11][E$] Sync completed: 16 copied, 0 skipped, 0 failed
+[15:37:13] [WU12][E$] Sync completed: 16 copied, 0 skipped, 0 failed
+[15:37:13] [WU02][E$] Sync completed: 16 copied, 0 skipped, 0 failed
+[15:37:13] [WU01][E$] Sync completed: 16 copied, 0 skipped, 0 failed
+[15:37:13] [CU][E$] Started sync task for project UCSync_Test1
+[15:37:13] [WU08][E$] Sync completed: 16 copied, 0 skipped, 0 failed
+[15:37:14] [CU][E$] Found 6 files (634,9 KB)
+[15:37:14] [CU][E$] Sync completed: 42 copied, 0 skipped, 0 failed
+[15:37:18] ✓ Снимок #00013 проекта 'UCSync_Test1' скачан полностью (13/13 файлов) [Всего: 12]
+[15:37:20] ✓ Снимок #00014 проекта 'UCSync_Test1' скачан полностью (13/13 файлов) [Всего: 13]
+[15:37:21] ✓ Снимок #00015 проекта 'UCSync_Test1' скачан полностью (13/13 файлов) [Всего: 14]
+[15:37:21] ✓ Снимок #00016 проекта 'UCSync_Test1' скачан полностью (13/13 файлов) [Всего: 15]
+[15:37:21] [WU03][E$] Sync completed: 21 copied, 0 skipped, 0 failed
+[15:37:21] [WU04][E$] Sync completed: 21 copied, 0 skipped, 0 failed
+[15:37:21] [WU07][E$] Sync completed: 21 copied, 0 skipped, 0 failed
+[15:37:21] [WU13][E$] Sync completed: 19 copied, 0 skipped, 0 failed
+[15:37:23] [WU01][E$] Started sync task for project UCSync_Test1
+[15:37:23] [WU02][E$] Started sync task for project UCSync_Test1
+[15:37:23] [WU03][E$] Started sync task for project UCSync_Test1
+[15:37:23] [WU04][E$] Started sync task for project UCSync_Test1
+[15:37:23] [WU05][E$] Started sync task for project UCSync_Test1
+[15:37:23] [WU06][E$] Started sync task for project UCSync_Test1
+[15:37:23] [WU07][E$] Started sync task for project UCSync_Test1
+[15:37:23] [WU08][E$] Started sync task for project UCSync_Test1
+[15:37:23] [WU09][E$] Started sync task for project UCSync_Test1
+[15:37:23] [WU10][E$] Started sync task for project UCSync_Test1
+[15:37:23] [WU11][E$] Started sync task for project UCSync_Test1
+[15:37:23] [WU12][E$] Started sync task for project UCSync_Test1
+[15:37:23] [WU13][E$] Started sync task for project UCSync_Test1
+[15:37:23] [CU][E$] Started sync task for project UCSync_Test1
+[15:37:23] [WU02][E$] Found 7 files (323,86 MB)
+[15:37:23] [WU04][E$] Found 2 files (92,53 MB)
+[15:37:23] [WU05][E$] Found 7 files (323,86 MB)
+[15:37:23] [WU07][E$] Found 2 files (92,53 MB)
+[15:37:23] [WU08][E$] Found 7 files (323,86 MB)
+[15:37:23] [WU09][E$] Found 7 files (323,86 MB)
+[15:37:23] [WU10][E$] Found 7 files (323,86 MB)
+[15:37:23] [WU11][E$] Found 7 files (323,86 MB)
+[15:37:23] [WU03][E$] Found 2 files (92,53 MB)
+[15:37:23] [WU12][E$] Found 7 files (323,86 MB)
+[15:37:23] [WU01][E$] Found 7 files (323,86 MB)
+[15:37:23] [WU06][E$] Found 7 files (323,86 MB)
+[15:37:24] [WU13][E$] Found 4 files (185,06 MB)
+[15:37:24] [CU][E$] Found 3 files (422,56 KB)
+[15:37:27] [CU][E$] Sync completed: 45 copied, 0 skipped, 0 failed
+[15:37:34] [WU04][E$] Sync completed: 23 copied, 0 skipped, 0 failed
+[15:37:34] [WU07][E$] Sync completed: 23 copied, 0 skipped, 0 failed
+[15:37:34] [WU07][E$] Started sync task for project UCSync_Test1
+[15:37:34] [WU03][E$] Sync completed: 23 copied, 0 skipped, 0 failed
+[15:37:34] [WU07][E$] Found 2 files (92,53 MB)
+[15:37:34] [CU][E$] Started sync task for project UCSync_Test1
+[15:37:35] [CU][E$] Found 5 files (423,97 KB)
+[15:37:35] [CU][E$] Sync completed: 50 copied, 0 skipped, 0 failed
+[15:37:44] [WU07][E$] Sync completed: 25 copied, 0 skipped, 0 failed
+[15:37:44] [WU03][E$] Started sync task for project UCSync_Test1
+[15:37:44] [WU04][E$] Started sync task for project UCSync_Test1
+[15:37:45] [WU07][E$] Started sync task for project UCSync_Test1
+[15:37:45] [WU03][E$] Found 4 files (185,06 MB)
+[15:37:45] [WU04][E$] Found 4 files (185,06 MB)
+[15:37:45] [WU07][E$] Found 2 files (92,53 MB)
+[15:37:45] [WU13][E$] Sync completed: 23 copied, 0 skipped, 0 failed
+[15:37:45] [WU13][E$] Started sync task for project UCSync_Test1
+[15:37:45] [CU][E$] Started sync task for project UCSync_Test1
+[15:37:45] [WU13][E$] Found 4 files (185,06 MB)
+[15:37:45] [CU][E$] Found 4 files (423,27 KB)
+[15:37:47] [CU][E$] Sync completed: 54 copied, 0 skipped, 0 failed
+[15:37:48] Stopping all synchronization tasks...
+[15:37:53] All synchronization tasks stopped
+[15:37:53] Synchronization cancelled
+[15:37:56] Диск назначения: G:
+[15:37:57] [WU01][E$] Started sync task for project UCSync_Test1
+[15:37:57] [WU02][E$] Started sync task for project UCSync_Test1
+[15:37:57] [WU03][E$] Started sync task for project UCSync_Test1
+[15:37:57] [WU04][E$] Started sync task for project UCSync_Test1
+[15:37:58] [WU05][E$] Started sync task for project UCSync_Test1
+[15:37:58] [WU06][E$] Started sync task for project UCSync_Test1
+[15:37:58] [WU07][E$] Started sync task for project UCSync_Test1
+[15:37:58] [WU08][E$] Started sync task for project UCSync_Test1
+[15:37:58] [WU09][E$] Started sync task for project UCSync_Test1
+[15:37:58] [WU10][E$] Started sync task for project UCSync_Test1
+[15:37:58] [WU05][E$] Found 6 files (277,59 MB)
+[15:37:58] [WU09][E$] Found 6 files (277,59 MB)
+[15:37:58] [WU06][E$] Found 6 files (277,59 MB)
+[15:37:58] [WU07][E$] Found 2 files (92,53 MB)
+[15:37:58] [WU08][E$] Found 6 files (277,59 MB)
+[15:37:58] [WU11][E$] Started sync task for project UCSync_Test1
+[15:37:58] [WU12][E$] Started sync task for project UCSync_Test1
+[15:37:58] ✓ Снимок #00019 проекта 'UCSync_Test1' скачан полностью (13/13 файлов) [Всего: 16]
+[15:37:58] ✓ Снимок #00017 проекта 'UCSync_Test1' скачан полностью (13/13 файлов) [Всего: 17]
+[15:37:58] ✓ Снимок #00018 проекта 'UCSync_Test1' скачан полностью (13/13 файлов) [Всего: 18]
+[15:37:58] ✓ Снимок #00020 проекта 'UCSync_Test1' скачан полностью (13/13 файлов) [Всего: 19]
+[15:37:58] ✓ Снимок #00021 проекта 'UCSync_Test1' скачан полностью (13/13 файлов) [Всего: 20]
+[15:37:58] [WU02][E$] Found 6 files (277,59 MB)
+[15:37:58] [WU13][E$] Started sync task for project UCSync_Test1
+[15:37:58] [WU12][E$] Found 7 files (323,86 MB)
+[15:37:58] [WU11][E$] Found 7 files (323,86 MB)
+[15:37:58] [CU][E$] Started sync task for project UCSync_Test1
+[15:37:59] [WU10][E$] Found 7 files (323,86 MB)
+[15:37:59] ✓ Снимок #00022 проекта 'UCSync_Test1' скачан полностью (13/13 файлов) [Всего: 21]
+[15:37:59] ✓ Снимок #00023 проекта 'UCSync_Test1' скачан полностью (13/13 файлов) [Всего: 22]
+[15:37:59] [WU01][E$] Found 6 files (277,59 MB)
+[15:37:59] [CU][E$] Found 5 files (634,19 KB)
+[15:37:59] [CU][E$] Sync completed: 5 copied, 0 skipped, 0 failed
+[15:38:06] [WU03][E$] Found 7 files (323,86 MB)
+[15:38:06] [WU13][E$] Found 3 files (138,8 MB)
+[15:38:06] ✓ Снимок #00024 проекта 'UCSync_Test1' скачан полностью (13/13 файлов) [Всего: 23]
+[15:38:06] [WU04][E$] Found 7 files (323,86 MB)
+[15:38:08] [WU07][E$] Sync completed: 2 copied, 0 skipped, 0 failed
+[15:38:09] [WU07][E$] Started sync task for project UCSync_Test1
+[15:38:09] [WU07][E$] Found 3 files (138,8 MB)
+[15:38:10] ✓ Снимок #00025 проекта 'UCSync_Test1' скачан полностью (13/13 файлов) [Всего: 24]
+[15:38:10] [CU][E$] Started sync task for project UCSync_Test1
+[15:38:11] [CU][E$] Found 5 files (423,97 KB)
+[15:38:11] [CU][E$] Sync completed: 10 copied, 0 skipped, 0 failed
+[15:38:15] ✓ Снимок #00026 проекта 'UCSync_Test1' скачан полностью (13/13 файлов) [Всего: 25]
+[15:38:20] ✓ Снимок #00027 проекта 'UCSync_Test1' скачан полностью (13/13 файлов) [Всего: 26]
+[15:38:21] [CU][E$] Started sync task for project UCSync_Test1
+[15:38:22] [CU][E$] Found 4 files (423,27 KB)
+[15:38:22] [CU][E$] Sync completed: 14 copied, 0 skipped, 0 failed
+[15:38:22] [WU13][E$] Sync completed: 3 copied, 0 skipped, 0 failed
+[15:38:25] [WU07][E$] Sync completed: 5 copied, 0 skipped, 0 failed
+[15:38:28] [WU05][E$] Sync completed: 6 copied, 0 skipped, 0 failed
+[15:38:29] [WU08][E$] Sync completed: 6 copied, 0 skipped, 0 failed
+[15:38:29] [WU06][E$] Sync completed: 6 copied, 0 skipped, 0 failed
+[15:38:29] [WU02][E$] Sync completed: 6 copied, 0 skipped, 0 failed
+[15:38:29] [WU09][E$] Sync completed: 6 copied, 0 skipped, 0 failed
+[15:38:29] [WU01][E$] Sync completed: 6 copied, 0 skipped, 0 failed
+[15:38:30] ✓ Снимок #00028 проекта 'UCSync_Test1' скачан полностью (13/13 файлов) [Всего: 27]
+[15:38:31] [WU01][E$] Started sync task for project UCSync_Test1
+[15:38:31] [WU02][E$] Started sync task for project UCSync_Test1
+[15:38:31] [WU05][E$] Started sync task for project UCSync_Test1
+[15:38:31] [WU06][E$] Started sync task for project UCSync_Test1
+[15:38:31] [WU07][E$] Started sync task for project UCSync_Test1
+[15:38:31] [WU08][E$] Started sync task for project UCSync_Test1
+[15:38:31] [WU09][E$] Started sync task for project UCSync_Test1
+[15:38:31] [WU12][E$] Sync completed: 7 copied, 0 skipped, 0 failed
+[15:38:31] [WU13][E$] Started sync task for project UCSync_Test1
+[15:38:31] [WU11][E$] Sync completed: 7 copied, 0 skipped, 0 failed
+[15:38:31] [CU][E$] Started sync task for project UCSync_Test1
+[15:38:31] [WU02][E$] Found 7 files (323,86 MB)
+[15:38:31] [WU10][E$] Sync completed: 7 copied, 0 skipped, 0 failed
+[15:38:31] [WU01][E$] Found 7 files (323,86 MB)
+[15:38:31] [WU05][E$] Found 7 files (323,86 MB)
+[15:38:31] [WU06][E$] Found 7 files (323,86 MB)
+[15:38:31] [WU07][E$] Found 4 files (185,06 MB)
+[15:38:31] [WU09][E$] Found 7 files (323,86 MB)
+[15:38:31] [WU08][E$] Found 7 files (323,86 MB)
+[15:38:31] [WU13][E$] Found 6 files (277,59 MB)
+[15:38:32] [CU][E$] Found 4 files (423,27 KB)
+[15:38:32] [CU][E$] Sync completed: 18 copied, 0 skipped, 0 failed
+[15:38:32] ✓ Снимок #00029 проекта 'UCSync_Test1' скачан полностью (13/13 файлов) [Всего: 28]
+[15:38:36] [WU03][E$] Sync completed: 7 copied, 0 skipped, 0 failed
+[15:38:36] ✓ Снимок #00030 проекта 'UCSync_Test1' скачан полностью (13/13 файлов) [Всего: 29]
+[15:38:36] [WU04][E$] Sync completed: 7 copied, 0 skipped, 0 failed
+[15:38:41] [WU03][E$] Started sync task for project UCSync_Test1
+[15:38:41] [WU04][E$] Started sync task for project UCSync_Test1
+[15:38:42] [WU10][E$] Started sync task for project UCSync_Test1
+[15:38:42] [WU11][E$] Started sync task for project UCSync_Test1
+[15:38:42] [WU12][E$] Started sync task for project UCSync_Test1
+[15:38:42] [CU][E$] Started sync task for project UCSync_Test1
+[15:38:42] [WU03][E$] Found 8 files (370,13 MB)
+[15:38:42] [WU04][E$] Found 8 files (370,13 MB)
+[15:38:42] [WU11][E$] Found 8 files (370,13 MB)
+[15:38:42] [WU10][E$] Found 8 files (370,13 MB)
+[15:38:42] [WU12][E$] Found 8 files (370,13 MB)
+[15:38:42] [CU][E$] Found 4 files (423,27 KB)
+[15:38:42] [CU][E$] Sync completed: 22 copied, 0 skipped, 0 failed
+[15:38:48] ✓ Снимок #00031 проекта 'UCSync_Test1' скачан полностью (13/13 файлов) [Всего: 30]
+[15:38:49] [WU07][E$] Sync completed: 9 copied, 0 skipped, 0 failed
+[15:38:52] [WU07][E$] Started sync task for project UCSync_Test1
+[15:38:53] ✓ Снимок #00032 проекта 'UCSync_Test1' скачан полностью (13/13 файлов) [Всего: 31]
+[15:38:53] [WU07][E$] Found 4 files (185,06 MB)
+[15:38:53] [CU][E$] Started sync task for project UCSync_Test1
+[15:38:54] [CU][E$] Found 4 files (423,27 KB)
+[15:38:54] [CU][E$] Sync completed: 26 copied, 0 skipped, 0 failed
+[15:38:57] [WU13][E$] Sync completed: 9 copied, 0 skipped, 0 failed
+[15:38:58] ✓ Снимок #00033 проекта 'UCSync_Test1' скачан полностью (13/13 файлов) [Всего: 32]
+[15:39:02] [WU01][E$] Sync completed: 13 copied, 0 skipped, 0 failed
+[15:39:02] [WU06][E$] Sync completed: 13 copied, 0 skipped, 0 failed
+[15:39:02] [WU09][E$] Sync completed: 13 copied, 0 skipped, 0 failed
+[15:39:03] ✓ Снимок #00034 проекта 'UCSync_Test1' скачан полностью (13/13 файлов) [Всего: 33]
+[15:39:03] [WU01][E$] Started sync task for project UCSync_Test1
+[15:39:03] [WU02][E$] Sync completed: 13 copied, 0 skipped, 0 failed
+[15:39:03] [WU06][E$] Started sync task for project UCSync_Test1
+[15:39:03] [WU09][E$] Started sync task for project UCSync_Test1
+[15:39:03] [WU01][E$] Found 6 files (277,59 MB)
+[15:39:03] [WU05][E$] Sync completed: 13 copied, 0 skipped, 0 failed
+[15:39:03] [WU08][E$] Sync completed: 13 copied, 0 skipped, 0 failed
+[15:39:03] [WU13][E$] Started sync task for project UCSync_Test1
+[15:39:03] [CU][E$] Started sync task for project UCSync_Test1
+[15:39:04] [WU06][E$] Found 6 files (277,59 MB)
+[15:39:04] [WU09][E$] Found 6 files (277,59 MB)
+[15:39:04] [WU13][E$] Found 6 files (277,59 MB)
+[15:39:04] [CU][E$] Found 4 files (423,27 KB)
+[15:39:04] [CU][E$] Sync completed: 30 copied, 0 skipped, 0 failed
+[15:39:07] ✓ Снимок #00035 проекта 'UCSync_Test1' скачан полностью (13/13 файлов) [Всего: 34]
+[15:39:11] [WU07][E$] Sync completed: 13 copied, 0 skipped, 0 failed
+[15:39:11] ✓ Снимок #00036 проекта 'UCSync_Test1' скачан полностью (13/13 файлов) [Всего: 35]
+[15:39:14] [WU02][E$] Started sync task for project UCSync_Test1
+[15:39:14] [WU05][E$] Started sync task for project UCSync_Test1
+[15:39:14] [WU07][E$] Started sync task for project UCSync_Test1
+[15:39:14] [WU08][E$] Started sync task for project UCSync_Test1
+[15:39:14] [CU][E$] Started sync task for project UCSync_Test1
+[15:39:14] [WU02][E$] Found 6 files (277,59 MB)
+[15:39:15] [CU][E$] Found 0 files (0 B)
+[15:39:15] [WU08][E$] Found 6 files (277,59 MB)
+[15:39:16] [WU07][E$] Found 2 files (92,53 MB)
+[15:39:16] [WU05][E$] Found 6 files (277,59 MB)
+[15:39:16] [CU][E$] Sync completed: 30 copied, 0 skipped, 0 failed
+[15:39:18] [WU04][E$] Sync completed: 15 copied, 0 skipped, 0 failed
+[15:39:19] [WU11][E$] Sync completed: 15 copied, 0 skipped, 0 failed
+[15:39:19] [WU12][E$] Sync completed: 15 copied, 0 skipped, 0 failed
+[15:39:19] [WU10][E$] Sync completed: 15 copied, 0 skipped, 0 failed
+[15:39:19] [WU03][E$] Sync completed: 15 copied, 0 skipped, 0 failed
+[15:39:22] ✓ Снимок #00037 проекта 'UCSync_Test1' скачан полностью (13/13 файлов) [Всего: 36]
+[15:39:24] [WU03][E$] Started sync task for project UCSync_Test1
+[15:39:24] [WU04][E$] Started sync task for project UCSync_Test1
+[15:39:25] [WU10][E$] Started sync task for project UCSync_Test1
+[15:39:25] [WU11][E$] Started sync task for project UCSync_Test1
+[15:39:25] [WU07][E$] Sync completed: 15 copied, 0 skipped, 0 failed
+[15:39:25] [WU12][E$] Started sync task for project UCSync_Test1
+[15:39:25] [CU][E$] Started sync task for project UCSync_Test1
+[15:39:25] [WU03][E$] Found 4 files (185,06 MB)
+[15:39:25] [WU04][E$] Found 4 files (185,06 MB)
+[15:39:25] [WU11][E$] Found 4 files (185,06 MB)
+[15:39:25] [WU10][E$] Found 4 files (185,06 MB)
+[15:39:25] ✓ Снимок #00038 проекта 'UCSync_Test1' скачан полностью (13/13 файлов) [Всего: 37]
+[15:39:25] [WU06][E$] Sync completed: 19 copied, 0 skipped, 0 failed
+[15:39:26] [CU][E$] Found 0 files (0 B)
+[15:39:26] [CU][E$] Sync completed: 30 copied, 0 skipped, 0 failed
+[15:39:26] [WU12][E$] Found 4 files (185,06 MB)
+[15:39:27] [WU01][E$] Sync completed: 19 copied, 0 skipped, 0 failed
+[15:39:28] [WU09][E$] Sync completed: 19 copied, 0 skipped, 0 failed
+[15:39:28] [WU13][E$] Sync completed: 15 copied, 0 skipped, 0 failed
+[15:39:29] ✓ Снимок #00039 проекта 'UCSync_Test1' скачан полностью (13/13 файлов) [Всего: 38]
+[15:39:33] ✓ Снимок #00040 проекта 'UCSync_Test1' скачан полностью (13/13 файлов) [Всего: 39]
+[15:39:35] [WU02][E$] Sync completed: 19 copied, 0 skipped, 0 failed
+[15:39:35] [WU01][E$] Started sync task for project UCSync_Test1
+[15:39:35] [WU02][E$] Started sync task for project UCSync_Test1
+[15:39:35] [WU06][E$] Started sync task for project UCSync_Test1
+[15:39:35] [WU07][E$] Started sync task for project UCSync_Test1
+[15:39:35] [WU09][E$] Started sync task for project UCSync_Test1
+[15:39:35] [WU02][E$] Found 0 files (0 B)
+[15:39:35] [WU02][E$] Sync completed: 19 copied, 0 skipped, 0 failed
+[15:39:35] [WU01][E$] Found 0 files (0 B)
+[15:39:35] [WU01][E$] Sync completed: 19 copied, 0 skipped, 0 failed
+[15:39:35] [WU13][E$] Started sync task for project UCSync_Test1
+[15:39:35] [CU][E$] Started sync task for project UCSync_Test1
+[15:39:35] [WU06][E$] Found 0 files (0 B)
+[15:39:35] [WU06][E$] Sync completed: 19 copied, 0 skipped, 0 failed
+[15:39:35] [WU07][E$] Found 0 files (0 B)
+[15:39:35] [WU07][E$] Sync completed: 15 copied, 0 skipped, 0 failed
+[15:39:36] [WU09][E$] Found 0 files (0 B)
+[15:39:36] [WU09][E$] Sync completed: 19 copied, 0 skipped, 0 failed
+[15:39:36] [WU13][E$] Found 0 files (0 B)
+[15:39:36] [WU13][E$] Sync completed: 15 copied, 0 skipped, 0 failed
+[15:39:36] ✓ Снимок #00041 проекта 'UCSync_Test1' скачан полностью (13/13 файлов) [Всего: 40]
+[15:39:36] [CU][E$] Found 0 files (0 B)
+[15:39:36] [CU][E$] Sync completed: 30 copied, 0 skipped, 0 failed
+[15:39:37] [WU08][E$] Sync completed: 19 copied, 0 skipped, 0 failed
+[15:39:38] [WU03][E$] Sync completed: 19 copied, 0 skipped, 0 failed
+[15:39:38] [WU04][E$] Sync completed: 19 copied, 0 skipped, 0 failed
+[15:39:38] [WU11][E$] Sync completed: 19 copied, 0 skipped, 0 failed
+[15:39:38] [WU10][E$] Sync completed: 19 copied, 0 skipped, 0 failed
+[15:39:38] [WU05][E$] Sync completed: 19 copied, 0 skipped, 0 failed
+[15:39:38] ✓ Снимок #00042 проекта 'UCSync_Test1' скачан полностью (13/13 файлов) [Всего: 41]
+[15:39:38] [WU12][E$] Sync completed: 19 copied, 0 skipped, 0 failed
+[15:39:45] [WU01][E$] Started sync task for project UCSync_Test1
+[15:39:45] [WU02][E$] Started sync task for project UCSync_Test1
+[15:39:45] [WU03][E$] Started sync task for project UCSync_Test1
+[15:39:45] [WU04][E$] Started sync task for project UCSync_Test1
+[15:39:45] [WU05][E$] Started sync task for project UCSync_Test1
+[15:39:45] [WU06][E$] Started sync task for project UCSync_Test1
+[15:39:45] [WU07][E$] Started sync task for project UCSync_Test1
+[15:39:45] [WU08][E$] Started sync task for project UCSync_Test1
+[15:39:45] [WU09][E$] Started sync task for project UCSync_Test1
+[15:39:45] [WU10][E$] Started sync task for project UCSync_Test1
+[15:39:45] [WU11][E$] Started sync task for project UCSync_Test1
+[15:39:45] [WU12][E$] Started sync task for project UCSync_Test1
+[15:39:45] [WU13][E$] Started sync task for project UCSync_Test1
+[15:39:45] [CU][E$] Started sync task for project UCSync_Test1
+[15:39:45] [WU02][E$] Found 0 files (0 B)
+[15:39:45] [WU02][E$] Sync completed: 19 copied, 0 skipped, 0 failed
+[15:39:45] [WU05][E$] Found 0 files (0 B)
+[15:39:45] [WU05][E$] Sync completed: 19 copied, 0 skipped, 0 failed
+[15:39:45] [WU04][E$] Found 0 files (0 B)
+[15:39:45] [WU06][E$] Found 0 files (0 B)
+[15:39:45] [WU04][E$] Sync completed: 19 copied, 0 skipped, 0 failed
+[15:39:45] [WU06][E$] Sync completed: 19 copied, 0 skipped, 0 failed
+[15:39:45] [WU07][E$] Found 0 files (0 B)
+[15:39:45] [WU08][E$] Found 0 files (0 B)
+[15:39:45] [WU07][E$] Sync completed: 15 copied, 0 skipped, 0 failed
+[15:39:45] [WU08][E$] Sync completed: 19 copied, 0 skipped, 0 failed
+[15:39:45] [WU03][E$] Found 0 files (0 B)
+[15:39:45] [WU03][E$] Sync completed: 19 copied, 0 skipped, 0 failed
+[15:39:46] [WU01][E$] Found 0 files (0 B)
+[15:39:46] [WU01][E$] Sync completed: 19 copied, 0 skipped, 0 failed
+[15:39:46] [WU11][E$] Found 0 files (0 B)
+[15:39:46] [WU13][E$] Found 0 files (0 B)
+[15:39:46] [WU12][E$] Found 0 files (0 B)
+[15:39:46] [WU11][E$] Sync completed: 19 copied, 0 skipped, 0 failed
+[15:39:46] [WU13][E$] Sync completed: 15 copied, 0 skipped, 0 failed
+[15:39:46] [WU12][E$] Sync completed: 19 copied, 0 skipped, 0 failed
+[15:39:46] [WU09][E$] Found 0 files (0 B)
+[15:39:46] [WU09][E$] Sync completed: 19 copied, 0 skipped, 0 failed
+[15:39:46] [CU][E$] Found 0 files (0 B)
+[15:39:46] [CU][E$] Sync completed: 30 copied, 0 skipped, 0 failed
+[15:39:46] [WU10][E$] Found 0 files (0 B)
+[15:39:46] [WU10][E$] Sync completed: 19 copied, 0 skipped, 0 failed
+[15:39:55] [WU01][E$] Started sync task for project UCSync_Test1
+[15:39:55] [WU02][E$] Started sync task for project UCSync_Test1
+[15:39:55] [WU03][E$] Started sync task for project UCSync_Test1
+[15:39:55] [WU04][E$] Started sync task for project UCSync_Test1
+[15:39:55] [WU05][E$] Started sync task for project UCSync_Test1
+[15:39:55] [WU06][E$] Started sync task for project UCSync_Test1
+[15:39:55] [WU07][E$] Started sync task for project UCSync_Test1
+[15:39:55] [WU08][E$] Started sync task for project UCSync_Test1
+[15:39:55] [WU09][E$] Started sync task for project UCSync_Test1
+[15:39:55] [WU10][E$] Started sync task for project UCSync_Test1
+[15:39:55] [WU11][E$] Started sync task for project UCSync_Test1
+[15:39:55] [WU12][E$] Started sync task for project UCSync_Test1
+[15:39:55] [WU13][E$] Started sync task for project UCSync_Test1
+[15:39:55] [CU][E$] Started sync task for project UCSync_Test1
+[15:39:55] [WU01][E$] Found 0 files (0 B)
+[15:39:55] [WU01][E$] Sync completed: 19 copied, 0 skipped, 0 failed
+[15:39:55] [WU02][E$] Found 0 files (0 B)
+[15:39:55] [WU02][E$] Sync completed: 19 copied, 0 skipped, 0 failed
+[15:39:55] [WU04][E$] Found 0 files (0 B)
+[15:39:56] [WU04][E$] Sync completed: 19 copied, 0 skipped, 0 failed
+[15:39:56] [WU06][E$] Found 0 files (0 B)
+[15:39:56] [WU06][E$] Sync completed: 19 copied, 0 skipped, 0 failed
+[15:39:56] [WU07][E$] Found 0 files (0 B)
+[15:39:56] [WU07][E$] Sync completed: 15 copied, 0 skipped, 0 failed
+[15:39:56] [WU08][E$] Found 0 files (0 B)
+[15:39:56] [WU08][E$] Sync completed: 19 copied, 0 skipped, 0 failed
+[15:39:56] [WU09][E$] Found 0 files (0 B)
+[15:39:56] [WU09][E$] Sync completed: 19 copied, 0 skipped, 0 failed
+[15:39:56] [WU05][E$] Found 0 files (0 B)
+[15:39:56] [WU03][E$] Found 0 files (0 B)
+[15:39:56] [WU10][E$] Found 0 files (0 B)
+[15:39:56] [WU05][E$] Sync completed: 19 copied, 0 skipped, 0 failed
+[15:39:56] [WU03][E$] Sync completed: 19 copied, 0 skipped, 0 failed
+[15:39:56] [WU10][E$] Sync completed: 19 copied, 0 skipped, 0 failed
+[15:39:56] [CU][E$] Found 0 files (0 B)
+[15:39:56] [CU][E$] Sync completed: 30 copied, 0 skipped, 0 failed
+[15:39:56] [WU12][E$] Found 0 files (0 B)
+[15:39:56] [WU11][E$] Found 0 files (0 B)
+[15:39:56] [WU12][E$] Sync completed: 19 copied, 0 skipped, 0 failed
+[15:39:56] [WU11][E$] Sync completed: 19 copied, 0 skipped, 0 failed
+[15:39:56] [WU13][E$] Found 0 files (0 B)
+[15:39:56] [WU13][E$] Sync completed: 15 copied, 0 skipped, 0 failed
+[15:40:05] [WU01][E$] Started sync task for project UCSync_Test1
+[15:40:05] [WU02][E$] Started sync task for project UCSync_Test1
+[15:40:05] [WU03][E$] Started sync task for project UCSync_Test1
+[15:40:05] [WU04][E$] Started sync task for project UCSync_Test1
+[15:40:05] [WU05][E$] Started sync task for project UCSync_Test1
+[15:40:05] [WU06][E$] Started sync task for project UCSync_Test1
+[15:40:05] [WU07][E$] Started sync task for project UCSync_Test1
+[15:40:05] [WU08][E$] Started sync task for project UCSync_Test1
+[15:40:05] [WU09][E$] Started sync task for project UCSync_Test1
+[15:40:05] [WU10][E$] Started sync task for project UCSync_Test1
+[15:40:06] [WU11][E$] Started sync task for project UCSync_Test1
+[15:40:06] [WU12][E$] Started sync task for project UCSync_Test1
+[15:40:06] [WU13][E$] Started sync task for project UCSync_Test1
+[15:40:06] [CU][E$] Started sync task for project UCSync_Test1
+[15:40:06] [WU02][E$] Found 0 files (0 B)
+[15:40:06] [WU03][E$] Found 0 files (0 B)
+[15:40:06] [WU02][E$] Sync completed: 19 copied, 0 skipped, 0 failed
+[15:40:06] [WU01][E$] Found 0 files (0 B)
+[15:40:06] [WU03][E$] Sync completed: 19 copied, 0 skipped, 0 failed
+[15:40:06] [WU01][E$] Sync completed: 19 copied, 0 skipped, 0 failed
+[15:40:06] [WU04][E$] Found 0 files (0 B)
+[15:40:06] [WU04][E$] Sync completed: 19 copied, 0 skipped, 0 failed
+[15:40:06] [WU06][E$] Found 0 files (0 B)
+[15:40:06] [WU06][E$] Sync completed: 19 copied, 0 skipped, 0 failed
+[15:40:06] [WU05][E$] Found 0 files (0 B)
+[15:40:06] [WU05][E$] Sync completed: 19 copied, 0 skipped, 0 failed
+[15:40:06] [WU07][E$] Found 0 files (0 B)
+[15:40:06] [WU07][E$] Sync completed: 15 copied, 0 skipped, 0 failed
+[15:40:06] [WU09][E$] Found 0 files (0 B)
+[15:40:06] [WU08][E$] Found 0 files (0 B)
+[15:40:06] [WU09][E$] Sync completed: 19 copied, 0 skipped, 0 failed
+[15:40:06] [WU08][E$] Sync completed: 19 copied, 0 skipped, 0 failed
+[15:40:06] [WU11][E$] Found 0 files (0 B)
+[15:40:06] [WU11][E$] Sync completed: 19 copied, 0 skipped, 0 failed
+[15:40:06] [WU13][E$] Found 0 files (0 B)
+[15:40:06] [WU13][E$] Sync completed: 15 copied, 0 skipped, 0 failed
+[15:40:06] [CU][E$] Found 0 files (0 B)
+[15:40:06] [CU][E$] Sync completed: 30 copied, 0 skipped, 0 failed
+[15:40:06] [WU10][E$] Found 0 files (0 B)
+[15:40:06] [WU12][E$] Found 0 files (0 B)
+[15:40:06] [WU10][E$] Sync completed: 19 copied, 0 skipped, 0 failed
+[15:40:06] [WU12][E$] Sync completed: 19 copied, 0 skipped, 0 failed
+[15:40:16] [WU01][E$] Started sync task for project UCSync_Test1
+[15:40:16] [WU02][E$] Started sync task for project UCSync_Test1
+[15:40:16] [WU03][E$] Started sync task for project UCSync_Test1
+[15:40:16] [WU04][E$] Started sync task for project UCSync_Test1
+[15:40:16] [WU05][E$] Started sync task for project UCSync_Test1
+[15:40:16] [WU06][E$] Started sync task for project UCSync_Test1
+[15:40:16] [WU07][E$] Started sync task for project UCSync_Test1
+[15:40:16] [WU08][E$] Started sync task for project UCSync_Test1
+[15:40:16] [WU09][E$] Started sync task for project UCSync_Test1
+[15:40:16] [WU10][E$] Started sync task for project UCSync_Test1
+[15:40:16] [WU11][E$] Started sync task for project UCSync_Test1
+[15:40:16] [WU12][E$] Started sync task for project UCSync_Test1
+[15:40:16] [WU13][E$] Started sync task for project UCSync_Test1
+[15:40:16] [CU][E$] Started sync task for project UCSync_Test1
+[15:40:16] [WU07][E$] Found 0 files (0 B)
+[15:40:16] [WU04][E$] Found 0 files (0 B)
+[15:40:16] [WU07][E$] Sync completed: 15 copied, 0 skipped, 0 failed
+[15:40:16] [WU06][E$] Found 0 files (0 B)
+[15:40:16] [WU04][E$] Sync completed: 19 copied, 0 skipped, 0 failed
+[15:40:16] [WU06][E$] Sync completed: 19 copied, 0 skipped, 0 failed
+[15:40:16] [WU01][E$] Found 0 files (0 B)
+[15:40:16] [WU05][E$] Found 0 files (0 B)
+[15:40:16] [WU01][E$] Sync completed: 19 copied, 0 skipped, 0 failed
+[15:40:16] [WU05][E$] Sync completed: 19 copied, 0 skipped, 0 failed
+[15:40:16] [WU02][E$] Found 0 files (0 B)
+[15:40:16] [WU03][E$] Found 0 files (0 B)
+[15:40:16] [WU02][E$] Sync completed: 19 copied, 0 skipped, 0 failed
+[15:40:16] [WU03][E$] Sync completed: 19 copied, 0 skipped, 0 failed
+[15:40:16] [WU09][E$] Found 0 files (0 B)
+[15:40:16] [WU08][E$] Found 0 files (0 B)
+[15:40:16] [WU09][E$] Sync completed: 19 copied, 0 skipped, 0 failed
+[15:40:16] [WU12][E$] Found 0 files (0 B)
+[15:40:16] [WU08][E$] Sync completed: 19 copied, 0 skipped, 0 failed
+[15:40:16] [WU12][E$] Sync completed: 19 copied, 0 skipped, 0 failed
+[15:40:16] [WU13][E$] Found 0 files (0 B)
+[15:40:16] [CU][E$] Found 0 files (0 B)
+[15:40:16] [WU13][E$] Sync completed: 15 copied, 0 skipped, 0 failed
+[15:40:16] [CU][E$] Sync completed: 30 copied, 0 skipped, 0 failed
+[15:40:16] [WU10][E$] Found 0 files (0 B)
+[15:40:16] [WU10][E$] Sync completed: 19 copied, 0 skipped, 0 failed
+[15:40:16] [WU11][E$] Found 0 files (0 B)
+[15:40:16] [WU11][E$] Sync completed: 19 copied, 0 skipped, 0 failed
+[15:40:26] [WU01][E$] Started sync task for project UCSync_Test1
+[15:40:26] [WU02][E$] Started sync task for project UCSync_Test1
+[15:40:26] [WU03][E$] Started sync task for project UCSync_Test1
+[15:40:26] [WU04][E$] Started sync task for project UCSync_Test1
+[15:40:26] [WU05][E$] Started sync task for project UCSync_Test1
+[15:40:26] [WU06][E$] Started sync task for project UCSync_Test1
+[15:40:26] [WU07][E$] Started sync task for project UCSync_Test1
+[15:40:26] [WU08][E$] Started sync task for project UCSync_Test1
+[15:40:26] [WU01][E$] Found 0 files (0 B)
+[15:40:26] [WU01][E$] Sync completed: 19 copied, 0 skipped, 0 failed
+[15:40:26] [WU09][E$] Started sync task for project UCSync_Test1
+[15:40:26] [WU03][E$] Found 0 files (0 B)
+[15:40:26] [WU10][E$] Started sync task for project UCSync_Test1
+[15:40:26] [WU03][E$] Sync completed: 19 copied, 0 skipped, 0 failed
+[15:40:26] [WU11][E$] Started sync task for project UCSync_Test1
+[15:40:26] [WU04][E$] Found 0 files (0 B)
+[15:40:26] [WU04][E$] Sync completed: 19 copied, 0 skipped, 0 failed
+[15:40:26] [WU12][E$] Started sync task for project UCSync_Test1
+[15:40:26] [WU13][E$] Started sync task for project UCSync_Test1
+[15:40:26] [CU][E$] Started sync task for project UCSync_Test1
+[15:40:26] [WU02][E$] Found 0 files (0 B)
+[15:40:26] [WU02][E$] Sync completed: 19 copied, 0 skipped, 0 failed
+[15:40:26] [WU06][E$] Found 0 files (0 B)
+[15:40:26] [WU05][E$] Found 0 files (0 B)
+[15:40:26] [WU06][E$] Sync completed: 19 copied, 0 skipped, 0 failed
+[15:40:26] [WU05][E$] Sync completed: 19 copied, 0 skipped, 0 failed
+[15:40:26] [WU07][E$] Found 0 files (0 B)
+[15:40:26] [WU09][E$] Found 0 files (0 B)
+[15:40:26] [WU10][E$] Found 0 files (0 B)
+[15:40:26] [WU11][E$] Found 0 files (0 B)
+[15:40:26] [WU07][E$] Sync completed: 15 copied, 0 skipped, 0 failed
+[15:40:26] [WU09][E$] Sync completed: 19 copied, 0 skipped, 0 failed
+[15:40:26] [WU10][E$] Sync completed: 19 copied, 0 skipped, 0 failed
+[15:40:26] [WU11][E$] Sync completed: 19 copied, 0 skipped, 0 failed
+[15:40:26] [WU13][E$] Found 0 files (0 B)
+[15:40:26] [WU13][E$] Sync completed: 15 copied, 0 skipped, 0 failed
+[15:40:26] [WU12][E$] Found 0 files (0 B)
+[15:40:26] [WU12][E$] Sync completed: 19 copied, 0 skipped, 0 failed
+[15:40:26] [WU08][E$] Found 0 files (0 B)
+[15:40:26] [WU08][E$] Sync completed: 19 copied, 0 skipped, 0 failed
+[15:40:26] [CU][E$] Found 0 files (0 B)
+[15:40:26] [CU][E$] Sync completed: 30 copied, 0 skipped, 0 failed
+[15:40:36] [WU01][E$] Started sync task for project UCSync_Test1
+[15:40:36] [WU02][E$] Started sync task for project UCSync_Test1
+[15:40:36] [WU03][E$] Started sync task for project UCSync_Test1
+[15:40:36] [WU04][E$] Started sync task for project UCSync_Test1
+[15:40:36] [WU05][E$] Started sync task for project UCSync_Test1
+[15:40:36] [WU06][E$] Started sync task for project UCSync_Test1
+[15:40:36] [WU07][E$] Started sync task for project UCSync_Test1
+[15:40:36] [WU08][E$] Started sync task for project UCSync_Test1
+[15:40:36] [WU09][E$] Started sync task for project UCSync_Test1
+[15:40:36] [WU10][E$] Started sync task for project UCSync_Test1
+[15:40:36] [WU11][E$] Started sync task for project UCSync_Test1
+[15:40:36] [WU12][E$] Started sync task for project UCSync_Test1
+[15:40:36] [WU13][E$] Started sync task for project UCSync_Test1
+[15:40:36] [CU][E$] Started sync task for project UCSync_Test1
+[15:40:36] [WU04][E$] Found 0 files (0 B)
+[15:40:36] [WU04][E$] Sync completed: 19 copied, 0 skipped, 0 failed
+[15:40:36] [WU05][E$] Found 0 files (0 B)
+[15:40:36] [WU05][E$] Sync completed: 19 copied, 0 skipped, 0 failed
+[15:40:36] [WU06][E$] Found 0 files (0 B)
+[15:40:36] [WU06][E$] Sync completed: 19 copied, 0 skipped, 0 failed
+[15:40:36] [WU07][E$] Found 0 files (0 B)
+[15:40:36] [WU07][E$] Sync completed: 15 copied, 0 skipped, 0 failed
+[15:40:36] [WU01][E$] Found 0 files (0 B)
+[15:40:36] [WU01][E$] Sync completed: 19 copied, 0 skipped, 0 failed
+[15:40:36] [WU08][E$] Found 0 files (0 B)
+[15:40:36] [WU09][E$] Found 0 files (0 B)
+[15:40:36] [WU11][E$] Found 0 files (0 B)
+[15:40:36] [WU02][E$] Found 0 files (0 B)
+[15:40:36] [WU13][E$] Found 0 files (0 B)
+[15:40:36] [WU08][E$] Sync completed: 19 copied, 0 skipped, 0 failed
+[15:40:36] [WU09][E$] Sync completed: 19 copied, 0 skipped, 0 failed
+[15:40:36] [WU11][E$] Sync completed: 19 copied, 0 skipped, 0 failed
+[15:40:36] [WU02][E$] Sync completed: 19 copied, 0 skipped, 0 failed
+[15:40:36] [WU13][E$] Sync completed: 15 copied, 0 skipped, 0 failed
+[15:40:36] [WU03][E$] Found 0 files (0 B)
+[15:40:36] [WU03][E$] Sync completed: 19 copied, 0 skipped, 0 failed
+[15:40:36] [WU10][E$] Found 0 files (0 B)
+[15:40:36] [WU10][E$] Sync completed: 19 copied, 0 skipped, 0 failed
+[15:40:36] [WU12][E$] Found 0 files (0 B)
+[15:40:36] [WU12][E$] Sync completed: 19 copied, 0 skipped, 0 failed
+[15:40:36] [CU][E$] Found 0 files (0 B)
+[15:40:36] [CU][E$] Sync completed: 30 copied, 0 skipped, 0 failed
+[15:40:39] Stopping all synchronization tasks...
+[15:40:39] All synchronization tasks stopped
+[15:40:39] Synchronization cancelled
+[15:51:33] Диск назначения: G:
+[15:51:35] [WU01][E$] Started sync task for project UCSync_Test1
+[15:51:36] [WU01][E$] Found 0 files (0 B)
+[15:51:36] [WU01][E$] Sync completed: 0 copied, 0 skipped, 0 failed
+[15:51:38] [WU02][E$] Started sync task for project UCSync_Test1
+[15:51:38] [WU02][E$] Found 0 files (0 B)
+[15:51:38] [WU02][E$] Sync completed: 0 copied, 0 skipped, 0 failed
+[15:51:40] [WU03][E$] Started sync task for project UCSync_Test1
+[15:51:40] [WU03][E$] Found 1 files (46,27 MB)
+[15:51:41] [WU03][E$] Sync completed: 1 copied, 0 skipped, 0 failed
+[15:51:42] [WU04][E$] Started sync task for project UCSync_Test1
+[15:51:42] [WU04][E$] Found 1 files (46,27 MB)
+[15:51:43] [WU04][E$] Sync completed: 1 copied, 0 skipped, 0 failed
+[15:51:45] [WU05][E$] Started sync task for project UCSync_Test1
+[15:51:45] [WU05][E$] Found 2 files (92,53 MB)
+[15:51:46] [WU05][E$] Sync completed: 2 copied, 0 skipped, 0 failed
+[15:51:47] [WU06][E$] Started sync task for project UCSync_Test1
+[15:51:47] [WU06][E$] Found 2 files (92,53 MB)
+[15:51:48] [WU06][E$] Sync completed: 2 copied, 0 skipped, 0 failed
+[15:51:49] [WU07][E$] Started sync task for project UCSync_Test1
+[15:51:50] [WU07][E$] Found 3 files (138,8 MB)
+[15:51:51] [WU07][E$] Sync completed: 3 copied, 0 skipped, 0 failed
+[15:51:51] [WU08][E$] Started sync task for project UCSync_Test1
+[15:51:52] [WU08][E$] Found 3 files (138,8 MB)
+[15:51:53] [WU08][E$] Sync completed: 3 copied, 0 skipped, 0 failed
+[15:51:54] [WU09][E$] Started sync task for project UCSync_Test1
+[15:51:54] [WU09][E$] Found 3 files (138,8 MB)
+[15:51:55] [WU09][E$] Sync completed: 3 copied, 0 skipped, 0 failed
+[15:51:56] [WU10][E$] Started sync task for project UCSync_Test1
+[15:51:56] [WU10][E$] Found 4 files (185,06 MB)
+[15:51:58] [WU10][E$] Sync completed: 4 copied, 0 skipped, 0 failed
+[15:51:58] [WU11][E$] Started sync task for project UCSync_Test1
+[15:51:59] [WU11][E$] Found 4 files (185,06 MB)
+[15:52:01] [WU11][E$] Sync completed: 4 copied, 0 skipped, 0 failed
+[15:52:01] [WU12][E$] Started sync task for project UCSync_Test1
+[15:52:01] [WU12][E$] Found 5 files (231,33 MB)
+[15:52:03] [WU13][E$] Started sync task for project UCSync_Test1
+[15:52:03] [WU12][E$] Sync completed: 5 copied, 0 skipped, 0 failed
+[15:52:03] [WU13][E$] Found 5 files (231,33 MB)
+[15:52:05] [CU][E$] Started sync task for project UCSync_Test1
+[15:52:06] [WU13][E$] Sync completed: 5 copied, 0 skipped, 0 failed
+[15:52:06] [CU][E$] Found 10 files (1,03 MB)
+[15:52:06] [CU][E$] Sync completed: 10 copied, 0 skipped, 0 failed
+[15:52:15] [WU01][E$] Started sync task for project UCSync_Test1
+[15:52:15] [WU02][E$] Started sync task for project UCSync_Test1
+[15:52:15] [WU03][E$] Started sync task for project UCSync_Test1
+[15:52:15] [WU04][E$] Started sync task for project UCSync_Test1
+[15:52:15] [WU05][E$] Started sync task for project UCSync_Test1
+[15:52:15] [WU06][E$] Started sync task for project UCSync_Test1
+[15:52:15] [WU07][E$] Started sync task for project UCSync_Test1
+[15:52:15] [WU08][E$] Started sync task for project UCSync_Test1
+[15:52:15] [WU09][E$] Started sync task for project UCSync_Test1
+[15:52:15] [WU10][E$] Started sync task for project UCSync_Test1
+[15:52:15] [WU11][E$] Started sync task for project UCSync_Test1
+[15:52:15] [WU12][E$] Started sync task for project UCSync_Test1
+[15:52:15] [WU13][E$] Started sync task for project UCSync_Test1
+[15:52:15] [CU][E$] Started sync task for project UCSync_Test1
+[15:52:15] [WU01][E$] Found 8 files (370,13 MB)
+[15:52:16] [WU02][E$] Found 8 files (370,13 MB)
+[15:52:16] [WU03][E$] Found 7 files (323,86 MB)
+[15:52:16] [WU04][E$] Found 7 files (323,86 MB)
+[15:52:16] [WU05][E$] Found 6 files (277,59 MB)
+[15:52:16] [WU07][E$] Found 5 files (231,33 MB)
+[15:52:16] [WU08][E$] Found 5 files (231,33 MB)
+[15:52:16] [WU06][E$] Found 6 files (277,59 MB)
+[15:52:16] [WU12][E$] Found 3 files (138,8 MB)
+[15:52:16] [WU11][E$] Found 4 files (185,06 MB)
+[15:52:16] [WU09][E$] Found 5 files (231,33 MB)
+[15:52:16] [WU13][E$] Found 3 files (138,8 MB)
+[15:52:16] [WU10][E$] Found 4 files (185,06 MB)
+[15:52:16] [CU][E$] Found 6 files (634,9 KB)
+[15:52:17] [CU][E$] Sync completed: 16 copied, 0 skipped, 0 failed
+[15:52:21] ✓ Снимок #00043 проекта 'UCSync_Test1' скачан полностью (13/13 файлов) [Всего: 42]
+[15:52:26] ✓ Снимок #00044 проекта 'UCSync_Test1' скачан полностью (13/13 файлов) [Всего: 43]
+[15:52:26] [CU][E$] Started sync task for project UCSync_Test1
+[15:52:27] [CU][E$] Found 4 files (423,27 KB)
+[15:52:27] [CU][E$] Sync completed: 20 copied, 0 skipped, 0 failed
+[15:52:31] ✓ Снимок #00045 проекта 'UCSync_Test1' скачан полностью (13/13 файлов) [Всего: 44]
+[15:52:32] [WU12][E$] Sync completed: 8 copied, 0 skipped, 0 failed
+[15:52:32] [WU13][E$] Sync completed: 8 copied, 0 skipped, 0 failed
+[15:52:36] ✓ Снимок #00046 проекта 'UCSync_Test1' скачан полностью (13/13 файлов) [Всего: 45]
+[15:52:36] [WU11][E$] Sync completed: 8 copied, 0 skipped, 0 failed
+[15:52:36] [WU10][E$] Sync completed: 8 copied, 0 skipped, 0 failed
+[15:52:37] [WU10][E$] Started sync task for project UCSync_Test1
+[15:52:37] [WU11][E$] Started sync task for project UCSync_Test1
+[15:52:37] [WU12][E$] Started sync task for project UCSync_Test1
+[15:52:37] [WU13][E$] Started sync task for project UCSync_Test1
+[15:52:37] [CU][E$] Started sync task for project UCSync_Test1
+[15:52:37] [WU10][E$] Found 4 files (185,06 MB)
+[15:52:37] [WU11][E$] Found 4 files (185,06 MB)
+[15:52:37] [WU13][E$] Found 4 files (185,06 MB)
+[15:52:37] [WU12][E$] Found 4 files (185,06 MB)
+[15:52:38] [CU][E$] Found 4 files (423,27 KB)
+[15:52:38] [CU][E$] Sync completed: 24 copied, 0 skipped, 0 failed
+[15:52:41] ✓ Снимок #00047 проекта 'UCSync_Test1' скачан полностью (13/13 файлов) [Всего: 46]
+[15:52:41] [WU09][E$] Sync completed: 8 copied, 0 skipped, 0 failed
+[15:52:41] [WU08][E$] Sync completed: 8 copied, 0 skipped, 0 failed
+[15:52:42] [WU07][E$] Sync completed: 8 copied, 0 skipped, 0 failed
+[15:52:45] [WU05][E$] Sync completed: 8 copied, 0 skipped, 0 failed
+[15:52:45] ✓ Снимок #00048 проекта 'UCSync_Test1' скачан полностью (13/13 файлов) [Всего: 47]
+[15:52:45] [WU06][E$] Sync completed: 8 copied, 0 skipped, 0 failed
+[15:52:47] [WU05][E$] Started sync task for project UCSync_Test1
+[15:52:47] [WU06][E$] Started sync task for project UCSync_Test1
+[15:52:47] [WU07][E$] Started sync task for project UCSync_Test1
+[15:52:47] [WU08][E$] Started sync task for project UCSync_Test1
+[15:52:47] [WU09][E$] Started sync task for project UCSync_Test1
+[15:52:47] [CU][E$] Started sync task for project UCSync_Test1
+[15:52:47] [WU07][E$] Found 5 files (231,33 MB)
+[15:52:48] [WU08][E$] Found 5 files (231,33 MB)
+[15:52:48] [WU09][E$] Found 5 files (231,33 MB)
+[15:52:48] [WU06][E$] Found 5 files (231,33 MB)
+[15:52:48] [WU05][E$] Found 5 files (231,33 MB)
+[15:52:48] [CU][E$] Found 2 files (211,63 KB)
+[15:52:48] [CU][E$] Sync completed: 26 copied, 0 skipped, 0 failed
+[15:52:49] [WU03][E$] Sync completed: 8 copied, 0 skipped, 0 failed
+[15:52:49] [WU04][E$] Sync completed: 8 copied, 0 skipped, 0 failed
+[15:52:49] ✓ Снимок #00049 проекта 'UCSync_Test1' скачан полностью (13/13 файлов) [Всего: 48]
+[15:52:53] [WU01][E$] Sync completed: 8 copied, 0 skipped, 0 failed
+[15:52:53] ✓ Снимок #00050 проекта 'UCSync_Test1' скачан полностью (13/13 файлов) [Всего: 49]
+[15:52:53] [WU02][E$] Sync completed: 8 copied, 0 skipped, 0 failed
+[15:52:54] [WU10][E$] Sync completed: 12 copied, 0 skipped, 0 failed
+[15:52:54] [WU11][E$] Sync completed: 12 copied, 0 skipped, 0 failed
+[15:52:55] [WU13][E$] Sync completed: 12 copied, 0 skipped, 0 failed
+[15:52:55] [WU12][E$] Sync completed: 12 copied, 0 skipped, 0 failed
+[15:52:57] [WU01][E$] Started sync task for project UCSync_Test1
+[15:52:57] [WU02][E$] Started sync task for project UCSync_Test1
+[15:52:57] [WU03][E$] Started sync task for project UCSync_Test1
+[15:52:57] [WU04][E$] Started sync task for project UCSync_Test1
+[15:52:57] [WU10][E$] Started sync task for project UCSync_Test1
+[15:52:57] [WU11][E$] Started sync task for project UCSync_Test1
+[15:52:57] [WU12][E$] Started sync task for project UCSync_Test1
+[15:52:57] [WU13][E$] Started sync task for project UCSync_Test1
+[15:52:57] [CU][E$] Started sync task for project UCSync_Test1
+[15:52:58] [WU02][E$] Found 5 files (231,33 MB)
+[15:52:58] [WU03][E$] Found 5 files (231,33 MB)
+[15:52:58] [WU04][E$] Found 5 files (231,33 MB)
+[15:52:58] [WU01][E$] Found 5 files (231,33 MB)
+[15:52:58] [WU11][E$] Found 1 files (46,27 MB)
+[15:52:58] [WU12][E$] Found 1 files (46,27 MB)
+[15:52:58] [WU10][E$] Found 1 files (46,27 MB)
+[15:52:58] [WU13][E$] Found 1 files (46,27 MB)
+[15:52:58] [CU][E$] Found 0 files (0 B)
+[15:52:58] [CU][E$] Sync completed: 26 copied, 0 skipped, 0 failed
+[15:53:04] ✓ Снимок #00051 проекта 'UCSync_Test1' скачан полностью (13/13 файлов) [Всего: 50]
+[15:53:04] [WU11][E$] Sync completed: 13 copied, 0 skipped, 0 failed
+[15:53:04] [WU10][E$] Sync completed: 13 copied, 0 skipped, 0 failed
+[15:53:04] [WU12][E$] Sync completed: 13 copied, 0 skipped, 0 failed
+[15:53:04] [WU13][E$] Sync completed: 13 copied, 0 skipped, 0 failed
+[15:53:06] [WU07][E$] Sync completed: 13 copied, 0 skipped, 0 failed
+[15:53:06] [WU05][E$] Sync completed: 13 copied, 0 skipped, 0 failed
+[15:53:06] [WU06][E$] Sync completed: 13 copied, 0 skipped, 0 failed
+[15:53:07] [WU09][E$] Sync completed: 13 copied, 0 skipped, 0 failed
+[15:53:07] [WU08][E$] Sync completed: 13 copied, 0 skipped, 0 failed
+[15:53:07] ✓ Снимок #00052 проекта 'UCSync_Test1' скачан полностью (13/13 файлов) [Всего: 51]
+[15:53:07] [WU05][E$] Started sync task for project UCSync_Test1
+[15:53:08] [WU06][E$] Started sync task for project UCSync_Test1
+[15:53:08] [WU07][E$] Started sync task for project UCSync_Test1
+[15:53:08] [WU08][E$] Started sync task for project UCSync_Test1
+[15:53:08] [WU09][E$] Started sync task for project UCSync_Test1
+[15:53:08] [WU10][E$] Started sync task for project UCSync_Test1
+[15:53:08] [WU11][E$] Started sync task for project UCSync_Test1
+[15:53:08] [WU12][E$] Started sync task for project UCSync_Test1
+[15:53:08] [WU13][E$] Started sync task for project UCSync_Test1
+[15:53:08] [CU][E$] Started sync task for project UCSync_Test1
+[15:53:08] [WU11][E$] Found 0 files (0 B)
+[15:53:08] [WU11][E$] Sync completed: 13 copied, 0 skipped, 0 failed
+[15:53:08] [WU13][E$] Found 0 files (0 B)
+[15:53:08] [WU13][E$] Sync completed: 13 copied, 0 skipped, 0 failed
+[15:53:08] [WU08][E$] Found 0 files (0 B)
+[15:53:08] [WU05][E$] Found 0 files (0 B)
+[15:53:08] [WU08][E$] Sync completed: 13 copied, 0 skipped, 0 failed
+[15:53:08] [WU05][E$] Sync completed: 13 copied, 0 skipped, 0 failed
+[15:53:08] [WU07][E$] Found 0 files (0 B)
+[15:53:08] [WU10][E$] Found 0 files (0 B)
+[15:53:08] [WU07][E$] Sync completed: 13 copied, 0 skipped, 0 failed
+[15:53:08] [WU10][E$] Sync completed: 13 copied, 0 skipped, 0 failed
+[15:53:08] [WU09][E$] Found 0 files (0 B)
+[15:53:08] [WU09][E$] Sync completed: 13 copied, 0 skipped, 0 failed
+[15:53:08] [WU06][E$] Found 0 files (0 B)
+[15:53:08] [WU06][E$] Sync completed: 13 copied, 0 skipped, 0 failed
+[15:53:08] [WU12][E$] Found 0 files (0 B)
+[15:53:08] [WU12][E$] Sync completed: 13 copied, 0 skipped, 0 failed
+[15:53:08] [CU][E$] Found 0 files (0 B)
+[15:53:08] [CU][E$] Sync completed: 26 copied, 0 skipped, 0 failed
+[15:53:09] ✓ Снимок #00053 проекта 'UCSync_Test1' скачан полностью (13/13 файлов) [Всего: 52]
+[15:53:10] ✓ Снимок #00054 проекта 'UCSync_Test1' скачан полностью (13/13 файлов) [Всего: 53]
+[15:53:12] [WU01][E$] Sync completed: 13 copied, 0 skipped, 0 failed
+[15:53:12] [WU02][E$] Sync completed: 13 copied, 0 skipped, 0 failed
+[15:53:12] [WU04][E$] Sync completed: 13 copied, 0 skipped, 0 failed
+[15:53:12] ✓ Снимок #00055 проекта 'UCSync_Test1' скачан полностью (13/13 файлов) [Всего: 54]
+[15:53:12] [WU03][E$] Sync completed: 13 copied, 0 skipped, 0 failed
+[15:53:18] [WU01][E$] Started sync task for project UCSync_Test1
+[15:53:18] [WU02][E$] Started sync task for project UCSync_Test1
+[15:53:18] [WU03][E$] Started sync task for project UCSync_Test1
+[15:53:18] [WU04][E$] Started sync task for project UCSync_Test1
+[15:53:18] [WU05][E$] Started sync task for project UCSync_Test1
+[15:53:18] [WU06][E$] Started sync task for project UCSync_Test1
+[15:53:18] [WU07][E$] Started sync task for project UCSync_Test1
+[15:53:18] [WU08][E$] Started sync task for project UCSync_Test1
+[15:53:18] [WU09][E$] Started sync task for project UCSync_Test1
+[15:53:18] [WU10][E$] Started sync task for project UCSync_Test1
+[15:53:18] [WU11][E$] Started sync task for project UCSync_Test1
+[15:53:18] [WU12][E$] Started sync task for project UCSync_Test1
+[15:53:18] [WU13][E$] Started sync task for project UCSync_Test1
+[15:53:18] [CU][E$] Started sync task for project UCSync_Test1
+[15:53:18] [WU02][E$] Found 0 files (0 B)
+[15:53:18] [WU03][E$] Found 0 files (0 B)
+[15:53:18] [WU02][E$] Sync completed: 13 copied, 0 skipped, 0 failed
+[15:53:18] [WU03][E$] Sync completed: 13 copied, 0 skipped, 0 failed
+[15:53:18] [WU04][E$] Found 0 files (0 B)
+[15:53:18] [WU04][E$] Sync completed: 13 copied, 0 skipped, 0 failed
+[15:53:18] [WU05][E$] Found 0 files (0 B)
+[15:53:18] [WU05][E$] Sync completed: 13 copied, 0 skipped, 0 failed
+[15:53:18] [WU06][E$] Found 0 files (0 B)
+[15:53:18] [WU07][E$] Found 0 files (0 B)
+[15:53:18] [WU06][E$] Sync completed: 13 copied, 0 skipped, 0 failed
+[15:53:18] [WU07][E$] Sync completed: 13 copied, 0 skipped, 0 failed
+[15:53:18] [WU09][E$] Found 0 files (0 B)
+[15:53:18] [WU08][E$] Found 0 files (0 B)
+[15:53:18] [WU01][E$] Found 0 files (0 B)
+[15:53:18] [WU10][E$] Found 0 files (0 B)
+[15:53:18] [WU09][E$] Sync completed: 13 copied, 0 skipped, 0 failed
+[15:53:18] [WU08][E$] Sync completed: 13 copied, 0 skipped, 0 failed
+[15:53:18] [WU12][E$] Found 0 files (0 B)
+[15:53:18] [WU13][E$] Found 0 files (0 B)
+[15:53:18] [WU01][E$] Sync completed: 13 copied, 0 skipped, 0 failed
+[15:53:18] [WU10][E$] Sync completed: 13 copied, 0 skipped, 0 failed
+[15:53:18] [WU12][E$] Sync completed: 13 copied, 0 skipped, 0 failed
+[15:53:18] [WU13][E$] Sync completed: 13 copied, 0 skipped, 0 failed
+[15:53:18] [WU11][E$] Found 0 files (0 B)
+[15:53:18] [WU11][E$] Sync completed: 13 copied, 0 skipped, 0 failed
+[15:53:18] [CU][E$] Found 0 files (0 B)
+[15:53:18] [CU][E$] Sync completed: 26 copied, 0 skipped, 0 failed
+[15:53:28] [WU01][E$] Started sync task for project UCSync_Test1
+[15:53:28] [WU02][E$] Started sync task for project UCSync_Test1
+[15:53:28] [WU03][E$] Started sync task for project UCSync_Test1
+[15:53:28] [WU04][E$] Started sync task for project UCSync_Test1
+[15:53:28] [WU05][E$] Started sync task for project UCSync_Test1
+[15:53:28] [WU06][E$] Started sync task for project UCSync_Test1
+[15:53:28] [WU07][E$] Started sync task for project UCSync_Test1
+[15:53:28] [WU08][E$] Started sync task for project UCSync_Test1
+[15:53:28] [WU09][E$] Started sync task for project UCSync_Test1
+[15:53:28] [WU10][E$] Started sync task for project UCSync_Test1
+[15:53:28] [WU11][E$] Started sync task for project UCSync_Test1
+[15:53:28] [WU12][E$] Started sync task for project UCSync_Test1
+[15:53:28] [WU13][E$] Started sync task for project UCSync_Test1
+[15:53:28] [CU][E$] Started sync task for project UCSync_Test1
+[15:53:28] [WU01][E$] Found 0 files (0 B)
+[15:53:28] [WU01][E$] Sync completed: 13 copied, 0 skipped, 0 failed
+[15:53:28] [WU02][E$] Found 0 files (0 B)
+[15:53:28] [WU02][E$] Sync completed: 13 copied, 0 skipped, 0 failed
+[15:53:28] [WU03][E$] Found 0 files (0 B)
+[15:53:28] [WU03][E$] Sync completed: 13 copied, 0 skipped, 0 failed
+[15:53:28] [WU04][E$] Found 0 files (0 B)
+[15:53:28] [WU04][E$] Sync completed: 13 copied, 0 skipped, 0 failed
+[15:53:28] [WU05][E$] Found 0 files (0 B)
+[15:53:28] [WU05][E$] Sync completed: 13 copied, 0 skipped, 0 failed
+[15:53:28] [WU06][E$] Found 0 files (0 B)
+[15:53:28] [WU06][E$] Sync completed: 13 copied, 0 skipped, 0 failed
+[15:53:28] [WU09][E$] Found 0 files (0 B)
+[15:53:28] [WU08][E$] Found 0 files (0 B)
+[15:53:28] [WU09][E$] Sync completed: 13 copied, 0 skipped, 0 failed
+[15:53:28] [WU10][E$] Found 0 files (0 B)
+[15:53:28] [WU08][E$] Sync completed: 13 copied, 0 skipped, 0 failed
+[15:53:28] [WU10][E$] Sync completed: 13 copied, 0 skipped, 0 failed
+[15:53:28] [WU11][E$] Found 0 files (0 B)
+[15:53:28] [WU12][E$] Found 0 files (0 B)
+[15:53:28] [WU11][E$] Sync completed: 13 copied, 0 skipped, 0 failed
+[15:53:28] [WU12][E$] Sync completed: 13 copied, 0 skipped, 0 failed
+[15:53:28] [WU07][E$] Found 0 files (0 B)
+[15:53:28] [WU07][E$] Sync completed: 13 copied, 0 skipped, 0 failed
+[15:53:28] [WU13][E$] Found 0 files (0 B)
+[15:53:28] [WU13][E$] Sync completed: 13 copied, 0 skipped, 0 failed
+[15:53:28] [CU][E$] Found 0 files (0 B)
+[15:53:28] [CU][E$] Sync completed: 26 copied, 0 skipped, 0 failed
+[15:53:38] [WU01][E$] Started sync task for project UCSync_Test1
+[15:53:38] [WU02][E$] Started sync task for project UCSync_Test1
+[15:53:38] [WU03][E$] Started sync task for project UCSync_Test1
+[15:53:38] [WU04][E$] Started sync task for project UCSync_Test1
+[15:53:38] [WU05][E$] Started sync task for project UCSync_Test1
+[15:53:38] [WU06][E$] Started sync task for project UCSync_Test1
+[15:53:38] [WU07][E$] Started sync task for project UCSync_Test1
+[15:53:38] [WU08][E$] Started sync task for project UCSync_Test1
+[15:53:38] [WU09][E$] Started sync task for project UCSync_Test1
+[15:53:38] [WU10][E$] Started sync task for project UCSync_Test1
+[15:53:38] [WU11][E$] Started sync task for project UCSync_Test1
+[15:53:38] [WU12][E$] Started sync task for project UCSync_Test1
+[15:53:38] [WU13][E$] Started sync task for project UCSync_Test1
+[15:53:38] [CU][E$] Started sync task for project UCSync_Test1
+[15:53:38] [WU02][E$] Found 0 files (0 B)
+[15:53:38] [WU02][E$] Sync completed: 13 copied, 0 skipped, 0 failed
+[15:53:38] [WU03][E$] Found 0 files (0 B)
+[15:53:38] [WU03][E$] Sync completed: 13 copied, 0 skipped, 0 failed
+[15:53:38] [WU07][E$] Found 0 files (0 B)
+[15:53:38] [WU07][E$] Sync completed: 13 copied, 0 skipped, 0 failed
+[15:53:38] [WU08][E$] Found 0 files (0 B)
+[15:53:38] [WU04][E$] Found 0 files (0 B)
+[15:53:38] [WU05][E$] Found 0 files (0 B)
+[15:53:38] [WU10][E$] Found 0 files (0 B)
+[15:53:38] [WU08][E$] Sync completed: 13 copied, 0 skipped, 0 failed
+[15:53:38] [WU04][E$] Sync completed: 13 copied, 0 skipped, 0 failed
+[15:53:38] [WU05][E$] Sync completed: 13 copied, 0 skipped, 0 failed
+[15:53:38] [WU10][E$] Sync completed: 13 copied, 0 skipped, 0 failed
+[15:53:38] [WU13][E$] Found 0 files (0 B)
+[15:53:38] [WU01][E$] Found 0 files (0 B)
+[15:53:38] [WU13][E$] Sync completed: 13 copied, 0 skipped, 0 failed
+[15:53:38] [WU01][E$] Sync completed: 13 copied, 0 skipped, 0 failed
+[15:53:38] [WU06][E$] Found 0 files (0 B)
+[15:53:38] [WU06][E$] Sync completed: 13 copied, 0 skipped, 0 failed
+[15:53:38] [WU11][E$] Found 0 files (0 B)
+[15:53:38] [WU11][E$] Sync completed: 13 copied, 0 skipped, 0 failed
+[15:53:38] [WU12][E$] Found 0 files (0 B)
+[15:53:38] [WU12][E$] Sync completed: 13 copied, 0 skipped, 0 failed
+[15:53:38] [WU09][E$] Found 0 files (0 B)
+[15:53:38] [WU09][E$] Sync completed: 13 copied, 0 skipped, 0 failed
+[15:53:38] [CU][E$] Found 0 files (0 B)
+[15:53:38] [CU][E$] Sync completed: 26 copied, 0 skipped, 0 failed
+[15:53:48] [WU01][E$] Started sync task for project UCSync_Test1
+[15:53:48] [WU02][E$] Started sync task for project UCSync_Test1
+[15:53:48] [WU03][E$] Started sync task for project UCSync_Test1
+[15:53:48] [WU04][E$] Started sync task for project UCSync_Test1
+[15:53:48] [WU05][E$] Started sync task for project UCSync_Test1
+[15:53:48] [WU06][E$] Started sync task for project UCSync_Test1
+[15:53:48] [WU07][E$] Started sync task for project UCSync_Test1
+[15:53:48] [WU08][E$] Started sync task for project UCSync_Test1
+[15:53:48] [WU09][E$] Started sync task for project UCSync_Test1
+[15:53:48] [WU10][E$] Started sync task for project UCSync_Test1
+[15:53:48] [WU11][E$] Started sync task for project UCSync_Test1
+[15:53:48] [WU12][E$] Started sync task for project UCSync_Test1
+[15:53:48] [WU13][E$] Started sync task for project UCSync_Test1
+[15:53:48] [CU][E$] Started sync task for project UCSync_Test1
+[15:53:48] [WU01][E$] Found 0 files (0 B)
+[15:53:48] [WU01][E$] Sync completed: 13 copied, 0 skipped, 0 failed
+[15:53:48] [WU02][E$] Found 0 files (0 B)
+[15:53:48] [WU02][E$] Sync completed: 13 copied, 0 skipped, 0 failed
+[15:53:48] [WU04][E$] Found 0 files (0 B)
+[15:53:48] [WU04][E$] Sync completed: 13 copied, 0 skipped, 0 failed
+[15:53:48] [WU06][E$] Found 0 files (0 B)
+[15:53:48] [WU06][E$] Sync completed: 13 copied, 0 skipped, 0 failed
+[15:53:48] [WU07][E$] Found 0 files (0 B)
+[15:53:48] [WU08][E$] Found 0 files (0 B)
+[15:53:48] [WU07][E$] Sync completed: 13 copied, 0 skipped, 0 failed
+[15:53:48] [WU09][E$] Found 0 files (0 B)
+[15:53:48] [WU10][E$] Found 0 files (0 B)
+[15:53:48] [WU11][E$] Found 0 files (0 B)
+[15:53:48] [WU08][E$] Sync completed: 13 copied, 0 skipped, 0 failed
+[15:53:48] [WU09][E$] Sync completed: 13 copied, 0 skipped, 0 failed
+[15:53:48] [WU10][E$] Sync completed: 13 copied, 0 skipped, 0 failed
+[15:53:48] [WU11][E$] Sync completed: 13 copied, 0 skipped, 0 failed
+[15:53:48] [WU13][E$] Found 0 files (0 B)
+[15:53:48] [WU13][E$] Sync completed: 13 copied, 0 skipped, 0 failed
+[15:53:48] [WU05][E$] Found 0 files (0 B)
+[15:53:48] [WU05][E$] Sync completed: 13 copied, 0 skipped, 0 failed
+[15:53:48] [WU12][E$] Found 0 files (0 B)
+[15:53:48] [WU03][E$] Found 0 files (0 B)
+[15:53:48] [CU][E$] Found 0 files (0 B)
+[15:53:48] [WU12][E$] Sync completed: 13 copied, 0 skipped, 0 failed
+[15:53:48] [WU03][E$] Sync completed: 13 copied, 0 skipped, 0 failed
+[15:53:48] [CU][E$] Sync completed: 26 copied, 0 skipped, 0 failed
+[15:53:58] [WU01][E$] Started sync task for project UCSync_Test1
+[15:53:58] [WU02][E$] Started sync task for project UCSync_Test1
+[15:53:58] [WU03][E$] Started sync task for project UCSync_Test1
+[15:53:58] [WU04][E$] Started sync task for project UCSync_Test1
+[15:53:58] [WU05][E$] Started sync task for project UCSync_Test1
+[15:53:58] [WU06][E$] Started sync task for project UCSync_Test1
+[15:53:58] [WU07][E$] Started sync task for project UCSync_Test1
+[15:53:58] [WU08][E$] Started sync task for project UCSync_Test1
+[15:53:58] [WU09][E$] Started sync task for project UCSync_Test1
+[15:53:58] [WU10][E$] Started sync task for project UCSync_Test1
+[15:53:58] [WU11][E$] Started sync task for project UCSync_Test1
+[15:53:58] [WU12][E$] Started sync task for project UCSync_Test1
+[15:53:58] [WU13][E$] Started sync task for project UCSync_Test1
+[15:53:58] [CU][E$] Started sync task for project UCSync_Test1
+[15:53:58] [WU05][E$] Found 0 files (0 B)
+[15:53:58] [WU05][E$] Sync completed: 13 copied, 0 skipped, 0 failed
+[15:53:58] [WU06][E$] Found 0 files (0 B)
+[15:53:58] [WU06][E$] Sync completed: 13 copied, 0 skipped, 0 failed
+[15:53:58] [WU07][E$] Found 0 files (0 B)
+[15:53:58] [WU08][E$] Found 0 files (0 B)
+[15:53:58] [WU07][E$] Sync completed: 13 copied, 0 skipped, 0 failed
+[15:53:58] [WU08][E$] Sync completed: 13 copied, 0 skipped, 0 failed
+[15:53:58] [WU04][E$] Found 0 files (0 B)
+[15:53:58] [WU11][E$] Found 0 files (0 B)
+[15:53:58] [WU04][E$] Sync completed: 13 copied, 0 skipped, 0 failed
+[15:53:58] [WU13][E$] Found 0 files (0 B)
+[15:53:58] [WU11][E$] Sync completed: 13 copied, 0 skipped, 0 failed
+[15:53:58] [WU01][E$] Found 0 files (0 B)
+[15:53:58] [WU02][E$] Found 0 files (0 B)
+[15:53:58] [WU13][E$] Sync completed: 13 copied, 0 skipped, 0 failed
+[15:53:58] [WU03][E$] Found 0 files (0 B)
+[15:53:58] [WU01][E$] Sync completed: 13 copied, 0 skipped, 0 failed
+[15:53:58] [WU02][E$] Sync completed: 13 copied, 0 skipped, 0 failed
+[15:53:58] [WU03][E$] Sync completed: 13 copied, 0 skipped, 0 failed
+[15:53:58] [WU10][E$] Found 0 files (0 B)
+[15:53:58] [WU09][E$] Found 0 files (0 B)
+[15:53:58] [WU10][E$] Sync completed: 13 copied, 0 skipped, 0 failed
+[15:53:58] [WU09][E$] Sync completed: 13 copied, 0 skipped, 0 failed
+[15:53:58] [WU12][E$] Found 0 files (0 B)
+[15:53:58] [WU12][E$] Sync completed: 13 copied, 0 skipped, 0 failed
+[15:53:59] [CU][E$] Found 0 files (0 B)
+[15:53:59] [CU][E$] Sync completed: 26 copied, 0 skipped, 0 failed
+[15:54:08] [WU01][E$] Started sync task for project UCSync_Test1
+[15:54:08] [WU02][E$] Started sync task for project UCSync_Test1
+[15:54:08] [WU03][E$] Started sync task for project UCSync_Test1
+[15:54:08] [WU04][E$] Started sync task for project UCSync_Test1
+[15:54:08] [WU05][E$] Started sync task for project UCSync_Test1
+[15:54:08] [WU06][E$] Started sync task for project UCSync_Test1
+[15:54:08] [WU07][E$] Started sync task for project UCSync_Test1
+[15:54:08] [WU08][E$] Started sync task for project UCSync_Test1
+[15:54:08] [WU09][E$] Started sync task for project UCSync_Test1
+[15:54:08] [WU10][E$] Started sync task for project UCSync_Test1
+[15:54:08] [WU11][E$] Started sync task for project UCSync_Test1
+[15:54:08] [WU12][E$] Started sync task for project UCSync_Test1
+[15:54:08] [WU13][E$] Started sync task for project UCSync_Test1
+[15:54:08] [CU][E$] Started sync task for project UCSync_Test1
+[15:54:08] [WU02][E$] Found 0 files (0 B)
+[15:54:08] [WU02][E$] Sync completed: 13 copied, 0 skipped, 0 failed
+[15:54:08] [WU05][E$] Found 0 files (0 B)
+[15:54:08] [WU06][E$] Found 0 files (0 B)
+[15:54:08] [WU05][E$] Sync completed: 13 copied, 0 skipped, 0 failed
+[15:54:08] [WU07][E$] Found 0 files (0 B)
+[15:54:08] [WU06][E$] Sync completed: 13 copied, 0 skipped, 0 failed
+[15:54:08] [WU07][E$] Sync completed: 13 copied, 0 skipped, 0 failed
+[15:54:08] [WU09][E$] Found 0 files (0 B)
+[15:54:08] [WU08][E$] Found 0 files (0 B)
+[15:54:08] [WU09][E$] Sync completed: 13 copied, 0 skipped, 0 failed
+[15:54:08] [WU08][E$] Sync completed: 13 copied, 0 skipped, 0 failed
+[15:54:08] [WU12][E$] Found 0 files (0 B)
+[15:54:08] [WU12][E$] Sync completed: 13 copied, 0 skipped, 0 failed
+[15:54:08] [WU03][E$] Found 0 files (0 B)
+[15:54:08] [WU04][E$] Found 0 files (0 B)
+[15:54:08] [WU13][E$] Found 0 files (0 B)
+[15:54:08] [WU03][E$] Sync completed: 13 copied, 0 skipped, 0 failed
+[15:54:08] [WU04][E$] Sync completed: 13 copied, 0 skipped, 0 failed
+[15:54:08] [WU13][E$] Sync completed: 13 copied, 0 skipped, 0 failed
+[15:54:08] [WU01][E$] Found 0 files (0 B)
+[15:54:08] [WU01][E$] Sync completed: 13 copied, 0 skipped, 0 failed
+[15:54:08] [WU10][E$] Found 0 files (0 B)
+[15:54:08] [WU10][E$] Sync completed: 13 copied, 0 skipped, 0 failed
+[15:54:08] [CU][E$] Found 0 files (0 B)
+[15:54:08] [WU11][E$] Found 0 files (0 B)
+[15:54:08] [CU][E$] Sync completed: 26 copied, 0 skipped, 0 failed
+[15:54:08] [WU11][E$] Sync completed: 13 copied, 0 skipped, 0 failed
+[15:54:18] [WU01][E$] Started sync task for project UCSync_Test1
+[15:54:18] [WU02][E$] Started sync task for project UCSync_Test1
+[15:54:18] [WU03][E$] Started sync task for project UCSync_Test1
+[15:54:18] [WU04][E$] Started sync task for project UCSync_Test1
+[15:54:18] [WU05][E$] Started sync task for project UCSync_Test1
+[15:54:18] [WU06][E$] Started sync task for project UCSync_Test1
+[15:54:18] [WU07][E$] Started sync task for project UCSync_Test1
+[15:54:18] [WU08][E$] Started sync task for project UCSync_Test1
+[15:54:18] [WU09][E$] Started sync task for project UCSync_Test1
+[15:54:18] [WU10][E$] Started sync task for project UCSync_Test1
+[15:54:18] [WU11][E$] Started sync task for project UCSync_Test1
+[15:54:18] [WU12][E$] Started sync task for project UCSync_Test1
+[15:54:18] [WU13][E$] Started sync task for project UCSync_Test1
+[15:54:18] [CU][E$] Started sync task for project UCSync_Test1
+[15:54:18] [WU02][E$] Found 0 files (0 B)
+[15:54:18] [WU02][E$] Sync completed: 13 copied, 0 skipped, 0 failed
+[15:54:18] [WU01][E$] Found 0 files (0 B)
+[15:54:18] [WU01][E$] Sync completed: 13 copied, 0 skipped, 0 failed
+[15:54:18] [WU06][E$] Found 0 files (0 B)
+[15:54:18] [WU03][E$] Found 0 files (0 B)
+[15:54:18] [WU06][E$] Sync completed: 13 copied, 0 skipped, 0 failed
+[15:54:18] [WU03][E$] Sync completed: 13 copied, 0 skipped, 0 failed
+[15:54:19] [WU04][E$] Found 0 files (0 B)
+[15:54:19] [WU05][E$] Found 0 files (0 B)
+[15:54:19] [WU04][E$] Sync completed: 13 copied, 0 skipped, 0 failed
+[15:54:19] [WU05][E$] Sync completed: 13 copied, 0 skipped, 0 failed
+[15:54:19] [WU08][E$] Found 0 files (0 B)
+[15:54:19] [WU07][E$] Found 0 files (0 B)
+[15:54:19] [WU08][E$] Sync completed: 13 copied, 0 skipped, 0 failed
+[15:54:19] [WU07][E$] Sync completed: 13 copied, 0 skipped, 0 failed
+[15:54:19] [WU09][E$] Found 0 files (0 B)
+[15:54:19] [WU09][E$] Sync completed: 13 copied, 0 skipped, 0 failed
+[15:54:19] [WU10][E$] Found 0 files (0 B)
+[15:54:19] [WU11][E$] Found 0 files (0 B)
+[15:54:19] [WU10][E$] Sync completed: 13 copied, 0 skipped, 0 failed
+[15:54:19] [WU11][E$] Sync completed: 13 copied, 0 skipped, 0 failed
+[15:54:19] [WU12][E$] Found 0 files (0 B)
+[15:54:19] [WU12][E$] Sync completed: 13 copied, 0 skipped, 0 failed
+[15:54:19] [CU][E$] Found 0 files (0 B)
+[15:54:19] [WU13][E$] Found 0 files (0 B)
+[15:54:19] [CU][E$] Sync completed: 26 copied, 0 skipped, 0 failed
+[15:54:19] [WU13][E$] Sync completed: 13 copied, 0 skipped, 0 failed
+[15:54:28] [WU01][E$] Started sync task for project UCSync_Test1
+[15:54:28] [WU02][E$] Started sync task for project UCSync_Test1
+[15:54:28] [WU03][E$] Started sync task for project UCSync_Test1
+[15:54:28] [WU04][E$] Started sync task for project UCSync_Test1
+[15:54:28] [WU05][E$] Started sync task for project UCSync_Test1
+[15:54:28] [WU06][E$] Started sync task for project UCSync_Test1
+[15:54:28] [WU07][E$] Started sync task for project UCSync_Test1
+[15:54:28] [WU08][E$] Started sync task for project UCSync_Test1
+[15:54:28] [WU09][E$] Started sync task for project UCSync_Test1
+[15:54:28] [WU10][E$] Started sync task for project UCSync_Test1
+[15:54:28] [WU11][E$] Started sync task for project UCSync_Test1
+[15:54:28] [WU12][E$] Started sync task for project UCSync_Test1
+[15:54:28] [WU13][E$] Started sync task for project UCSync_Test1
+[15:54:28] [CU][E$] Started sync task for project UCSync_Test1
+[15:54:28] [WU02][E$] Found 0 files (0 B)
+[15:54:28] [WU02][E$] Sync completed: 13 copied, 0 skipped, 0 failed
+[15:54:28] [WU03][E$] Found 0 files (0 B)
+[15:54:28] [WU03][E$] Sync completed: 13 copied, 0 skipped, 0 failed
+[15:54:28] [WU04][E$] Found 0 files (0 B)
+[15:54:28] [WU06][E$] Found 0 files (0 B)
+[15:54:28] [WU04][E$] Sync completed: 13 copied, 0 skipped, 0 failed
+[15:54:28] [WU06][E$] Sync completed: 13 copied, 0 skipped, 0 failed
+[15:54:28] [WU01][E$] Found 0 files (0 B)
+[15:54:29] [WU01][E$] Sync completed: 13 copied, 0 skipped, 0 failed
+[15:54:29] [WU07][E$] Found 0 files (0 B)
+[15:54:29] [WU07][E$] Sync completed: 13 copied, 0 skipped, 0 failed
+[15:54:29] [WU08][E$] Found 0 files (0 B)
+[15:54:29] [WU08][E$] Sync completed: 13 copied, 0 skipped, 0 failed
+[15:54:29] [WU09][E$] Found 0 files (0 B)
+[15:54:29] [WU09][E$] Sync completed: 13 copied, 0 skipped, 0 failed
+[15:54:29] [WU10][E$] Found 0 files (0 B)
+[15:54:29] [WU10][E$] Sync completed: 13 copied, 0 skipped, 0 failed
+[15:54:29] [WU11][E$] Found 0 files (0 B)
+[15:54:29] [WU11][E$] Sync completed: 13 copied, 0 skipped, 0 failed
+[15:54:29] [WU12][E$] Found 0 files (0 B)
+[15:54:29] [WU12][E$] Sync completed: 13 copied, 0 skipped, 0 failed
+[15:54:29] [WU05][E$] Found 0 files (0 B)
+[15:54:29] [WU13][E$] Found 0 files (0 B)
+[15:54:29] [CU][E$] Found 0 files (0 B)
+[15:54:29] [WU05][E$] Sync completed: 13 copied, 0 skipped, 0 failed
+[15:54:29] [WU13][E$] Sync completed: 13 copied, 0 skipped, 0 failed
+[15:54:29] [CU][E$] Sync completed: 26 copied, 0 skipped, 0 failed
+[15:54:38] [WU01][E$] Started sync task for project UCSync_Test1
+[15:54:38] [WU02][E$] Started sync task for project UCSync_Test1
+[15:54:38] [WU03][E$] Started sync task for project UCSync_Test1
+[15:54:38] [WU04][E$] Started sync task for project UCSync_Test1
+[15:54:38] [WU05][E$] Started sync task for project UCSync_Test1
+[15:54:38] [WU06][E$] Started sync task for project UCSync_Test1
+[15:54:38] [WU07][E$] Started sync task for project UCSync_Test1
+[15:54:38] [WU08][E$] Started sync task for project UCSync_Test1
+[15:54:38] [WU09][E$] Started sync task for project UCSync_Test1
+[15:54:38] [WU10][E$] Started sync task for project UCSync_Test1
+[15:54:38] [WU11][E$] Started sync task for project UCSync_Test1
+[15:54:39] [WU12][E$] Started sync task for project UCSync_Test1
+[15:54:39] [WU13][E$] Started sync task for project UCSync_Test1
+[15:54:39] [CU][E$] Started sync task for project UCSync_Test1
+[15:54:39] [WU03][E$] Found 0 files (0 B)
+[15:54:39] [WU03][E$] Sync completed: 13 copied, 0 skipped, 0 failed
+[15:54:39] [WU02][E$] Found 0 files (0 B)
+[15:54:39] [WU05][E$] Found 0 files (0 B)
+[15:54:39] [WU02][E$] Sync completed: 13 copied, 0 skipped, 0 failed
+[15:54:39] [WU05][E$] Sync completed: 13 copied, 0 skipped, 0 failed
+[15:54:39] [WU06][E$] Found 0 files (0 B)
+[15:54:39] [WU07][E$] Found 0 files (0 B)
+[15:54:39] [WU06][E$] Sync completed: 13 copied, 0 skipped, 0 failed
+[15:54:39] [WU07][E$] Sync completed: 13 copied, 0 skipped, 0 failed
+[15:54:39] [WU01][E$] Found 0 files (0 B)
+[15:54:39] [WU04][E$] Found 0 files (0 B)
+[15:54:39] [WU01][E$] Sync completed: 13 copied, 0 skipped, 0 failed
+[15:54:39] [WU04][E$] Sync completed: 13 copied, 0 skipped, 0 failed
+[15:54:39] [WU10][E$] Found 0 files (0 B)
+[15:54:39] [WU11][E$] Found 0 files (0 B)
+[15:54:39] [WU09][E$] Found 0 files (0 B)
+[15:54:39] [WU10][E$] Sync completed: 13 copied, 0 skipped, 0 failed
+[15:54:39] [WU08][E$] Found 0 files (0 B)
+[15:54:39] [WU13][E$] Found 0 files (0 B)
+[15:54:39] [WU11][E$] Sync completed: 13 copied, 0 skipped, 0 failed
+[15:54:39] [WU09][E$] Sync completed: 13 copied, 0 skipped, 0 failed
+[15:54:39] [WU08][E$] Sync completed: 13 copied, 0 skipped, 0 failed
+[15:54:39] [WU13][E$] Sync completed: 13 copied, 0 skipped, 0 failed
+[15:54:39] [CU][E$] Found 0 files (0 B)
+[15:54:39] [CU][E$] Sync completed: 26 copied, 0 skipped, 0 failed
+[15:54:39] [WU12][E$] Found 0 files (0 B)
+[15:54:39] [WU12][E$] Sync completed: 13 copied, 0 skipped, 0 failed
+[15:54:49] [WU01][E$] Started sync task for project UCSync_Test1
+[15:54:49] [WU02][E$] Started sync task for project UCSync_Test1
+[15:54:49] [WU03][E$] Started sync task for project UCSync_Test1
+[15:54:49] [WU04][E$] Started sync task for project UCSync_Test1
+[15:54:49] [WU05][E$] Started sync task for project UCSync_Test1
+[15:54:49] [WU06][E$] Started sync task for project UCSync_Test1
+[15:54:49] [WU07][E$] Started sync task for project UCSync_Test1
+[15:54:49] [WU08][E$] Started sync task for project UCSync_Test1
+[15:54:49] [WU09][E$] Started sync task for project UCSync_Test1
+[15:54:49] [WU10][E$] Started sync task for project UCSync_Test1
+[15:54:49] [WU11][E$] Started sync task for project UCSync_Test1
+[15:54:49] [WU12][E$] Started sync task for project UCSync_Test1
+[15:54:49] [WU13][E$] Started sync task for project UCSync_Test1
+[15:54:49] [CU][E$] Started sync task for project UCSync_Test1
+[15:54:49] [WU05][E$] Found 0 files (0 B)
+[15:54:49] [WU05][E$] Sync completed: 13 copied, 0 skipped, 0 failed
+[15:54:49] [WU07][E$] Found 0 files (0 B)
+[15:54:49] [WU07][E$] Sync completed: 13 copied, 0 skipped, 0 failed
+[15:54:49] [WU08][E$] Found 0 files (0 B)
+[15:54:49] [WU08][E$] Sync completed: 13 copied, 0 skipped, 0 failed
+[15:54:49] [WU04][E$] Found 0 files (0 B)
+[15:54:49] [WU04][E$] Sync completed: 13 copied, 0 skipped, 0 failed
+[15:54:49] [WU09][E$] Found 0 files (0 B)
+[15:54:49] [WU10][E$] Found 0 files (0 B)
+[15:54:49] [WU12][E$] Found 0 files (0 B)
+[15:54:49] [WU09][E$] Sync completed: 13 copied, 0 skipped, 0 failed
+[15:54:49] [WU10][E$] Sync completed: 13 copied, 0 skipped, 0 failed
+[15:54:49] [WU12][E$] Sync completed: 13 copied, 0 skipped, 0 failed
+[15:54:49] [WU11][E$] Found 0 files (0 B)
+[15:54:49] [WU01][E$] Found 0 files (0 B)
+[15:54:49] [WU06][E$] Found 0 files (0 B)
+[15:54:49] [WU13][E$] Found 0 files (0 B)
+[15:54:49] [WU02][E$] Found 0 files (0 B)
+[15:54:49] [WU11][E$] Sync completed: 13 copied, 0 skipped, 0 failed
+[15:54:49] [WU01][E$] Sync completed: 13 copied, 0 skipped, 0 failed
+[15:54:49] [WU06][E$] Sync completed: 13 copied, 0 skipped, 0 failed
+[15:54:49] [WU13][E$] Sync completed: 13 copied, 0 skipped, 0 failed
+[15:54:49] [WU02][E$] Sync completed: 13 copied, 0 skipped, 0 failed
+[15:54:49] [WU03][E$] Found 0 files (0 B)
+[15:54:49] [WU03][E$] Sync completed: 13 copied, 0 skipped, 0 failed
+[15:54:49] [CU][E$] Found 0 files (0 B)
+[15:54:49] [CU][E$] Sync completed: 26 copied, 0 skipped, 0 failed
+[15:54:59] [WU01][E$] Started sync task for project UCSync_Test1
+[15:54:59] [WU02][E$] Started sync task for project UCSync_Test1
+[15:54:59] [WU03][E$] Started sync task for project UCSync_Test1
+[15:54:59] [WU04][E$] Started sync task for project UCSync_Test1
+[15:54:59] [WU05][E$] Started sync task for project UCSync_Test1
+[15:54:59] [WU06][E$] Started sync task for project UCSync_Test1
+[15:54:59] [WU07][E$] Started sync task for project UCSync_Test1
+[15:54:59] [WU08][E$] Started sync task for project UCSync_Test1
+[15:54:59] [WU09][E$] Started sync task for project UCSync_Test1
+[15:54:59] [WU10][E$] Started sync task for project UCSync_Test1
+[15:54:59] [WU11][E$] Started sync task for project UCSync_Test1
+[15:54:59] [WU12][E$] Started sync task for project UCSync_Test1
+[15:54:59] [WU13][E$] Started sync task for project UCSync_Test1
+[15:54:59] [CU][E$] Started sync task for project UCSync_Test1
+[15:54:59] [WU02][E$] Found 0 files (0 B)
+[15:54:59] [WU02][E$] Sync completed: 13 copied, 0 skipped, 0 failed
+[15:54:59] [WU04][E$] Found 0 files (0 B)
+[15:54:59] [WU04][E$] Sync completed: 13 copied, 0 skipped, 0 failed
+[15:54:59] [WU05][E$] Found 0 files (0 B)
+[15:54:59] [WU01][E$] Found 0 files (0 B)
+[15:54:59] [WU06][E$] Found 0 files (0 B)
+[15:54:59] [WU07][E$] Found 0 files (0 B)
+[15:54:59] [WU05][E$] Sync completed: 13 copied, 0 skipped, 0 failed
+[15:54:59] [WU01][E$] Sync completed: 13 copied, 0 skipped, 0 failed
+[15:54:59] [WU08][E$] Found 0 files (0 B)
+[15:54:59] [WU06][E$] Sync completed: 13 copied, 0 skipped, 0 failed
+[15:54:59] [WU09][E$] Found 0 files (0 B)
+[15:54:59] [WU07][E$] Sync completed: 13 copied, 0 skipped, 0 failed
+[15:54:59] [WU08][E$] Sync completed: 13 copied, 0 skipped, 0 failed
+[15:54:59] [WU09][E$] Sync completed: 13 copied, 0 skipped, 0 failed
+[15:54:59] [WU10][E$] Found 0 files (0 B)
+[15:54:59] [WU10][E$] Sync completed: 13 copied, 0 skipped, 0 failed
+[15:54:59] [WU11][E$] Found 0 files (0 B)
+[15:54:59] [WU12][E$] Found 0 files (0 B)
+[15:54:59] [WU11][E$] Sync completed: 13 copied, 0 skipped, 0 failed
+[15:54:59] [WU12][E$] Sync completed: 13 copied, 0 skipped, 0 failed
+[15:54:59] [WU13][E$] Found 0 files (0 B)
+[15:54:59] [WU13][E$] Sync completed: 13 copied, 0 skipped, 0 failed
+[15:54:59] [WU03][E$] Found 0 files (0 B)
+[15:54:59] [WU03][E$] Sync completed: 13 copied, 0 skipped, 0 failed
+[15:54:59] [CU][E$] Found 0 files (0 B)
+[15:54:59] [CU][E$] Sync completed: 26 copied, 0 skipped, 0 failed
+[15:55:09] [WU01][E$] Started sync task for project UCSync_Test1
+[15:55:09] [WU02][E$] Started sync task for project UCSync_Test1
+[15:55:09] [WU03][E$] Started sync task for project UCSync_Test1
+[15:55:09] [WU04][E$] Started sync task for project UCSync_Test1
+[15:55:09] [WU05][E$] Started sync task for project UCSync_Test1
+[15:55:09] [WU06][E$] Started sync task for project UCSync_Test1
+[15:55:09] [WU07][E$] Started sync task for project UCSync_Test1
+[15:55:09] [WU08][E$] Started sync task for project UCSync_Test1
+[15:55:09] [WU09][E$] Started sync task for project UCSync_Test1
+[15:55:09] [WU10][E$] Started sync task for project UCSync_Test1
+[15:55:09] [WU11][E$] Started sync task for project UCSync_Test1
+[15:55:09] [WU12][E$] Started sync task for project UCSync_Test1
+[15:55:09] [WU13][E$] Started sync task for project UCSync_Test1
+[15:55:09] [CU][E$] Started sync task for project UCSync_Test1
+[15:55:09] [WU02][E$] Found 0 files (0 B)
+[15:55:09] [WU02][E$] Sync completed: 13 copied, 0 skipped, 0 failed
+[15:55:09] [WU04][E$] Found 0 files (0 B)
+[15:55:09] [WU05][E$] Found 0 files (0 B)
+[15:55:09] [WU01][E$] Found 0 files (0 B)
+[15:55:09] [WU06][E$] Found 0 files (0 B)
+[15:55:09] [WU07][E$] Found 0 files (0 B)
+[15:55:09] [WU03][E$] Found 0 files (0 B)
+[15:55:09] [WU09][E$] Found 0 files (0 B)
+[15:55:09] [WU10][E$] Found 0 files (0 B)
+[15:55:09] [WU11][E$] Found 0 files (0 B)
+[15:55:09] [WU04][E$] Sync completed: 13 copied, 0 skipped, 0 failed
+[15:55:09] [WU12][E$] Found 0 files (0 B)
+[15:55:09] [WU05][E$] Sync completed: 13 copied, 0 skipped, 0 failed
+[15:55:09] [WU01][E$] Sync completed: 13 copied, 0 skipped, 0 failed
+[15:55:09] [WU06][E$] Sync completed: 13 copied, 0 skipped, 0 failed
+[15:55:09] [WU07][E$] Sync completed: 13 copied, 0 skipped, 0 failed
+[15:55:09] [WU03][E$] Sync completed: 13 copied, 0 skipped, 0 failed
+[15:55:09] [WU09][E$] Sync completed: 13 copied, 0 skipped, 0 failed
+[15:55:09] [WU10][E$] Sync completed: 13 copied, 0 skipped, 0 failed
+[15:55:09] [WU11][E$] Sync completed: 13 copied, 0 skipped, 0 failed
+[15:55:09] [WU12][E$] Sync completed: 13 copied, 0 skipped, 0 failed
+[15:55:09] [WU08][E$] Found 0 files (0 B)
+[15:55:09] [WU08][E$] Sync completed: 13 copied, 0 skipped, 0 failed
+[15:55:09] [CU][E$] Found 0 files (0 B)
+[15:55:09] [CU][E$] Sync completed: 26 copied, 0 skipped, 0 failed
+[15:55:09] [WU13][E$] Found 0 files (0 B)
+[15:55:09] [WU13][E$] Sync completed: 13 copied, 0 skipped, 0 failed
+[15:55:19] [WU01][E$] Started sync task for project UCSync_Test1
+[15:55:19] [WU02][E$] Started sync task for project UCSync_Test1
+[15:55:19] [WU03][E$] Started sync task for project UCSync_Test1
+[15:55:19] [WU04][E$] Started sync task for project UCSync_Test1
+[15:55:19] [WU05][E$] Started sync task for project UCSync_Test1
+[15:55:19] [WU06][E$] Started sync task for project UCSync_Test1
+[15:55:19] [WU07][E$] Started sync task for project UCSync_Test1
+[15:55:19] [WU08][E$] Started sync task for project UCSync_Test1
+[15:55:19] [WU02][E$] Found 0 files (0 B)
+[15:55:19] [WU03][E$] Found 0 files (0 B)
+[15:55:19] [WU02][E$] Sync completed: 13 copied, 0 skipped, 0 failed
+[15:55:19] [WU09][E$] Started sync task for project UCSync_Test1
+[15:55:19] [WU03][E$] Sync completed: 13 copied, 0 skipped, 0 failed
+[15:55:19] [WU10][E$] Started sync task for project UCSync_Test1
+[15:55:19] [WU11][E$] Started sync task for project UCSync_Test1
+[15:55:19] [WU12][E$] Started sync task for project UCSync_Test1
+[15:55:19] [WU04][E$] Found 0 files (0 B)
+[15:55:19] [WU13][E$] Started sync task for project UCSync_Test1
+[15:55:19] [WU04][E$] Sync completed: 13 copied, 0 skipped, 0 failed
+[15:55:19] [WU05][E$] Found 0 files (0 B)
+[15:55:19] [WU06][E$] Found 0 files (0 B)
+[15:55:19] [WU07][E$] Found 0 files (0 B)
+[15:55:19] [WU05][E$] Sync completed: 13 copied, 0 skipped, 0 failed
+[15:55:19] [WU06][E$] Sync completed: 13 copied, 0 skipped, 0 failed
+[15:55:19] [WU07][E$] Sync completed: 13 copied, 0 skipped, 0 failed
+[15:55:19] [CU][E$] Started sync task for project UCSync_Test1
+[15:55:19] [WU08][E$] Found 0 files (0 B)
+[15:55:19] [WU08][E$] Sync completed: 13 copied, 0 skipped, 0 failed
+[15:55:19] [WU01][E$] Found 0 files (0 B)
+[15:55:19] [WU01][E$] Sync completed: 13 copied, 0 skipped, 0 failed
+[15:55:19] [WU09][E$] Found 0 files (0 B)
+[15:55:19] [WU09][E$] Sync completed: 13 copied, 0 skipped, 0 failed
+[15:55:19] [WU10][E$] Found 0 files (0 B)
+[15:55:19] [WU10][E$] Sync completed: 13 copied, 0 skipped, 0 failed
+[15:55:19] [WU12][E$] Found 0 files (0 B)
+[15:55:19] [WU12][E$] Sync completed: 13 copied, 0 skipped, 0 failed
+[15:55:19] [WU11][E$] Found 0 files (0 B)
+[15:55:19] [WU13][E$] Found 0 files (0 B)
+[15:55:19] [WU11][E$] Sync completed: 13 copied, 0 skipped, 0 failed
+[15:55:19] [WU13][E$] Sync completed: 13 copied, 0 skipped, 0 failed
+[15:55:19] [CU][E$] Found 0 files (0 B)
+[15:55:19] [CU][E$] Sync completed: 26 copied, 0 skipped, 0 failed
+[15:55:29] [WU01][E$] Started sync task for project UCSync_Test1
+[15:55:29] [WU02][E$] Started sync task for project UCSync_Test1
+[15:55:29] [WU03][E$] Started sync task for project UCSync_Test1
+[15:55:29] [WU04][E$] Started sync task for project UCSync_Test1
+[15:55:29] [WU05][E$] Started sync task for project UCSync_Test1
+[15:55:29] [WU06][E$] Started sync task for project UCSync_Test1
+[15:55:29] [WU07][E$] Started sync task for project UCSync_Test1
+[15:55:29] [WU08][E$] Started sync task for project UCSync_Test1
+[15:55:29] [WU09][E$] Started sync task for project UCSync_Test1
+[15:55:29] [WU10][E$] Started sync task for project UCSync_Test1
+[15:55:29] [WU11][E$] Started sync task for project UCSync_Test1
+[15:55:29] [WU12][E$] Started sync task for project UCSync_Test1
+[15:55:29] [WU13][E$] Started sync task for project UCSync_Test1
+[15:55:29] [CU][E$] Started sync task for project UCSync_Test1
+[15:55:29] [WU02][E$] Found 0 files (0 B)
+[15:55:29] [WU02][E$] Sync completed: 13 copied, 0 skipped, 0 failed
+[15:55:29] [WU04][E$] Found 0 files (0 B)
+[15:55:29] [WU04][E$] Sync completed: 13 copied, 0 skipped, 0 failed
+[15:55:29] [WU05][E$] Found 0 files (0 B)
+[15:55:29] [WU05][E$] Sync completed: 13 copied, 0 skipped, 0 failed
+[15:55:29] [WU06][E$] Found 0 files (0 B)
+[15:55:29] [WU07][E$] Found 0 files (0 B)
+[15:55:29] [WU01][E$] Found 0 files (0 B)
+[15:55:29] [WU06][E$] Sync completed: 13 copied, 0 skipped, 0 failed
+[15:55:29] [WU03][E$] Found 0 files (0 B)
+[15:55:29] [WU07][E$] Sync completed: 13 copied, 0 skipped, 0 failed
+[15:55:29] [WU01][E$] Sync completed: 13 copied, 0 skipped, 0 failed
+[15:55:29] [WU03][E$] Sync completed: 13 copied, 0 skipped, 0 failed
+[15:55:29] [WU08][E$] Found 0 files (0 B)
+[15:55:29] [WU08][E$] Sync completed: 13 copied, 0 skipped, 0 failed
+[15:55:29] [WU09][E$] Found 0 files (0 B)
+[15:55:29] [WU09][E$] Sync completed: 13 copied, 0 skipped, 0 failed
+[15:55:29] [WU10][E$] Found 0 files (0 B)
+[15:55:29] [CU][E$] Found 0 files (0 B)
+[15:55:29] [WU10][E$] Sync completed: 13 copied, 0 skipped, 0 failed
+[15:55:29] [CU][E$] Sync completed: 26 copied, 0 skipped, 0 failed
+[15:55:29] [WU11][E$] Found 0 files (0 B)
+[15:55:29] [WU11][E$] Sync completed: 13 copied, 0 skipped, 0 failed
+[15:55:29] [WU12][E$] Found 0 files (0 B)
+[15:55:30] [WU12][E$] Sync completed: 13 copied, 0 skipped, 0 failed
+[15:55:30] [WU13][E$] Found 0 files (0 B)
+[15:55:30] [WU13][E$] Sync completed: 13 copied, 0 skipped, 0 failed
+[15:55:39] [WU01][E$] Started sync task for project UCSync_Test1
+[15:55:39] [WU02][E$] Started sync task for project UCSync_Test1
+[15:55:39] [WU03][E$] Started sync task for project UCSync_Test1
+[15:55:39] [WU04][E$] Started sync task for project UCSync_Test1
+[15:55:39] [WU05][E$] Started sync task for project UCSync_Test1
+[15:55:39] [WU06][E$] Started sync task for project UCSync_Test1
+[15:55:39] [WU07][E$] Started sync task for project UCSync_Test1
+[15:55:39] [WU08][E$] Started sync task for project UCSync_Test1
+[15:55:39] [WU09][E$] Started sync task for project UCSync_Test1
+[15:55:39] [WU10][E$] Started sync task for project UCSync_Test1
+[15:55:39] [WU11][E$] Started sync task for project UCSync_Test1
+[15:55:39] [WU12][E$] Started sync task for project UCSync_Test1
+[15:55:39] [WU03][E$] Found 0 files (0 B)
+[15:55:39] [WU13][E$] Started sync task for project UCSync_Test1
+[15:55:39] [WU04][E$] Found 0 files (0 B)
+[15:55:39] [WU05][E$] Found 0 files (0 B)
+[15:55:39] [WU06][E$] Found 0 files (0 B)
+[15:55:39] [WU07][E$] Found 0 files (0 B)
+[15:55:39] [WU03][E$] Sync completed: 13 copied, 0 skipped, 0 failed
+[15:55:39] [WU04][E$] Sync completed: 13 copied, 0 skipped, 0 failed
+[15:55:39] [CU][E$] Started sync task for project UCSync_Test1
+[15:55:39] [WU05][E$] Sync completed: 13 copied, 0 skipped, 0 failed
+[15:55:39] [WU01][E$] Found 0 files (0 B)
+[15:55:39] [WU06][E$] Sync completed: 13 copied, 0 skipped, 0 failed
+[15:55:39] [WU07][E$] Sync completed: 13 copied, 0 skipped, 0 failed
+[15:55:39] [WU01][E$] Sync completed: 13 copied, 0 skipped, 0 failed
+[15:55:39] [WU02][E$] Found 0 files (0 B)
+[15:55:39] [WU02][E$] Sync completed: 13 copied, 0 skipped, 0 failed
+[15:55:40] [WU11][E$] Found 0 files (0 B)
+[15:55:40] [WU12][E$] Found 0 files (0 B)
+[15:55:40] [WU11][E$] Sync completed: 13 copied, 0 skipped, 0 failed
+[15:55:40] [WU13][E$] Found 0 files (0 B)
+[15:55:40] [WU12][E$] Sync completed: 13 copied, 0 skipped, 0 failed
+[15:55:40] [WU13][E$] Sync completed: 13 copied, 0 skipped, 0 failed
+[15:55:40] [WU08][E$] Found 0 files (0 B)
+[15:55:40] [WU10][E$] Found 0 files (0 B)
+[15:55:40] [WU08][E$] Sync completed: 13 copied, 0 skipped, 0 failed
+[15:55:40] [WU10][E$] Sync completed: 13 copied, 0 skipped, 0 failed
+[15:55:40] [WU09][E$] Found 0 files (0 B)
+[15:55:40] [WU09][E$] Sync completed: 13 copied, 0 skipped, 0 failed
+[15:55:40] [CU][E$] Found 0 files (0 B)
+[15:55:40] [CU][E$] Sync completed: 26 copied, 0 skipped, 0 failed
+[15:55:49] [WU01][E$] Started sync task for project UCSync_Test1
+[15:55:49] [WU02][E$] Started sync task for project UCSync_Test1
+[15:55:49] [WU03][E$] Started sync task for project UCSync_Test1
+[15:55:49] [WU04][E$] Started sync task for project UCSync_Test1
+[15:55:50] [WU05][E$] Started sync task for project UCSync_Test1
+[15:55:50] [WU06][E$] Started sync task for project UCSync_Test1
+[15:55:50] [WU07][E$] Started sync task for project UCSync_Test1
+[15:55:50] [WU08][E$] Started sync task for project UCSync_Test1
+[15:55:50] [WU09][E$] Started sync task for project UCSync_Test1
+[15:55:50] [WU10][E$] Started sync task for project UCSync_Test1
+[15:55:50] [WU11][E$] Started sync task for project UCSync_Test1
+[15:55:50] [WU12][E$] Started sync task for project UCSync_Test1
+[15:55:50] [WU13][E$] Started sync task for project UCSync_Test1
+[15:55:50] [CU][E$] Started sync task for project UCSync_Test1
+[15:55:50] [WU01][E$] Found 0 files (0 B)
+[15:55:50] [WU01][E$] Sync completed: 13 copied, 0 skipped, 0 failed
+[15:55:50] [WU02][E$] Found 0 files (0 B)
+[15:55:50] [WU02][E$] Sync completed: 13 copied, 0 skipped, 0 failed
+[15:55:50] [WU03][E$] Found 0 files (0 B)
+[15:55:50] [WU05][E$] Found 0 files (0 B)
+[15:55:50] [WU06][E$] Found 0 files (0 B)
+[15:55:50] [WU07][E$] Found 0 files (0 B)
+[15:55:50] [WU03][E$] Sync completed: 13 copied, 0 skipped, 0 failed
+[15:55:50] [WU05][E$] Sync completed: 13 copied, 0 skipped, 0 failed
+[15:55:50] [WU06][E$] Sync completed: 13 copied, 0 skipped, 0 failed
+[15:55:50] [WU07][E$] Sync completed: 13 copied, 0 skipped, 0 failed
+[15:55:50] [WU04][E$] Found 0 files (0 B)
+[15:55:50] [WU04][E$] Sync completed: 13 copied, 0 skipped, 0 failed
+[15:55:50] [WU10][E$] Found 0 files (0 B)
+[15:55:50] [WU12][E$] Found 0 files (0 B)
+[15:55:50] [WU10][E$] Sync completed: 13 copied, 0 skipped, 0 failed
+[15:55:50] [WU12][E$] Sync completed: 13 copied, 0 skipped, 0 failed
+[15:55:50] [WU08][E$] Found 0 files (0 B)
+[15:55:50] [WU08][E$] Sync completed: 13 copied, 0 skipped, 0 failed
+[15:55:50] [CU][E$] Found 0 files (0 B)
+[15:55:50] [CU][E$] Sync completed: 26 copied, 0 skipped, 0 failed
+[15:55:50] [WU09][E$] Found 0 files (0 B)
+[15:55:50] [WU09][E$] Sync completed: 13 copied, 0 skipped, 0 failed
+[15:55:50] [WU13][E$] Found 0 files (0 B)
+[15:55:50] [WU13][E$] Sync completed: 13 copied, 0 skipped, 0 failed
+[15:55:50] [WU11][E$] Found 0 files (0 B)
+[15:55:50] [WU11][E$] Sync completed: 13 copied, 0 skipped, 0 failed
+[15:56:00] [WU01][E$] Started sync task for project UCSync_Test1
+[15:56:00] [WU02][E$] Started sync task for project UCSync_Test1
+[15:56:00] [WU03][E$] Started sync task for project UCSync_Test1
+[15:56:00] [WU04][E$] Started sync task for project UCSync_Test1
+[15:56:00] [WU05][E$] Started sync task for project UCSync_Test1
+[15:56:00] [WU06][E$] Started sync task for project UCSync_Test1
+[15:56:00] [WU07][E$] Started sync task for project UCSync_Test1
+[15:56:00] [WU08][E$] Started sync task for project UCSync_Test1
+[15:56:00] [WU09][E$] Started sync task for project UCSync_Test1
+[15:56:00] [WU10][E$] Started sync task for project UCSync_Test1
+[15:56:00] [WU11][E$] Started sync task for project UCSync_Test1
+[15:56:00] [WU12][E$] Started sync task for project UCSync_Test1
+[15:56:00] [WU13][E$] Started sync task for project UCSync_Test1
+[15:56:00] [CU][E$] Started sync task for project UCSync_Test1
+[15:56:00] [WU02][E$] Found 0 files (0 B)
+[15:56:00] [WU02][E$] Sync completed: 13 copied, 0 skipped, 0 failed
+[15:56:00] [WU04][E$] Found 0 files (0 B)
+[15:56:00] [WU04][E$] Sync completed: 13 copied, 0 skipped, 0 failed
+[15:56:00] [WU05][E$] Found 0 files (0 B)
+[15:56:00] [WU05][E$] Sync completed: 13 copied, 0 skipped, 0 failed
+[15:56:00] [WU06][E$] Found 0 files (0 B)
+[15:56:00] [WU06][E$] Sync completed: 13 copied, 0 skipped, 0 failed
+[15:56:00] [WU01][E$] Found 0 files (0 B)
+[15:56:00] [WU07][E$] Found 0 files (0 B)
+[15:56:00] [WU01][E$] Sync completed: 13 copied, 0 skipped, 0 failed
+[15:56:00] [WU07][E$] Sync completed: 13 copied, 0 skipped, 0 failed
+[15:56:00] [WU08][E$] Found 0 files (0 B)
+[15:56:00] [WU03][E$] Found 0 files (0 B)
+[15:56:00] [WU10][E$] Found 0 files (0 B)
+[15:56:00] [WU08][E$] Sync completed: 13 copied, 0 skipped, 0 failed
+[15:56:00] [WU03][E$] Sync completed: 13 copied, 0 skipped, 0 failed
+[15:56:00] [WU10][E$] Sync completed: 13 copied, 0 skipped, 0 failed
+[15:56:00] [WU11][E$] Found 0 files (0 B)
+[15:56:00] [WU11][E$] Sync completed: 13 copied, 0 skipped, 0 failed
+[15:56:00] [WU09][E$] Found 0 files (0 B)
+[15:56:00] [WU09][E$] Sync completed: 13 copied, 0 skipped, 0 failed
+[15:56:00] [WU12][E$] Found 0 files (0 B)
+[15:56:00] [WU13][E$] Found 0 files (0 B)
+[15:56:00] [WU12][E$] Sync completed: 13 copied, 0 skipped, 0 failed
+[15:56:00] [WU13][E$] Sync completed: 13 copied, 0 skipped, 0 failed
+[15:56:00] [CU][E$] Found 0 files (0 B)
+[15:56:00] [CU][E$] Sync completed: 26 copied, 0 skipped, 0 failed
+[15:56:10] [WU01][E$] Started sync task for project UCSync_Test1
+[15:56:10] [WU02][E$] Started sync task for project UCSync_Test1
+[15:56:10] [WU03][E$] Started sync task for project UCSync_Test1
+[15:56:10] [WU04][E$] Started sync task for project UCSync_Test1
+[15:56:10] [WU05][E$] Started sync task for project UCSync_Test1
+[15:56:10] [WU06][E$] Started sync task for project UCSync_Test1
+[15:56:10] [WU07][E$] Started sync task for project UCSync_Test1
+[15:56:10] [WU08][E$] Started sync task for project UCSync_Test1
+[15:56:10] [WU09][E$] Started sync task for project UCSync_Test1
+[15:56:10] [WU10][E$] Started sync task for project UCSync_Test1
+[15:56:10] [WU11][E$] Started sync task for project UCSync_Test1
+[15:56:10] [WU12][E$] Started sync task for project UCSync_Test1
+[15:56:10] [WU13][E$] Started sync task for project UCSync_Test1
+[15:56:10] [CU][E$] Started sync task for project UCSync_Test1
+[15:56:10] [WU01][E$] Found 0 files (0 B)
+[15:56:10] [WU01][E$] Sync completed: 13 copied, 0 skipped, 0 failed
+[15:56:10] [WU02][E$] Found 0 files (0 B)
+[15:56:10] [WU02][E$] Sync completed: 13 copied, 0 skipped, 0 failed
+[15:56:10] [WU03][E$] Found 0 files (0 B)
+[15:56:10] [WU04][E$] Found 0 files (0 B)
+[15:56:10] [WU05][E$] Found 0 files (0 B)
+[15:56:10] [WU03][E$] Sync completed: 13 copied, 0 skipped, 0 failed
+[15:56:10] [WU04][E$] Sync completed: 13 copied, 0 skipped, 0 failed
+[15:56:10] [WU05][E$] Sync completed: 13 copied, 0 skipped, 0 failed
+[15:56:10] [WU06][E$] Found 0 files (0 B)
+[15:56:10] [WU06][E$] Sync completed: 13 copied, 0 skipped, 0 failed
+[15:56:10] [WU07][E$] Found 0 files (0 B)
+[15:56:10] [WU07][E$] Sync completed: 13 copied, 0 skipped, 0 failed
+[15:56:10] [WU08][E$] Found 0 files (0 B)
+[15:56:10] [WU08][E$] Sync completed: 13 copied, 0 skipped, 0 failed
+[15:56:10] [WU09][E$] Found 0 files (0 B)
+[15:56:10] [WU09][E$] Sync completed: 13 copied, 0 skipped, 0 failed
+[15:56:10] [WU10][E$] Found 0 files (0 B)
+[15:56:10] [WU10][E$] Sync completed: 13 copied, 0 skipped, 0 failed
+[15:56:10] [WU11][E$] Found 0 files (0 B)
+[15:56:10] [WU11][E$] Sync completed: 13 copied, 0 skipped, 0 failed
+[15:56:10] [WU12][E$] Found 0 files (0 B)
+[15:56:10] [WU12][E$] Sync completed: 13 copied, 0 skipped, 0 failed
+[15:56:10] [WU13][E$] Found 0 files (0 B)
+[15:56:10] [WU13][E$] Sync completed: 13 copied, 0 skipped, 0 failed
+[15:56:10] [CU][E$] Found 0 files (0 B)
+[15:56:10] [CU][E$] Sync completed: 26 copied, 0 skipped, 0 failed
+[15:56:20] [WU01][E$] Started sync task for project UCSync_Test1
+[15:56:20] [WU02][E$] Started sync task for project UCSync_Test1
+[15:56:20] [WU03][E$] Started sync task for project UCSync_Test1
+[15:56:20] [WU04][E$] Started sync task for project UCSync_Test1
+[15:56:20] [WU05][E$] Started sync task for project UCSync_Test1
+[15:56:20] [WU06][E$] Started sync task for project UCSync_Test1
+[15:56:20] [WU07][E$] Started sync task for project UCSync_Test1
+[15:56:20] [WU08][E$] Started sync task for project UCSync_Test1
+[15:56:20] [WU09][E$] Started sync task for project UCSync_Test1
+[15:56:20] [WU10][E$] Started sync task for project UCSync_Test1
+[15:56:20] [WU11][E$] Started sync task for project UCSync_Test1
+[15:56:20] [WU12][E$] Started sync task for project UCSync_Test1
+[15:56:20] [WU13][E$] Started sync task for project UCSync_Test1
+[15:56:20] [CU][E$] Started sync task for project UCSync_Test1
+[15:56:20] [WU02][E$] Found 0 files (0 B)
+[15:56:20] [WU02][E$] Sync completed: 13 copied, 0 skipped, 0 failed
+[15:56:20] [WU03][E$] Found 0 files (0 B)
+[15:56:20] [WU03][E$] Sync completed: 13 copied, 0 skipped, 0 failed
+[15:56:20] [WU01][E$] Found 0 files (0 B)
+[15:56:20] [WU01][E$] Sync completed: 13 copied, 0 skipped, 0 failed
+[15:56:20] [WU06][E$] Found 0 files (0 B)
+[15:56:20] [WU06][E$] Sync completed: 13 copied, 0 skipped, 0 failed
+[15:56:20] [WU07][E$] Found 0 files (0 B)
+[15:56:20] [WU07][E$] Sync completed: 13 copied, 0 skipped, 0 failed
+[15:56:20] [WU08][E$] Found 0 files (0 B)
+[15:56:20] [WU09][E$] Found 0 files (0 B)
+[15:56:20] [WU10][E$] Found 0 files (0 B)
+[15:56:20] [WU12][E$] Found 0 files (0 B)
+[15:56:20] [WU08][E$] Sync completed: 13 copied, 0 skipped, 0 failed
+[15:56:20] [WU05][E$] Found 0 files (0 B)
+[15:56:20] [WU09][E$] Sync completed: 13 copied, 0 skipped, 0 failed
+[15:56:20] [WU13][E$] Found 0 files (0 B)
+[15:56:20] [WU10][E$] Sync completed: 13 copied, 0 skipped, 0 failed
+[15:56:20] [WU12][E$] Sync completed: 13 copied, 0 skipped, 0 failed
+[15:56:20] [WU04][E$] Found 0 files (0 B)
+[15:56:20] [WU05][E$] Sync completed: 13 copied, 0 skipped, 0 failed
+[15:56:20] [WU13][E$] Sync completed: 13 copied, 0 skipped, 0 failed
+[15:56:20] [WU04][E$] Sync completed: 13 copied, 0 skipped, 0 failed
+[15:56:20] [WU11][E$] Found 0 files (0 B)
+[15:56:20] [CU][E$] Found 0 files (0 B)
+[15:56:20] [WU11][E$] Sync completed: 13 copied, 0 skipped, 0 failed
+[15:56:20] [CU][E$] Sync completed: 26 copied, 0 skipped, 0 failed
+[15:56:30] [WU01][E$] Started sync task for project UCSync_Test1
+[15:56:30] [WU02][E$] Started sync task for project UCSync_Test1
+[15:56:30] [WU03][E$] Started sync task for project UCSync_Test1
+[15:56:30] [WU04][E$] Started sync task for project UCSync_Test1
+[15:56:30] [WU05][E$] Started sync task for project UCSync_Test1
+[15:56:30] [WU06][E$] Started sync task for project UCSync_Test1
+[15:56:30] [WU07][E$] Started sync task for project UCSync_Test1
+[15:56:30] [WU08][E$] Started sync task for project UCSync_Test1
+[15:56:30] [WU09][E$] Started sync task for project UCSync_Test1
+[15:56:30] [WU10][E$] Started sync task for project UCSync_Test1
+[15:56:30] [WU11][E$] Started sync task for project UCSync_Test1
+[15:56:30] [WU12][E$] Started sync task for project UCSync_Test1
+[15:56:30] [WU13][E$] Started sync task for project UCSync_Test1
+[15:56:30] [CU][E$] Started sync task for project UCSync_Test1
+[15:56:30] [WU01][E$] Found 0 files (0 B)
+[15:56:30] [WU01][E$] Sync completed: 13 copied, 0 skipped, 0 failed
+[15:56:30] [WU02][E$] Found 0 files (0 B)
+[15:56:30] [WU02][E$] Sync completed: 13 copied, 0 skipped, 0 failed
+[15:56:30] [WU03][E$] Found 0 files (0 B)
+[15:56:30] [WU03][E$] Sync completed: 13 copied, 0 skipped, 0 failed
+[15:56:30] [WU04][E$] Found 0 files (0 B)
+[15:56:30] [WU04][E$] Sync completed: 13 copied, 0 skipped, 0 failed
+[15:56:30] [WU06][E$] Found 0 files (0 B)
+[15:56:30] [WU06][E$] Sync completed: 13 copied, 0 skipped, 0 failed
+[15:56:30] [WU07][E$] Found 0 files (0 B)
+[15:56:30] [WU07][E$] Sync completed: 13 copied, 0 skipped, 0 failed
+[15:56:30] [WU08][E$] Found 0 files (0 B)
+[15:56:30] [WU08][E$] Sync completed: 13 copied, 0 skipped, 0 failed
+[15:56:30] [WU09][E$] Found 0 files (0 B)
+[15:56:30] [WU09][E$] Sync completed: 13 copied, 0 skipped, 0 failed
+[15:56:30] [WU11][E$] Found 0 files (0 B)
+[15:56:30] [WU11][E$] Sync completed: 13 copied, 0 skipped, 0 failed
+[15:56:30] [WU13][E$] Found 0 files (0 B)
+[15:56:30] [WU05][E$] Found 0 files (0 B)
+[15:56:30] [WU13][E$] Sync completed: 13 copied, 0 skipped, 0 failed
+[15:56:30] [WU05][E$] Sync completed: 13 copied, 0 skipped, 0 failed
+[15:56:30] [WU12][E$] Found 0 files (0 B)
+[15:56:30] [WU12][E$] Sync completed: 13 copied, 0 skipped, 0 failed
+[15:56:30] [WU10][E$] Found 0 files (0 B)
+[15:56:30] [WU10][E$] Sync completed: 13 copied, 0 skipped, 0 failed
+[15:56:30] [CU][E$] Found 0 files (0 B)
+[15:56:30] [CU][E$] Sync completed: 26 copied, 0 skipped, 0 failed
+[15:56:40] [WU01][E$] Started sync task for project UCSync_Test1
+[15:56:40] [WU02][E$] Started sync task for project UCSync_Test1
+[15:56:40] [WU03][E$] Started sync task for project UCSync_Test1
+[15:56:40] [WU04][E$] Started sync task for project UCSync_Test1
+[15:56:40] [WU05][E$] Started sync task for project UCSync_Test1
+[15:56:40] [WU06][E$] Started sync task for project UCSync_Test1
+[15:56:40] [WU07][E$] Started sync task for project UCSync_Test1
+[15:56:40] [WU08][E$] Started sync task for project UCSync_Test1
+[15:56:40] [WU09][E$] Started sync task for project UCSync_Test1
+[15:56:40] [WU10][E$] Started sync task for project UCSync_Test1
+[15:56:40] [WU11][E$] Started sync task for project UCSync_Test1
+[15:56:40] [WU12][E$] Started sync task for project UCSync_Test1
+[15:56:40] [WU13][E$] Started sync task for project UCSync_Test1
+[15:56:40] [CU][E$] Started sync task for project UCSync_Test1
+[15:56:40] [WU04][E$] Found 0 files (0 B)
+[15:56:40] [WU06][E$] Found 0 files (0 B)
+[15:56:40] [WU02][E$] Found 0 files (0 B)
+[15:56:40] [WU07][E$] Found 0 files (0 B)
+[15:56:40] [WU01][E$] Found 0 files (0 B)
+[15:56:40] [WU09][E$] Found 0 files (0 B)
+[15:56:40] [WU10][E$] Found 0 files (0 B)
+[15:56:40] [WU08][E$] Found 0 files (0 B)
+[15:56:40] [WU04][E$] Sync completed: 13 copied, 0 skipped, 0 failed
+[15:56:40] [WU06][E$] Sync completed: 13 copied, 0 skipped, 0 failed
+[15:56:40] [WU02][E$] Sync completed: 13 copied, 0 skipped, 0 failed
+[15:56:40] [WU07][E$] Sync completed: 13 copied, 0 skipped, 0 failed
+[15:56:40] [WU01][E$] Sync completed: 13 copied, 0 skipped, 0 failed
+[15:56:40] [WU09][E$] Sync completed: 13 copied, 0 skipped, 0 failed
+[15:56:40] [WU10][E$] Sync completed: 13 copied, 0 skipped, 0 failed
+[15:56:40] [WU03][E$] Found 0 files (0 B)
+[15:56:40] [WU05][E$] Found 0 files (0 B)
+[15:56:40] [WU08][E$] Sync completed: 13 copied, 0 skipped, 0 failed
+[15:56:40] [WU03][E$] Sync completed: 13 copied, 0 skipped, 0 failed
+[15:56:40] [WU05][E$] Sync completed: 13 copied, 0 skipped, 0 failed
+[15:56:40] [WU12][E$] Found 0 files (0 B)
+[15:56:40] [WU13][E$] Found 0 files (0 B)
+[15:56:40] [WU12][E$] Sync completed: 13 copied, 0 skipped, 0 failed
+[15:56:40] [WU13][E$] Sync completed: 13 copied, 0 skipped, 0 failed
+[15:56:40] [WU11][E$] Found 0 files (0 B)
+[15:56:40] [WU11][E$] Sync completed: 13 copied, 0 skipped, 0 failed
+[15:56:41] [CU][E$] Found 0 files (0 B)
+[15:56:41] [CU][E$] Sync completed: 26 copied, 0 skipped, 0 failed
+[15:56:50] [WU01][E$] Started sync task for project UCSync_Test1
+[15:56:50] [WU02][E$] Started sync task for project UCSync_Test1
+[15:56:50] [WU03][E$] Started sync task for project UCSync_Test1
+[15:56:50] [WU04][E$] Started sync task for project UCSync_Test1
+[15:56:50] [WU05][E$] Started sync task for project UCSync_Test1
+[15:56:50] [WU06][E$] Started sync task for project UCSync_Test1
+[15:56:50] [WU07][E$] Started sync task for project UCSync_Test1
+[15:56:50] [WU08][E$] Started sync task for project UCSync_Test1
+[15:56:50] [WU09][E$] Started sync task for project UCSync_Test1
+[15:56:50] [WU10][E$] Started sync task for project UCSync_Test1
+[15:56:50] [WU11][E$] Started sync task for project UCSync_Test1
+[15:56:50] [WU12][E$] Started sync task for project UCSync_Test1
+[15:56:50] [WU13][E$] Started sync task for project UCSync_Test1
+[15:56:50] [CU][E$] Started sync task for project UCSync_Test1
+[15:56:50] [WU02][E$] Found 0 files (0 B)
+[15:56:50] [WU02][E$] Sync completed: 13 copied, 0 skipped, 0 failed
+[15:56:50] [WU03][E$] Found 0 files (0 B)
+[15:56:50] [WU04][E$] Found 0 files (0 B)
+[15:56:50] [WU05][E$] Found 0 files (0 B)
+[15:56:50] [WU06][E$] Found 0 files (0 B)
+[15:56:50] [WU01][E$] Found 0 files (0 B)
+[15:56:50] [WU03][E$] Sync completed: 13 copied, 0 skipped, 0 failed
+[15:56:50] [WU04][E$] Sync completed: 13 copied, 0 skipped, 0 failed
+[15:56:50] [WU05][E$] Sync completed: 13 copied, 0 skipped, 0 failed
+[15:56:50] [WU06][E$] Sync completed: 13 copied, 0 skipped, 0 failed
+[15:56:50] [WU01][E$] Sync completed: 13 copied, 0 skipped, 0 failed
+[15:56:50] [WU07][E$] Found 0 files (0 B)
+[15:56:50] [WU07][E$] Sync completed: 13 copied, 0 skipped, 0 failed
+[15:56:50] [WU08][E$] Found 0 files (0 B)
+[15:56:50] [WU08][E$] Sync completed: 13 copied, 0 skipped, 0 failed
+[15:56:50] [WU09][E$] Found 0 files (0 B)
+[15:56:50] [WU09][E$] Sync completed: 13 copied, 0 skipped, 0 failed
+[15:56:50] [CU][E$] Found 0 files (0 B)
+[15:56:50] [WU10][E$] Found 0 files (0 B)
+[15:56:50] [CU][E$] Sync completed: 26 copied, 0 skipped, 0 failed
+[15:56:50] [WU12][E$] Found 0 files (0 B)
+[15:56:50] [WU13][E$] Found 0 files (0 B)
+[15:56:50] [WU11][E$] Found 0 files (0 B)
+[15:56:50] [WU10][E$] Sync completed: 13 copied, 0 skipped, 0 failed
+[15:56:50] [WU12][E$] Sync completed: 13 copied, 0 skipped, 0 failed
+[15:56:50] [WU13][E$] Sync completed: 13 copied, 0 skipped, 0 failed
+[15:56:50] [WU11][E$] Sync completed: 13 copied, 0 skipped, 0 failed
+[15:57:00] [WU01][E$] Started sync task for project UCSync_Test1
+[15:57:00] [WU02][E$] Started sync task for project UCSync_Test1
+[15:57:00] [WU03][E$] Started sync task for project UCSync_Test1
+[15:57:00] [WU04][E$] Started sync task for project UCSync_Test1
+[15:57:00] [WU05][E$] Started sync task for project UCSync_Test1
+[15:57:00] [WU06][E$] Started sync task for project UCSync_Test1
+[15:57:00] [WU07][E$] Started sync task for project UCSync_Test1
+[15:57:00] [WU08][E$] Started sync task for project UCSync_Test1
+[15:57:00] [WU09][E$] Started sync task for project UCSync_Test1
+[15:57:00] [WU10][E$] Started sync task for project UCSync_Test1
+[15:57:00] [WU11][E$] Started sync task for project UCSync_Test1
+[15:57:00] [WU12][E$] Started sync task for project UCSync_Test1
+[15:57:00] [WU13][E$] Started sync task for project UCSync_Test1
+[15:57:00] [CU][E$] Started sync task for project UCSync_Test1
+[15:57:00] [WU07][E$] Found 0 files (0 B)
+[15:57:00] [WU07][E$] Sync completed: 13 copied, 0 skipped, 0 failed
+[15:57:00] [WU05][E$] Found 0 files (0 B)
+[15:57:00] [WU05][E$] Sync completed: 13 copied, 0 skipped, 0 failed
+[15:57:00] [WU06][E$] Found 0 files (0 B)
+[15:57:00] [WU01][E$] Found 0 files (0 B)
+[15:57:00] [WU06][E$] Sync completed: 13 copied, 0 skipped, 0 failed
+[15:57:00] [WU02][E$] Found 0 files (0 B)
+[15:57:00] [WU01][E$] Sync completed: 13 copied, 0 skipped, 0 failed
+[15:57:00] [WU02][E$] Sync completed: 13 copied, 0 skipped, 0 failed
+[15:57:00] [WU04][E$] Found 0 files (0 B)
+[15:57:00] [WU04][E$] Sync completed: 13 copied, 0 skipped, 0 failed
+[15:57:00] [WU03][E$] Found 0 files (0 B)
+[15:57:00] [WU03][E$] Sync completed: 13 copied, 0 skipped, 0 failed
+[15:57:01] [WU08][E$] Found 0 files (0 B)
+[15:57:01] [WU09][E$] Found 0 files (0 B)
+[15:57:01] [WU08][E$] Sync completed: 13 copied, 0 skipped, 0 failed
+[15:57:01] [WU09][E$] Sync completed: 13 copied, 0 skipped, 0 failed
+[15:57:01] [CU][E$] Found 0 files (0 B)
+[15:57:01] [CU][E$] Sync completed: 26 copied, 0 skipped, 0 failed
+[15:57:01] [WU10][E$] Found 0 files (0 B)
+[15:57:01] [WU10][E$] Sync completed: 13 copied, 0 skipped, 0 failed
+[15:57:01] [WU12][E$] Found 0 files (0 B)
+[15:57:01] [WU11][E$] Found 0 files (0 B)
+[15:57:01] [WU13][E$] Found 0 files (0 B)
+[15:57:01] [WU12][E$] Sync completed: 13 copied, 0 skipped, 0 failed
+[15:57:01] [WU11][E$] Sync completed: 13 copied, 0 skipped, 0 failed
+[15:57:01] [WU13][E$] Sync completed: 13 copied, 0 skipped, 0 failed
+[15:57:10] [WU01][E$] Started sync task for project UCSync_Test1
+[15:57:10] [WU02][E$] Started sync task for project UCSync_Test1
+[15:57:10] [WU03][E$] Started sync task for project UCSync_Test1
+[15:57:10] [WU04][E$] Started sync task for project UCSync_Test1
+[15:57:10] [WU05][E$] Started sync task for project UCSync_Test1
+[15:57:10] [WU06][E$] Started sync task for project UCSync_Test1
+[15:57:10] [WU07][E$] Started sync task for project UCSync_Test1
+[15:57:10] [WU08][E$] Started sync task for project UCSync_Test1
+[15:57:10] [WU09][E$] Started sync task for project UCSync_Test1
+[15:57:10] [WU10][E$] Started sync task for project UCSync_Test1
+[15:57:10] [WU11][E$] Started sync task for project UCSync_Test1
+[15:57:10] [WU12][E$] Started sync task for project UCSync_Test1
+[15:57:10] [WU13][E$] Started sync task for project UCSync_Test1
+[15:57:10] [CU][E$] Started sync task for project UCSync_Test1
+[15:57:10] [WU01][E$] Found 0 files (0 B)
+[15:57:10] [WU02][E$] Found 0 files (0 B)
+[15:57:10] [WU01][E$] Sync completed: 13 copied, 0 skipped, 0 failed
+[15:57:10] [WU02][E$] Sync completed: 13 copied, 0 skipped, 0 failed
+[15:57:10] [WU07][E$] Found 0 files (0 B)
+[15:57:10] [WU07][E$] Sync completed: 13 copied, 0 skipped, 0 failed
+[15:57:11] [WU10][E$] Found 0 files (0 B)
+[15:57:11] [WU03][E$] Found 0 files (0 B)
+[15:57:11] [WU11][E$] Found 0 files (0 B)
+[15:57:11] [WU13][E$] Found 0 files (0 B)
+[15:57:11] [WU05][E$] Found 0 files (0 B)
+[15:57:11] [WU10][E$] Sync completed: 13 copied, 0 skipped, 0 failed
+[15:57:11] [WU03][E$] Sync completed: 13 copied, 0 skipped, 0 failed
+[15:57:11] [WU11][E$] Sync completed: 13 copied, 0 skipped, 0 failed
+[15:57:11] [WU13][E$] Sync completed: 13 copied, 0 skipped, 0 failed
+[15:57:11] [WU05][E$] Sync completed: 13 copied, 0 skipped, 0 failed
+[15:57:11] [WU04][E$] Found 0 files (0 B)
+[15:57:11] [WU04][E$] Sync completed: 13 copied, 0 skipped, 0 failed
+[15:57:11] [WU08][E$] Found 0 files (0 B)
+[15:57:11] [WU09][E$] Found 0 files (0 B)
+[15:57:11] [WU08][E$] Sync completed: 13 copied, 0 skipped, 0 failed
+[15:57:11] [WU09][E$] Sync completed: 13 copied, 0 skipped, 0 failed
+[15:57:11] [WU12][E$] Found 0 files (0 B)
+[15:57:11] [WU12][E$] Sync completed: 13 copied, 0 skipped, 0 failed
+[15:57:11] [WU06][E$] Found 0 files (0 B)
+[15:57:11] [WU06][E$] Sync completed: 13 copied, 0 skipped, 0 failed
+[15:57:11] [CU][E$] Found 0 files (0 B)
+[15:57:11] [CU][E$] Sync completed: 26 copied, 0 skipped, 0 failed
+[15:57:20] [WU01][E$] Started sync task for project UCSync_Test1
+[15:57:20] [WU02][E$] Started sync task for project UCSync_Test1
+[15:57:20] [WU03][E$] Started sync task for project UCSync_Test1
+[15:57:20] [WU04][E$] Started sync task for project UCSync_Test1
+[15:57:20] [WU05][E$] Started sync task for project UCSync_Test1
+[15:57:20] [WU06][E$] Started sync task for project UCSync_Test1
+[15:57:20] [WU07][E$] Started sync task for project UCSync_Test1
+[15:57:20] [WU08][E$] Started sync task for project UCSync_Test1
+[15:57:20] [WU09][E$] Started sync task for project UCSync_Test1
+[15:57:20] [WU10][E$] Started sync task for project UCSync_Test1
+[15:57:20] [WU11][E$] Started sync task for project UCSync_Test1
+[15:57:20] [WU12][E$] Started sync task for project UCSync_Test1
+[15:57:20] [WU13][E$] Started sync task for project UCSync_Test1
+[15:57:21] [CU][E$] Started sync task for project UCSync_Test1
+[15:57:21] [WU01][E$] Found 0 files (0 B)
+[15:57:21] [WU01][E$] Sync completed: 13 copied, 0 skipped, 0 failed
+[15:57:21] [WU02][E$] Found 0 files (0 B)
+[15:57:21] [WU03][E$] Found 0 files (0 B)
+[15:57:21] [WU02][E$] Sync completed: 13 copied, 0 skipped, 0 failed
+[15:57:21] [WU03][E$] Sync completed: 13 copied, 0 skipped, 0 failed
+[15:57:21] [WU04][E$] Found 0 files (0 B)
+[15:57:21] [WU04][E$] Sync completed: 13 copied, 0 skipped, 0 failed
+[15:57:21] [WU06][E$] Found 0 files (0 B)
+[15:57:21] [WU06][E$] Sync completed: 13 copied, 0 skipped, 0 failed
+[15:57:21] [WU08][E$] Found 0 files (0 B)
+[15:57:21] [WU08][E$] Sync completed: 13 copied, 0 skipped, 0 failed
+[15:57:21] [WU12][E$] Found 0 files (0 B)
+[15:57:21] [WU13][E$] Found 0 files (0 B)
+[15:57:21] [WU12][E$] Sync completed: 13 copied, 0 skipped, 0 failed
+[15:57:21] [WU07][E$] Found 0 files (0 B)
+[15:57:21] [WU05][E$] Found 0 files (0 B)
+[15:57:21] [WU13][E$] Sync completed: 13 copied, 0 skipped, 0 failed
+[15:57:21] [WU07][E$] Sync completed: 13 copied, 0 skipped, 0 failed
+[15:57:21] [WU05][E$] Sync completed: 13 copied, 0 skipped, 0 failed
+[15:57:21] [WU09][E$] Found 0 files (0 B)
+[15:57:21] [WU09][E$] Sync completed: 13 copied, 0 skipped, 0 failed
+[15:57:21] [WU10][E$] Found 0 files (0 B)
+[15:57:21] [WU11][E$] Found 0 files (0 B)
+[15:57:21] [WU10][E$] Sync completed: 13 copied, 0 skipped, 0 failed
+[15:57:21] [WU11][E$] Sync completed: 13 copied, 0 skipped, 0 failed
+[15:57:21] [CU][E$] Found 0 files (0 B)
+[15:57:21] [CU][E$] Sync completed: 26 copied, 0 skipped, 0 failed
+[15:57:31] [WU01][E$] Started sync task for project UCSync_Test1
+[15:57:31] [WU02][E$] Started sync task for project UCSync_Test1
+[15:57:31] [WU03][E$] Started sync task for project UCSync_Test1
+[15:57:31] [WU04][E$] Started sync task for project UCSync_Test1
+[15:57:31] [WU05][E$] Started sync task for project UCSync_Test1
+[15:57:31] [WU06][E$] Started sync task for project UCSync_Test1
+[15:57:31] [WU07][E$] Started sync task for project UCSync_Test1
+[15:57:31] [WU08][E$] Started sync task for project UCSync_Test1
+[15:57:31] [WU09][E$] Started sync task for project UCSync_Test1
+[15:57:31] [WU10][E$] Started sync task for project UCSync_Test1
+[15:57:31] [WU11][E$] Started sync task for project UCSync_Test1
+[15:57:31] [WU12][E$] Started sync task for project UCSync_Test1
+[15:57:31] [WU13][E$] Started sync task for project UCSync_Test1
+[15:57:31] [CU][E$] Started sync task for project UCSync_Test1
+[15:57:31] [WU02][E$] Found 0 files (0 B)
+[15:57:31] [WU02][E$] Sync completed: 13 copied, 0 skipped, 0 failed
+[15:57:31] [WU03][E$] Found 0 files (0 B)
+[15:57:31] [WU04][E$] Found 0 files (0 B)
+[15:57:31] [WU03][E$] Sync completed: 13 copied, 0 skipped, 0 failed
+[15:57:31] [WU05][E$] Found 0 files (0 B)
+[15:57:31] [WU04][E$] Sync completed: 13 copied, 0 skipped, 0 failed
+[15:57:31] [WU05][E$] Sync completed: 13 copied, 0 skipped, 0 failed
+[15:57:31] [WU06][E$] Found 0 files (0 B)
+[15:57:31] [WU06][E$] Sync completed: 13 copied, 0 skipped, 0 failed
+[15:57:31] [WU01][E$] Found 0 files (0 B)
+[15:57:31] [WU01][E$] Sync completed: 13 copied, 0 skipped, 0 failed
+[15:57:31] [WU08][E$] Found 0 files (0 B)
+[15:57:31] [WU09][E$] Found 0 files (0 B)
+[15:57:31] [WU08][E$] Sync completed: 13 copied, 0 skipped, 0 failed
+[15:57:31] [WU10][E$] Found 0 files (0 B)
+[15:57:31] [WU11][E$] Found 0 files (0 B)
+[15:57:31] [WU12][E$] Found 0 files (0 B)
+[15:57:31] [WU09][E$] Sync completed: 13 copied, 0 skipped, 0 failed
+[15:57:31] [WU13][E$] Found 0 files (0 B)
+[15:57:31] [WU10][E$] Sync completed: 13 copied, 0 skipped, 0 failed
+[15:57:31] [WU11][E$] Sync completed: 13 copied, 0 skipped, 0 failed
+[15:57:31] [WU12][E$] Sync completed: 13 copied, 0 skipped, 0 failed
+[15:57:31] [WU13][E$] Sync completed: 13 copied, 0 skipped, 0 failed
+[15:57:31] [WU07][E$] Found 0 files (0 B)
+[15:57:31] [CU][E$] Found 0 files (0 B)
+[15:57:31] [WU07][E$] Sync completed: 13 copied, 0 skipped, 0 failed
+[15:57:31] [CU][E$] Sync completed: 26 copied, 0 skipped, 0 failed
+[15:57:41] [WU01][E$] Started sync task for project UCSync_Test1
+[15:57:41] [WU02][E$] Started sync task for project UCSync_Test1
+[15:57:41] [WU03][E$] Started sync task for project UCSync_Test1
+[15:57:41] [WU04][E$] Started sync task for project UCSync_Test1
+[15:57:41] [WU05][E$] Started sync task for project UCSync_Test1
+[15:57:41] [WU06][E$] Started sync task for project UCSync_Test1
+[15:57:41] [WU07][E$] Started sync task for project UCSync_Test1
+[15:57:41] [WU08][E$] Started sync task for project UCSync_Test1
+[15:57:41] [WU09][E$] Started sync task for project UCSync_Test1
+[15:57:41] [WU10][E$] Started sync task for project UCSync_Test1
+[15:57:41] [WU11][E$] Started sync task for project UCSync_Test1
+[15:57:41] [WU12][E$] Started sync task for project UCSync_Test1
+[15:57:41] [WU13][E$] Started sync task for project UCSync_Test1
+[15:57:41] [CU][E$] Started sync task for project UCSync_Test1
+[15:57:41] [WU02][E$] Found 0 files (0 B)
+[15:57:41] [WU02][E$] Sync completed: 13 copied, 0 skipped, 0 failed
+[15:57:41] [WU01][E$] Found 0 files (0 B)
+[15:57:41] [WU01][E$] Sync completed: 13 copied, 0 skipped, 0 failed
+[15:57:41] [WU07][E$] Found 0 files (0 B)
+[15:57:41] [WU08][E$] Found 0 files (0 B)
+[15:57:41] [WU09][E$] Found 0 files (0 B)
+[15:57:41] [WU11][E$] Found 0 files (0 B)
+[15:57:41] [WU07][E$] Sync completed: 13 copied, 0 skipped, 0 failed
+[15:57:41] [WU08][E$] Sync completed: 13 copied, 0 skipped, 0 failed
+[15:57:41] [WU03][E$] Found 0 files (0 B)
+[15:57:41] [WU09][E$] Sync completed: 13 copied, 0 skipped, 0 failed
+[15:57:41] [WU11][E$] Sync completed: 13 copied, 0 skipped, 0 failed
+[15:57:41] [WU03][E$] Sync completed: 13 copied, 0 skipped, 0 failed
+[15:57:41] [WU06][E$] Found 0 files (0 B)
+[15:57:41] [WU05][E$] Found 0 files (0 B)
+[15:57:41] [WU06][E$] Sync completed: 13 copied, 0 skipped, 0 failed
+[15:57:41] [WU05][E$] Sync completed: 13 copied, 0 skipped, 0 failed
+[15:57:41] [WU04][E$] Found 0 files (0 B)
+[15:57:41] [WU12][E$] Found 0 files (0 B)
+[15:57:41] [WU04][E$] Sync completed: 13 copied, 0 skipped, 0 failed
+[15:57:41] [WU12][E$] Sync completed: 13 copied, 0 skipped, 0 failed
+[15:57:41] [WU10][E$] Found 0 files (0 B)
+[15:57:41] [WU10][E$] Sync completed: 13 copied, 0 skipped, 0 failed
+[15:57:41] [WU13][E$] Found 0 files (0 B)
+[15:57:41] [CU][E$] Found 0 files (0 B)
+[15:57:41] [WU13][E$] Sync completed: 13 copied, 0 skipped, 0 failed
+[15:57:41] [CU][E$] Sync completed: 26 copied, 0 skipped, 0 failed
+[15:57:51] [WU01][E$] Started sync task for project UCSync_Test1
+[15:57:51] [WU02][E$] Started sync task for project UCSync_Test1
+[15:57:51] [WU03][E$] Started sync task for project UCSync_Test1
+[15:57:51] [WU04][E$] Started sync task for project UCSync_Test1
+[15:57:51] [WU05][E$] Started sync task for project UCSync_Test1
+[15:57:51] [WU06][E$] Started sync task for project UCSync_Test1
+[15:57:51] [WU07][E$] Started sync task for project UCSync_Test1
+[15:57:51] [WU08][E$] Started sync task for project UCSync_Test1
+[15:57:51] [WU09][E$] Started sync task for project UCSync_Test1
+[15:57:51] [WU10][E$] Started sync task for project UCSync_Test1
+[15:57:51] [WU11][E$] Started sync task for project UCSync_Test1
+[15:57:51] [WU12][E$] Started sync task for project UCSync_Test1
+[15:57:51] [WU13][E$] Started sync task for project UCSync_Test1
+[15:57:51] [CU][E$] Started sync task for project UCSync_Test1
+[15:57:51] [WU01][E$] Found 0 files (0 B)
+[15:57:51] [WU01][E$] Sync completed: 13 copied, 0 skipped, 0 failed
+[15:57:51] [WU03][E$] Found 0 files (0 B)
+[15:57:51] [WU03][E$] Sync completed: 13 copied, 0 skipped, 0 failed
+[15:57:51] [WU04][E$] Found 0 files (0 B)
+[15:57:51] [WU05][E$] Found 0 files (0 B)
+[15:57:51] [WU06][E$] Found 0 files (0 B)
+[15:57:51] [WU04][E$] Sync completed: 13 copied, 0 skipped, 0 failed
+[15:57:51] [WU07][E$] Found 0 files (0 B)
+[15:57:51] [WU05][E$] Sync completed: 13 copied, 0 skipped, 0 failed
+[15:57:51] [WU06][E$] Sync completed: 13 copied, 0 skipped, 0 failed
+[15:57:51] [WU08][E$] Found 0 files (0 B)
+[15:57:51] [WU07][E$] Sync completed: 13 copied, 0 skipped, 0 failed
+[15:57:51] [WU08][E$] Sync completed: 13 copied, 0 skipped, 0 failed
+[15:57:51] [WU10][E$] Found 0 files (0 B)
+[15:57:51] [WU11][E$] Found 0 files (0 B)
+[15:57:51] [WU10][E$] Sync completed: 13 copied, 0 skipped, 0 failed
+[15:57:51] [WU11][E$] Sync completed: 13 copied, 0 skipped, 0 failed
+[15:57:51] [WU02][E$] Found 0 files (0 B)
+[15:57:51] [WU09][E$] Found 0 files (0 B)
+[15:57:51] [WU02][E$] Sync completed: 13 copied, 0 skipped, 0 failed
+[15:57:51] [WU09][E$] Sync completed: 13 copied, 0 skipped, 0 failed
+[15:57:51] [WU12][E$] Found 0 files (0 B)
+[15:57:51] [WU13][E$] Found 0 files (0 B)
+[15:57:51] [WU12][E$] Sync completed: 13 copied, 0 skipped, 0 failed
+[15:57:51] [WU13][E$] Sync completed: 13 copied, 0 skipped, 0 failed
+[15:57:51] [CU][E$] Found 0 files (0 B)
+[15:57:51] [CU][E$] Sync completed: 26 copied, 0 skipped, 0 failed
+[15:58:01] [WU01][E$] Started sync task for project UCSync_Test1
+[15:58:01] [WU02][E$] Started sync task for project UCSync_Test1
+[15:58:01] [WU03][E$] Started sync task for project UCSync_Test1
+[15:58:01] [WU04][E$] Started sync task for project UCSync_Test1
+[15:58:01] [WU05][E$] Started sync task for project UCSync_Test1
+[15:58:01] [WU06][E$] Started sync task for project UCSync_Test1
+[15:58:01] [WU07][E$] Started sync task for project UCSync_Test1
+[15:58:01] [WU08][E$] Started sync task for project UCSync_Test1
+[15:58:01] [WU01][E$] Found 0 files (0 B)
+[15:58:01] [WU09][E$] Started sync task for project UCSync_Test1
+[15:58:01] [WU02][E$] Found 0 files (0 B)
+[15:58:01] [WU04][E$] Found 0 files (0 B)
+[15:58:01] [WU05][E$] Found 0 files (0 B)
+[15:58:01] [WU01][E$] Sync completed: 13 copied, 0 skipped, 0 failed
+[15:58:01] [WU02][E$] Sync completed: 13 copied, 0 skipped, 0 failed
+[15:58:01] [WU10][E$] Started sync task for project UCSync_Test1
+[15:58:01] [WU04][E$] Sync completed: 13 copied, 0 skipped, 0 failed
+[15:58:01] [WU05][E$] Sync completed: 13 copied, 0 skipped, 0 failed
+[15:58:01] [WU11][E$] Started sync task for project UCSync_Test1
+[15:58:01] [WU12][E$] Started sync task for project UCSync_Test1
+[15:58:01] [WU03][E$] Found 0 files (0 B)
+[15:58:01] [WU13][E$] Started sync task for project UCSync_Test1
+[15:58:01] [WU03][E$] Sync completed: 13 copied, 0 skipped, 0 failed
+[15:58:01] [CU][E$] Started sync task for project UCSync_Test1
+[15:58:01] [WU07][E$] Found 0 files (0 B)
+[15:58:01] [WU07][E$] Sync completed: 13 copied, 0 skipped, 0 failed
+[15:58:01] [WU06][E$] Found 0 files (0 B)
+[15:58:01] [WU09][E$] Found 0 files (0 B)
+[15:58:01] [WU06][E$] Sync completed: 13 copied, 0 skipped, 0 failed
+[15:58:01] [WU09][E$] Sync completed: 13 copied, 0 skipped, 0 failed
+[15:58:01] [WU10][E$] Found 0 files (0 B)
+[15:58:01] [WU10][E$] Sync completed: 13 copied, 0 skipped, 0 failed
+[15:58:01] [WU11][E$] Found 0 files (0 B)
+[15:58:01] [WU11][E$] Sync completed: 13 copied, 0 skipped, 0 failed
+[15:58:01] [WU13][E$] Found 0 files (0 B)
+[15:58:01] [WU12][E$] Found 0 files (0 B)
+[15:58:01] [WU08][E$] Found 0 files (0 B)
+[15:58:01] [WU13][E$] Sync completed: 13 copied, 0 skipped, 0 failed
+[15:58:01] [WU12][E$] Sync completed: 13 copied, 0 skipped, 0 failed
+[15:58:01] [WU08][E$] Sync completed: 13 copied, 0 skipped, 0 failed
+[15:58:02] [CU][E$] Found 0 files (0 B)
+[15:58:02] [CU][E$] Sync completed: 26 copied, 0 skipped, 0 failed
+[15:58:11] [WU01][E$] Started sync task for project UCSync_Test1
+[15:58:11] [WU02][E$] Started sync task for project UCSync_Test1
+[15:58:11] [WU03][E$] Started sync task for project UCSync_Test1
+[15:58:11] [WU04][E$] Started sync task for project UCSync_Test1
+[15:58:11] [WU05][E$] Started sync task for project UCSync_Test1
+[15:58:11] [WU06][E$] Started sync task for project UCSync_Test1
+[15:58:11] [WU07][E$] Started sync task for project UCSync_Test1
+[15:58:11] [WU08][E$] Started sync task for project UCSync_Test1
+[15:58:11] [WU09][E$] Started sync task for project UCSync_Test1
+[15:58:11] [WU10][E$] Started sync task for project UCSync_Test1
+[15:58:11] [WU11][E$] Started sync task for project UCSync_Test1
+[15:58:11] [WU12][E$] Started sync task for project UCSync_Test1
+[15:58:11] [WU13][E$] Started sync task for project UCSync_Test1
+[15:58:11] [CU][E$] Started sync task for project UCSync_Test1
+[15:58:11] [WU01][E$] Found 0 files (0 B)
+[15:58:11] [WU01][E$] Sync completed: 13 copied, 0 skipped, 0 failed
+[15:58:11] [WU05][E$] Found 0 files (0 B)
+[15:58:11] [WU05][E$] Sync completed: 13 copied, 0 skipped, 0 failed
+[15:58:11] [WU06][E$] Found 0 files (0 B)
+[15:58:11] [WU07][E$] Found 0 files (0 B)
+[15:58:11] [WU06][E$] Sync completed: 13 copied, 0 skipped, 0 failed
+[15:58:11] [WU07][E$] Sync completed: 13 copied, 0 skipped, 0 failed
+[15:58:11] [WU02][E$] Found 0 files (0 B)
+[15:58:11] [WU03][E$] Found 0 files (0 B)
+[15:58:11] [WU02][E$] Sync completed: 13 copied, 0 skipped, 0 failed
+[15:58:11] [WU04][E$] Found 0 files (0 B)
+[15:58:11] [WU03][E$] Sync completed: 13 copied, 0 skipped, 0 failed
+[15:58:11] [WU04][E$] Sync completed: 13 copied, 0 skipped, 0 failed
+[15:58:11] [WU08][E$] Found 0 files (0 B)
+[15:58:11] [WU08][E$] Sync completed: 13 copied, 0 skipped, 0 failed
+[15:58:12] [WU11][E$] Found 0 files (0 B)
+[15:58:12] [WU11][E$] Sync completed: 13 copied, 0 skipped, 0 failed
+[15:58:12] [WU10][E$] Found 0 files (0 B)
+[15:58:12] [WU12][E$] Found 0 files (0 B)
+[15:58:12] [WU10][E$] Sync completed: 13 copied, 0 skipped, 0 failed
+[15:58:12] [WU12][E$] Sync completed: 13 copied, 0 skipped, 0 failed
+[15:58:12] [WU09][E$] Found 0 files (0 B)
+[15:58:12] [WU13][E$] Found 0 files (0 B)
+[15:58:12] [WU09][E$] Sync completed: 13 copied, 0 skipped, 0 failed
+[15:58:12] [WU13][E$] Sync completed: 13 copied, 0 skipped, 0 failed
+[15:58:12] [CU][E$] Found 0 files (0 B)
+[15:58:12] [CU][E$] Sync completed: 26 copied, 0 skipped, 0 failed
+[15:58:21] [WU01][E$] Started sync task for project UCSync_Test1
+[15:58:21] [WU02][E$] Started sync task for project UCSync_Test1
+[15:58:21] [WU03][E$] Started sync task for project UCSync_Test1
+[15:58:21] [WU04][E$] Started sync task for project UCSync_Test1
+[15:58:21] [WU05][E$] Started sync task for project UCSync_Test1
+[15:58:21] [WU06][E$] Started sync task for project UCSync_Test1
+[15:58:21] [WU07][E$] Started sync task for project UCSync_Test1
+[15:58:21] [WU08][E$] Started sync task for project UCSync_Test1
+[15:58:21] [WU09][E$] Started sync task for project UCSync_Test1
+[15:58:21] [WU10][E$] Started sync task for project UCSync_Test1
+[15:58:21] [WU11][E$] Started sync task for project UCSync_Test1
+[15:58:21] [WU12][E$] Started sync task for project UCSync_Test1
+[15:58:21] [WU13][E$] Started sync task for project UCSync_Test1
+[15:58:21] [CU][E$] Started sync task for project UCSync_Test1
+[15:58:21] [WU01][E$] Found 0 files (0 B)
+[15:58:21] [WU01][E$] Sync completed: 13 copied, 0 skipped, 0 failed
+[15:58:21] [WU05][E$] Found 0 files (0 B)
+[15:58:21] [WU05][E$] Sync completed: 13 copied, 0 skipped, 0 failed
+[15:58:21] [WU06][E$] Found 0 files (0 B)
+[15:58:21] [WU06][E$] Sync completed: 13 copied, 0 skipped, 0 failed
+[15:58:21] [WU07][E$] Found 0 files (0 B)
+[15:58:22] [WU07][E$] Sync completed: 13 copied, 0 skipped, 0 failed
+[15:58:22] [WU08][E$] Found 0 files (0 B)
+[15:58:22] [WU08][E$] Sync completed: 13 copied, 0 skipped, 0 failed
+[15:58:22] [WU10][E$] Found 0 files (0 B)
+[15:58:22] [WU10][E$] Sync completed: 13 copied, 0 skipped, 0 failed
+[15:58:22] [WU11][E$] Found 0 files (0 B)
+[15:58:22] [WU11][E$] Sync completed: 13 copied, 0 skipped, 0 failed
+[15:58:22] [WU09][E$] Found 0 files (0 B)
+[15:58:22] [WU04][E$] Found 0 files (0 B)
+[15:58:22] [WU03][E$] Found 0 files (0 B)
+[15:58:22] [WU09][E$] Sync completed: 13 copied, 0 skipped, 0 failed
+[15:58:22] [WU04][E$] Sync completed: 13 copied, 0 skipped, 0 failed
+[15:58:22] [WU03][E$] Sync completed: 13 copied, 0 skipped, 0 failed
+[15:58:22] [WU13][E$] Found 0 files (0 B)
+[15:58:22] [WU02][E$] Found 0 files (0 B)
+[15:58:22] [WU12][E$] Found 0 files (0 B)
+[15:58:22] [WU13][E$] Sync completed: 13 copied, 0 skipped, 0 failed
+[15:58:22] [WU02][E$] Sync completed: 13 copied, 0 skipped, 0 failed
+[15:58:22] [WU12][E$] Sync completed: 13 copied, 0 skipped, 0 failed
+[15:58:22] [CU][E$] Found 0 files (0 B)
+[15:58:22] [CU][E$] Sync completed: 26 copied, 0 skipped, 0 failed
+[15:58:31] [WU01][E$] Started sync task for project UCSync_Test1
+[15:58:31] [WU02][E$] Started sync task for project UCSync_Test1
+[15:58:31] [WU03][E$] Started sync task for project UCSync_Test1
+[15:58:31] [WU04][E$] Started sync task for project UCSync_Test1
+[15:58:31] [WU05][E$] Started sync task for project UCSync_Test1
+[15:58:31] [WU06][E$] Started sync task for project UCSync_Test1
+[15:58:32] [WU07][E$] Started sync task for project UCSync_Test1
+[15:58:32] [WU08][E$] Started sync task for project UCSync_Test1
+[15:58:32] [WU09][E$] Started sync task for project UCSync_Test1
+[15:58:32] [WU10][E$] Started sync task for project UCSync_Test1
+[15:58:32] [WU11][E$] Started sync task for project UCSync_Test1
+[15:58:32] [WU12][E$] Started sync task for project UCSync_Test1
+[15:58:32] [WU13][E$] Started sync task for project UCSync_Test1
+[15:58:32] [CU][E$] Started sync task for project UCSync_Test1
+[15:58:32] [WU04][E$] Found 0 files (0 B)
+[15:58:32] [WU04][E$] Sync completed: 13 copied, 0 skipped, 0 failed
+[15:58:32] [WU05][E$] Found 0 files (0 B)
+[15:58:32] [WU05][E$] Sync completed: 13 copied, 0 skipped, 0 failed
+[15:58:32] [WU06][E$] Found 0 files (0 B)
+[15:58:32] [WU06][E$] Sync completed: 13 copied, 0 skipped, 0 failed
+[15:58:32] [WU01][E$] Found 0 files (0 B)
+[15:58:32] [WU02][E$] Found 0 files (0 B)
+[15:58:32] [WU07][E$] Found 0 files (0 B)
+[15:58:32] [WU08][E$] Found 0 files (0 B)
+[15:58:32] [WU09][E$] Found 0 files (0 B)
+[15:58:32] [WU01][E$] Sync completed: 13 copied, 0 skipped, 0 failed
+[15:58:32] [WU03][E$] Found 0 files (0 B)
+[15:58:32] [WU02][E$] Sync completed: 13 copied, 0 skipped, 0 failed
+[15:58:32] [WU07][E$] Sync completed: 13 copied, 0 skipped, 0 failed
+[15:58:32] [WU08][E$] Sync completed: 13 copied, 0 skipped, 0 failed
+[15:58:32] [WU09][E$] Sync completed: 13 copied, 0 skipped, 0 failed
+[15:58:32] [WU10][E$] Found 0 files (0 B)
+[15:58:32] [WU03][E$] Sync completed: 13 copied, 0 skipped, 0 failed
+[15:58:32] [WU10][E$] Sync completed: 13 copied, 0 skipped, 0 failed
+[15:58:32] [WU13][E$] Found 0 files (0 B)
+[15:58:32] [WU13][E$] Sync completed: 13 copied, 0 skipped, 0 failed
+[15:58:32] [WU12][E$] Found 0 files (0 B)
+[15:58:32] [WU12][E$] Sync completed: 13 copied, 0 skipped, 0 failed
+[15:58:32] [WU11][E$] Found 0 files (0 B)
+[15:58:32] [WU11][E$] Sync completed: 13 copied, 0 skipped, 0 failed
+[15:58:32] [CU][E$] Found 0 files (0 B)
+[15:58:32] [CU][E$] Sync completed: 26 copied, 0 skipped, 0 failed
+[15:58:42] [WU01][E$] Started sync task for project UCSync_Test1
+[15:58:42] [WU02][E$] Started sync task for project UCSync_Test1
+[15:58:42] [WU03][E$] Started sync task for project UCSync_Test1
+[15:58:42] [WU04][E$] Started sync task for project UCSync_Test1
+[15:58:42] [WU05][E$] Started sync task for project UCSync_Test1
+[15:58:42] [WU06][E$] Started sync task for project UCSync_Test1
+[15:58:42] [WU07][E$] Started sync task for project UCSync_Test1
+[15:58:42] [WU08][E$] Started sync task for project UCSync_Test1
+[15:58:42] [WU09][E$] Started sync task for project UCSync_Test1
+[15:58:42] [WU10][E$] Started sync task for project UCSync_Test1
+[15:58:42] [WU11][E$] Started sync task for project UCSync_Test1
+[15:58:42] [WU12][E$] Started sync task for project UCSync_Test1
+[15:58:42] [WU13][E$] Started sync task for project UCSync_Test1
+[15:58:42] [CU][E$] Started sync task for project UCSync_Test1
+[15:58:42] [WU02][E$] Found 0 files (0 B)
+[15:58:42] [WU02][E$] Sync completed: 13 copied, 0 skipped, 0 failed
+[15:58:42] [WU03][E$] Found 0 files (0 B)
+[15:58:42] [WU04][E$] Found 0 files (0 B)
+[15:58:42] [WU01][E$] Found 0 files (0 B)
+[15:58:42] [WU03][E$] Sync completed: 13 copied, 0 skipped, 0 failed
+[15:58:42] [WU04][E$] Sync completed: 13 copied, 0 skipped, 0 failed
+[15:58:42] [WU01][E$] Sync completed: 13 copied, 0 skipped, 0 failed
+[15:58:42] [WU07][E$] Found 0 files (0 B)
+[15:58:42] [WU06][E$] Found 0 files (0 B)
+[15:58:42] [WU07][E$] Sync completed: 13 copied, 0 skipped, 0 failed
+[15:58:42] [WU06][E$] Sync completed: 13 copied, 0 skipped, 0 failed
+[15:58:42] [WU09][E$] Found 0 files (0 B)
+[15:58:42] [WU09][E$] Sync completed: 13 copied, 0 skipped, 0 failed
+[15:58:42] [WU10][E$] Found 0 files (0 B)
+[15:58:42] [WU11][E$] Found 0 files (0 B)
+[15:58:42] [WU05][E$] Found 0 files (0 B)
+[15:58:42] [WU10][E$] Sync completed: 13 copied, 0 skipped, 0 failed
+[15:58:42] [WU11][E$] Sync completed: 13 copied, 0 skipped, 0 failed
+[15:58:42] [WU05][E$] Sync completed: 13 copied, 0 skipped, 0 failed
+[15:58:42] [WU08][E$] Found 0 files (0 B)
+[15:58:42] [WU13][E$] Found 0 files (0 B)
+[15:58:42] [WU08][E$] Sync completed: 13 copied, 0 skipped, 0 failed
+[15:58:42] [WU13][E$] Sync completed: 13 copied, 0 skipped, 0 failed
+[15:58:42] [WU12][E$] Found 0 files (0 B)
+[15:58:42] [WU12][E$] Sync completed: 13 copied, 0 skipped, 0 failed
+[15:58:42] [CU][E$] Found 0 files (0 B)
+[15:58:42] [CU][E$] Sync completed: 26 copied, 0 skipped, 0 failed
+[15:58:52] [WU01][E$] Started sync task for project UCSync_Test1
+[15:58:52] [WU02][E$] Started sync task for project UCSync_Test1
+[15:58:52] [WU03][E$] Started sync task for project UCSync_Test1
+[15:58:52] [WU04][E$] Started sync task for project UCSync_Test1
+[15:58:52] [WU05][E$] Started sync task for project UCSync_Test1
+[15:58:52] [WU06][E$] Started sync task for project UCSync_Test1
+[15:58:52] [WU07][E$] Started sync task for project UCSync_Test1
+[15:58:52] [WU08][E$] Started sync task for project UCSync_Test1
+[15:58:52] [WU09][E$] Started sync task for project UCSync_Test1
+[15:58:52] [WU10][E$] Started sync task for project UCSync_Test1
+[15:58:52] [WU11][E$] Started sync task for project UCSync_Test1
+[15:58:52] [WU12][E$] Started sync task for project UCSync_Test1
+[15:58:52] [WU13][E$] Started sync task for project UCSync_Test1
+[15:58:52] [WU01][E$] Found 0 files (0 B)
+[15:58:52] [WU01][E$] Sync completed: 13 copied, 0 skipped, 0 failed
+[15:58:52] [WU02][E$] Found 0 files (0 B)
+[15:58:52] [WU03][E$] Found 0 files (0 B)
+[15:58:52] [WU04][E$] Found 0 files (0 B)
+[15:58:52] [WU05][E$] Found 0 files (0 B)
+[15:58:52] [WU06][E$] Found 0 files (0 B)
+[15:58:52] [WU02][E$] Sync completed: 13 copied, 0 skipped, 0 failed
+[15:58:52] [WU03][E$] Sync completed: 13 copied, 0 skipped, 0 failed
+[15:58:52] [WU04][E$] Sync completed: 13 copied, 0 skipped, 0 failed
+[15:58:52] [WU05][E$] Sync completed: 13 copied, 0 skipped, 0 failed
+[15:58:52] [WU06][E$] Sync completed: 13 copied, 0 skipped, 0 failed
+[15:58:52] [WU09][E$] Found 0 files (0 B)
+[15:58:52] [WU09][E$] Sync completed: 13 copied, 0 skipped, 0 failed
+[15:58:52] [WU07][E$] Found 0 files (0 B)
+[15:58:52] [WU11][E$] Found 0 files (0 B)
+[15:58:52] [WU07][E$] Sync completed: 13 copied, 0 skipped, 0 failed
+[15:58:52] [WU11][E$] Sync completed: 13 copied, 0 skipped, 0 failed
+[15:58:52] [WU13][E$] Found 0 files (0 B)
+[15:58:52] [WU13][E$] Sync completed: 13 copied, 0 skipped, 0 failed
+[15:58:52] [WU10][E$] Found 0 files (0 B)
+[15:58:52] [WU08][E$] Found 0 files (0 B)
+[15:58:52] [WU10][E$] Sync completed: 13 copied, 0 skipped, 0 failed
+[15:58:52] [WU08][E$] Sync completed: 13 copied, 0 skipped, 0 failed
+[15:58:52] [WU12][E$] Found 0 files (0 B)
+[15:58:52] [WU12][E$] Sync completed: 13 copied, 0 skipped, 0 failed
+[15:58:55] [CU][E$] Started sync task for project UCSync_Test1
+[15:58:55] [CU][E$] Found 0 files (0 B)
+[15:58:55] [CU][E$] Sync completed: 26 copied, 0 skipped, 0 failed
+[15:59:05] [WU01][E$] Started sync task for project UCSync_Test1
+[15:59:05] [WU02][E$] Started sync task for project UCSync_Test1
+[15:59:05] [WU03][E$] Started sync task for project UCSync_Test1
+[15:59:05] [WU04][E$] Started sync task for project UCSync_Test1
+[15:59:05] [WU05][E$] Started sync task for project UCSync_Test1
+[15:59:05] [WU06][E$] Started sync task for project UCSync_Test1
+[15:59:05] [WU07][E$] Started sync task for project UCSync_Test1
+[15:59:05] [WU08][E$] Started sync task for project UCSync_Test1
+[15:59:05] [WU09][E$] Started sync task for project UCSync_Test1
+[15:59:05] [WU10][E$] Started sync task for project UCSync_Test1
+[15:59:05] [WU11][E$] Started sync task for project UCSync_Test1
+[15:59:05] [WU12][E$] Started sync task for project UCSync_Test1
+[15:59:05] [WU13][E$] Started sync task for project UCSync_Test1
+[15:59:05] [WU02][E$] Found 0 files (0 B)
+[15:59:05] [WU02][E$] Sync completed: 13 copied, 0 skipped, 0 failed
+[15:59:05] [WU04][E$] Found 0 files (0 B)
+[15:59:05] [WU04][E$] Sync completed: 13 copied, 0 skipped, 0 failed
+[15:59:05] [WU01][E$] Found 0 files (0 B)
+[15:59:05] [WU06][E$] Found 0 files (0 B)
+[15:59:05] [WU01][E$] Sync completed: 13 copied, 0 skipped, 0 failed
+[15:59:05] [WU06][E$] Sync completed: 13 copied, 0 skipped, 0 failed
+[15:59:05] [WU07][E$] Found 0 files (0 B)
+[15:59:05] [WU03][E$] Found 0 files (0 B)
+[15:59:05] [WU09][E$] Found 0 files (0 B)
+[15:59:05] [WU07][E$] Sync completed: 13 copied, 0 skipped, 0 failed
+[15:59:05] [WU10][E$] Found 0 files (0 B)
+[15:59:05] [WU11][E$] Found 0 files (0 B)
+[15:59:05] [WU12][E$] Found 0 files (0 B)
+[15:59:05] [WU13][E$] Found 0 files (0 B)
+[15:59:05] [WU03][E$] Sync completed: 13 copied, 0 skipped, 0 failed
+[15:59:05] [WU09][E$] Sync completed: 13 copied, 0 skipped, 0 failed
+[15:59:05] [WU10][E$] Sync completed: 13 copied, 0 skipped, 0 failed
+[15:59:05] [WU11][E$] Sync completed: 13 copied, 0 skipped, 0 failed
+[15:59:05] [WU12][E$] Sync completed: 13 copied, 0 skipped, 0 failed
+[15:59:05] [WU13][E$] Sync completed: 13 copied, 0 skipped, 0 failed
+[15:59:06] [WU08][E$] Found 0 files (0 B)
+[15:59:06] [WU05][E$] Found 0 files (0 B)
+[15:59:06] [WU08][E$] Sync completed: 13 copied, 0 skipped, 0 failed
+[15:59:06] [WU05][E$] Sync completed: 13 copied, 0 skipped, 0 failed
+[15:59:28] [CU][E$] Started sync task for project UCSync_Test1
+[15:59:29] [CU][E$] Found 0 files (0 B)
+[15:59:29] [CU][E$] Sync completed: 26 copied, 0 skipped, 0 failed
+[15:59:38] [WU01][E$] Started sync task for project UCSync_Test1
+[15:59:38] [WU02][E$] Started sync task for project UCSync_Test1
+[15:59:38] [WU03][E$] Started sync task for project UCSync_Test1
+[15:59:38] [WU04][E$] Started sync task for project UCSync_Test1
+[15:59:39] [WU05][E$] Started sync task for project UCSync_Test1
+[15:59:39] [WU06][E$] Started sync task for project UCSync_Test1
+[15:59:39] [WU07][E$] Started sync task for project UCSync_Test1
+[15:59:39] [WU08][E$] Started sync task for project UCSync_Test1
+[15:59:39] [WU09][E$] Started sync task for project UCSync_Test1
+[15:59:39] [WU10][E$] Started sync task for project UCSync_Test1
+[15:59:39] [WU11][E$] Started sync task for project UCSync_Test1
+[15:59:39] [WU12][E$] Started sync task for project UCSync_Test1
+[15:59:39] [WU02][E$] Found 0 files (0 B)
+[15:59:39] [WU02][E$] Sync completed: 13 copied, 0 skipped, 0 failed
+[15:59:39] [WU13][E$] Started sync task for project UCSync_Test1
+[15:59:39] [WU03][E$] Found 0 files (0 B)
+[15:59:39] [WU03][E$] Sync completed: 13 copied, 0 skipped, 0 failed
+[15:59:39] [WU01][E$] Found 0 files (0 B)
+[15:59:39] [WU01][E$] Sync completed: 13 copied, 0 skipped, 0 failed
+[15:59:39] [WU04][E$] Found 0 files (0 B)
+[15:59:39] [WU04][E$] Sync completed: 13 copied, 0 skipped, 0 failed
+[15:59:39] [WU06][E$] Found 0 files (0 B)
+[15:59:39] [WU06][E$] Sync completed: 13 copied, 0 skipped, 0 failed
+[15:59:39] [WU05][E$] Found 0 files (0 B)
+[15:59:39] [WU05][E$] Sync completed: 13 copied, 0 skipped, 0 failed
+[15:59:39] [WU07][E$] Found 0 files (0 B)
+[15:59:39] [WU07][E$] Sync completed: 13 copied, 0 skipped, 0 failed
+[15:59:39] [WU08][E$] Found 0 files (0 B)
+[15:59:39] [WU08][E$] Sync completed: 13 copied, 0 skipped, 0 failed
+[15:59:39] [WU09][E$] Found 0 files (0 B)
+[15:59:39] [WU09][E$] Sync completed: 13 copied, 0 skipped, 0 failed
+[15:59:39] [WU10][E$] Found 0 files (0 B)
+[15:59:39] [WU10][E$] Sync completed: 13 copied, 0 skipped, 0 failed
+[15:59:39] [WU13][E$] Found 0 files (0 B)
+[15:59:39] [WU13][E$] Sync completed: 13 copied, 0 skipped, 0 failed
+[15:59:39] [WU11][E$] Found 0 files (0 B)
+[15:59:39] [WU11][E$] Sync completed: 13 copied, 0 skipped, 0 failed
+[15:59:39] [WU12][E$] Found 0 files (0 B)
+[15:59:39] [WU12][E$] Sync completed: 13 copied, 0 skipped, 0 failed
+[16:00:42] [WU01][E$] Started sync task for project UCSync_Test1
+[16:00:43] [WU01][E$] Found 0 files (0 B)
+[16:00:43] [WU01][E$] Sync completed: 13 copied, 0 skipped, 0 failed
+[16:00:43] [WU02][E$] Started sync task for project UCSync_Test1
+[16:00:44] [WU02][E$] Found 0 files (0 B)
+[16:00:44] [WU02][E$] Sync completed: 13 copied, 0 skipped, 0 failed
+[16:00:44] [WU03][E$] Started sync task for project UCSync_Test1
+[16:00:45] [WU03][E$] Found 0 files (0 B)
+[16:00:45] [WU03][E$] Sync completed: 13 copied, 0 skipped, 0 failed
+[16:00:45] [WU04][E$] Started sync task for project UCSync_Test1
+[16:00:46] [WU04][E$] Found 0 files (0 B)
+[16:00:46] [WU04][E$] Sync completed: 13 copied, 0 skipped, 0 failed
+[16:00:46] [WU05][E$] Started sync task for project UCSync_Test1
+[16:00:47] [WU05][E$] Found 0 files (0 B)
+[16:00:47] [WU05][E$] Sync completed: 13 copied, 0 skipped, 0 failed
+[16:00:47] [WU06][E$] Started sync task for project UCSync_Test1
+[16:00:48] [WU06][E$] Found 0 files (0 B)
+[16:00:48] [WU06][E$] Sync completed: 13 copied, 0 skipped, 0 failed
+[16:00:48] [WU07][E$] Started sync task for project UCSync_Test1
+[16:00:49] [WU07][E$] Found 0 files (0 B)
+[16:00:49] [WU07][E$] Sync completed: 13 copied, 0 skipped, 0 failed
+[16:00:50] [WU08][E$] Started sync task for project UCSync_Test1
+[16:00:50] [WU08][E$] Found 0 files (0 B)
+[16:00:50] [WU08][E$] Sync completed: 13 copied, 0 skipped, 0 failed
+[16:00:51] [WU09][E$] Started sync task for project UCSync_Test1
+[16:00:51] [WU09][E$] Found 0 files (0 B)
+[16:00:51] [WU09][E$] Sync completed: 13 copied, 0 skipped, 0 failed
+[16:00:52] [WU10][E$] Started sync task for project UCSync_Test1
+[16:00:52] [WU10][E$] Found 0 files (0 B)
+[16:00:52] [WU10][E$] Sync completed: 13 copied, 0 skipped, 0 failed
+[16:00:53] [WU11][E$] Started sync task for project UCSync_Test1
+[16:00:53] [WU11][E$] Found 0 files (0 B)
+[16:00:53] [WU11][E$] Sync completed: 13 copied, 0 skipped, 0 failed
+[16:00:54] [WU12][E$] Started sync task for project UCSync_Test1
+[16:00:54] [WU12][E$] Found 0 files (0 B)
+[16:00:54] [WU12][E$] Sync completed: 13 copied, 0 skipped, 0 failed
+[16:00:55] [WU13][E$] Started sync task for project UCSync_Test1
+[16:00:55] [WU13][E$] Found 0 files (0 B)
+[16:00:55] [WU13][E$] Sync completed: 13 copied, 0 skipped, 0 failed
+[16:01:05] [WU01][E$] Started sync task for project UCSync_Test1
+[16:01:05] [WU02][E$] Started sync task for project UCSync_Test1
+[16:01:05] [WU03][E$] Started sync task for project UCSync_Test1
+[16:01:05] [WU04][E$] Started sync task for project UCSync_Test1
+[16:01:05] [WU05][E$] Started sync task for project UCSync_Test1
+[16:01:05] [WU06][E$] Started sync task for project UCSync_Test1
+[16:01:05] [WU07][E$] Started sync task for project UCSync_Test1
+[16:01:05] [WU08][E$] Started sync task for project UCSync_Test1
+[16:01:05] [WU09][E$] Started sync task for project UCSync_Test1
+[16:01:05] [WU10][E$] Started sync task for project UCSync_Test1
+[16:01:05] [WU11][E$] Started sync task for project UCSync_Test1
+[16:01:05] [WU12][E$] Started sync task for project UCSync_Test1
+[16:01:05] [WU13][E$] Started sync task for project UCSync_Test1
+[16:01:05] [WU01][E$] Found 0 files (0 B)
+[16:01:05] [WU01][E$] Sync completed: 13 copied, 0 skipped, 0 failed
+[16:01:05] [WU06][E$] Found 0 files (0 B)
+[16:01:05] [WU06][E$] Sync completed: 13 copied, 0 skipped, 0 failed
+[16:01:05] [WU03][E$] Found 0 files (0 B)
+[16:01:05] [WU08][E$] Found 0 files (0 B)
+[16:01:05] [WU03][E$] Sync completed: 13 copied, 0 skipped, 0 failed
+[16:01:05] [WU09][E$] Found 0 files (0 B)
+[16:01:05] [WU08][E$] Sync completed: 13 copied, 0 skipped, 0 failed
+[16:01:05] [WU09][E$] Sync completed: 13 copied, 0 skipped, 0 failed
+[16:01:05] [WU05][E$] Found 0 files (0 B)
+[16:01:05] [WU10][E$] Found 0 files (0 B)
+[16:01:05] [WU05][E$] Sync completed: 13 copied, 0 skipped, 0 failed
+[16:01:05] [WU02][E$] Found 0 files (0 B)
+[16:01:05] [WU10][E$] Sync completed: 13 copied, 0 skipped, 0 failed
+[16:01:05] [WU12][E$] Found 0 files (0 B)
+[16:01:05] [WU07][E$] Found 0 files (0 B)
+[16:01:05] [WU13][E$] Found 0 files (0 B)
+[16:01:05] [WU02][E$] Sync completed: 13 copied, 0 skipped, 0 failed
+[16:01:05] [WU12][E$] Sync completed: 13 copied, 0 skipped, 0 failed
+[16:01:05] [WU07][E$] Sync completed: 13 copied, 0 skipped, 0 failed
+[16:01:05] [WU13][E$] Sync completed: 13 copied, 0 skipped, 0 failed
+[16:01:05] [WU04][E$] Found 0 files (0 B)
+[16:01:05] [WU04][E$] Sync completed: 13 copied, 0 skipped, 0 failed
+[16:01:05] [WU11][E$] Found 0 files (0 B)
+[16:01:05] [WU11][E$] Sync completed: 13 copied, 0 skipped, 0 failed
+[16:01:07] [CU][E$] Started sync task for project UCSync_Test1
+[16:01:08] [CU][E$] Found 0 files (0 B)
+[16:01:08] [CU][E$] Sync completed: 0 copied, 0 skipped, 0 failed
+[16:01:17] [WU01][E$] Started sync task for project UCSync_Test1
+[16:01:17] [WU02][E$] Started sync task for project UCSync_Test1
+[16:01:17] [WU03][E$] Started sync task for project UCSync_Test1
+[16:01:17] [WU04][E$] Started sync task for project UCSync_Test1
+[16:01:17] [WU05][E$] Started sync task for project UCSync_Test1
+[16:01:17] [WU06][E$] Started sync task for project UCSync_Test1
+[16:01:17] [WU07][E$] Started sync task for project UCSync_Test1
+[16:01:17] [WU08][E$] Started sync task for project UCSync_Test1
+[16:01:17] [WU09][E$] Started sync task for project UCSync_Test1
+[16:01:17] [WU10][E$] Started sync task for project UCSync_Test1
+[16:01:17] [WU11][E$] Started sync task for project UCSync_Test1
+[16:01:17] [WU12][E$] Started sync task for project UCSync_Test1
+[16:01:17] [WU13][E$] Started sync task for project UCSync_Test1
+[16:01:17] [CU][E$] Started sync task for project UCSync_Test1
+[16:01:17] [WU01][E$] Found 0 files (0 B)
+[16:01:17] [WU01][E$] Sync completed: 13 copied, 0 skipped, 0 failed
+[16:01:17] [WU02][E$] Found 0 files (0 B)
+[16:01:17] [WU02][E$] Sync completed: 13 copied, 0 skipped, 0 failed
+[16:01:17] [WU04][E$] Found 0 files (0 B)
+[16:01:17] [WU04][E$] Sync completed: 13 copied, 0 skipped, 0 failed
+[16:01:17] [WU05][E$] Found 0 files (0 B)
+[16:01:17] [WU05][E$] Sync completed: 13 copied, 0 skipped, 0 failed
+[16:01:17] [WU06][E$] Found 0 files (0 B)
+[16:01:17] [WU06][E$] Sync completed: 13 copied, 0 skipped, 0 failed
+[16:01:17] [WU08][E$] Found 0 files (0 B)
+[16:01:17] [WU07][E$] Found 0 files (0 B)
+[16:01:17] [WU08][E$] Sync completed: 13 copied, 0 skipped, 0 failed
+[16:01:17] [WU07][E$] Sync completed: 13 copied, 0 skipped, 0 failed
+[16:01:17] [WU10][E$] Found 0 files (0 B)
+[16:01:17] [WU10][E$] Sync completed: 13 copied, 0 skipped, 0 failed
+[16:01:17] [WU11][E$] Found 0 files (0 B)
+[16:01:17] [WU12][E$] Found 0 files (0 B)
+[16:01:17] [WU13][E$] Found 0 files (0 B)
+[16:01:17] [WU11][E$] Sync completed: 13 copied, 0 skipped, 0 failed
+[16:01:17] [WU12][E$] Sync completed: 13 copied, 0 skipped, 0 failed
+[16:01:17] [WU13][E$] Sync completed: 13 copied, 0 skipped, 0 failed
+[16:01:17] [WU09][E$] Found 0 files (0 B)
+[16:01:17] [WU03][E$] Found 0 files (0 B)
+[16:01:17] [WU09][E$] Sync completed: 13 copied, 0 skipped, 0 failed
+[16:01:17] [WU03][E$] Sync completed: 13 copied, 0 skipped, 0 failed
+[16:01:18] [CU][E$] Found 0 files (0 B)
+[16:01:18] [CU][E$] Sync completed: 0 copied, 0 skipped, 0 failed
+[16:01:27] [WU01][E$] Started sync task for project UCSync_Test1
+[16:01:27] [WU02][E$] Started sync task for project UCSync_Test1
+[16:01:27] [WU03][E$] Started sync task for project UCSync_Test1
+[16:01:27] [WU04][E$] Started sync task for project UCSync_Test1
+[16:01:27] [WU05][E$] Started sync task for project UCSync_Test1
+[16:01:27] [WU06][E$] Started sync task for project UCSync_Test1
+[16:01:27] [WU07][E$] Started sync task for project UCSync_Test1
+[16:01:27] [WU08][E$] Started sync task for project UCSync_Test1
+[16:01:27] [WU09][E$] Started sync task for project UCSync_Test1
+[16:01:27] [WU10][E$] Started sync task for project UCSync_Test1
+[16:01:27] [WU11][E$] Started sync task for project UCSync_Test1
+[16:01:27] [WU12][E$] Started sync task for project UCSync_Test1
+[16:01:27] [WU13][E$] Started sync task for project UCSync_Test1
+[16:01:27] [CU][E$] Started sync task for project UCSync_Test1
+[16:01:27] [WU01][E$] Found 0 files (0 B)
+[16:01:27] [WU01][E$] Sync completed: 13 copied, 0 skipped, 0 failed
+[16:01:27] [WU04][E$] Found 0 files (0 B)
+[16:01:27] [WU04][E$] Sync completed: 13 copied, 0 skipped, 0 failed
+[16:01:27] [WU05][E$] Found 0 files (0 B)
+[16:01:27] [WU05][E$] Sync completed: 13 copied, 0 skipped, 0 failed
+[16:01:27] [WU06][E$] Found 0 files (0 B)
+[16:01:27] [WU07][E$] Found 0 files (0 B)
+[16:01:27] [WU02][E$] Found 0 files (0 B)
+[16:01:27] [WU06][E$] Sync completed: 13 copied, 0 skipped, 0 failed
+[16:01:27] [WU08][E$] Found 0 files (0 B)
+[16:01:27] [WU07][E$] Sync completed: 13 copied, 0 skipped, 0 failed
+[16:01:27] [WU03][E$] Found 0 files (0 B)
+[16:01:27] [WU02][E$] Sync completed: 13 copied, 0 skipped, 0 failed
+[16:01:27] [WU08][E$] Sync completed: 13 copied, 0 skipped, 0 failed
+[16:01:27] [WU03][E$] Sync completed: 13 copied, 0 skipped, 0 failed
+[16:01:27] [WU11][E$] Found 0 files (0 B)
+[16:01:27] [WU11][E$] Sync completed: 13 copied, 0 skipped, 0 failed
+[16:01:27] [WU09][E$] Found 0 files (0 B)
+[16:01:27] [WU09][E$] Sync completed: 13 copied, 0 skipped, 0 failed
+[16:01:28] [WU10][E$] Found 0 files (0 B)
+[16:01:28] [WU10][E$] Sync completed: 13 copied, 0 skipped, 0 failed
+[16:01:28] [WU12][E$] Found 0 files (0 B)
+[16:01:28] [WU13][E$] Found 0 files (0 B)
+[16:01:28] [WU12][E$] Sync completed: 13 copied, 0 skipped, 0 failed
+[16:01:28] [WU13][E$] Sync completed: 13 copied, 0 skipped, 0 failed
+[16:01:28] [CU][E$] Found 0 files (0 B)
+[16:01:28] [CU][E$] Sync completed: 0 copied, 0 skipped, 0 failed
+[16:01:37] [WU01][E$] Started sync task for project UCSync_Test1
+[16:01:37] [WU02][E$] Started sync task for project UCSync_Test1
+[16:01:37] [WU03][E$] Started sync task for project UCSync_Test1
+[16:01:37] [WU04][E$] Started sync task for project UCSync_Test1
+[16:01:37] [WU05][E$] Started sync task for project UCSync_Test1
+[16:01:37] [WU06][E$] Started sync task for project UCSync_Test1
+[16:01:37] [WU07][E$] Started sync task for project UCSync_Test1
+[16:01:37] [WU08][E$] Started sync task for project UCSync_Test1
+[16:01:37] [WU09][E$] Started sync task for project UCSync_Test1
+[16:01:37] [WU10][E$] Started sync task for project UCSync_Test1
+[16:01:37] [WU11][E$] Started sync task for project UCSync_Test1
+[16:01:37] [WU12][E$] Started sync task for project UCSync_Test1
+[16:01:37] [WU13][E$] Started sync task for project UCSync_Test1
+[16:01:37] [CU][E$] Started sync task for project UCSync_Test1
+[16:01:37] [WU01][E$] Found 0 files (0 B)
+[16:01:38] [WU01][E$] Sync completed: 13 copied, 0 skipped, 0 failed
+[16:01:38] [WU02][E$] Found 0 files (0 B)
+[16:01:38] [WU02][E$] Sync completed: 13 copied, 0 skipped, 0 failed
+[16:01:38] [WU04][E$] Found 0 files (0 B)
+[16:01:38] [WU04][E$] Sync completed: 13 copied, 0 skipped, 0 failed
+[16:01:38] [WU05][E$] Found 0 files (0 B)
+[16:01:38] [WU03][E$] Found 0 files (0 B)
+[16:01:38] [WU05][E$] Sync completed: 13 copied, 0 skipped, 0 failed
+[16:01:38] [WU07][E$] Found 0 files (0 B)
+[16:01:38] [WU03][E$] Sync completed: 13 copied, 0 skipped, 0 failed
+[16:01:38] [WU07][E$] Sync completed: 13 copied, 0 skipped, 0 failed
+[16:01:38] [WU08][E$] Found 0 files (0 B)
+[16:01:38] [WU08][E$] Sync completed: 13 copied, 0 skipped, 0 failed
+[16:01:38] [WU09][E$] Found 0 files (0 B)
+[16:01:38] [WU09][E$] Sync completed: 13 copied, 0 skipped, 0 failed
+[16:01:38] [WU11][E$] Found 0 files (0 B)
+[16:01:38] [WU10][E$] Found 0 files (0 B)
+[16:01:38] [WU11][E$] Sync completed: 13 copied, 0 skipped, 0 failed
+[16:01:38] [WU10][E$] Sync completed: 13 copied, 0 skipped, 0 failed
+[16:01:38] [WU13][E$] Found 0 files (0 B)
+[16:01:38] [WU13][E$] Sync completed: 13 copied, 0 skipped, 0 failed
+[16:01:38] [WU06][E$] Found 0 files (0 B)
+[16:01:38] [WU06][E$] Sync completed: 13 copied, 0 skipped, 0 failed
+[16:01:38] [WU12][E$] Found 0 files (0 B)
+[16:01:38] [WU12][E$] Sync completed: 13 copied, 0 skipped, 0 failed
+[16:01:38] [CU][E$] Found 0 files (0 B)
+[16:01:38] [CU][E$] Sync completed: 0 copied, 0 skipped, 0 failed
+[16:01:47] [WU01][E$] Started sync task for project UCSync_Test1
+[16:01:48] [WU02][E$] Started sync task for project UCSync_Test1
+[16:01:48] [WU03][E$] Started sync task for project UCSync_Test1
+[16:01:48] [WU04][E$] Started sync task for project UCSync_Test1
+[16:01:48] [WU05][E$] Started sync task for project UCSync_Test1
+[16:01:48] [WU06][E$] Started sync task for project UCSync_Test1
+[16:01:48] [WU07][E$] Started sync task for project UCSync_Test1
+[16:01:48] [WU08][E$] Started sync task for project UCSync_Test1
+[16:01:48] [WU09][E$] Started sync task for project UCSync_Test1
+[16:01:48] [WU10][E$] Started sync task for project UCSync_Test1
+[16:01:48] [WU11][E$] Started sync task for project UCSync_Test1
+[16:01:48] [WU12][E$] Started sync task for project UCSync_Test1
+[16:01:48] [WU01][E$] Found 0 files (0 B)
+[16:01:48] [WU01][E$] Sync completed: 13 copied, 0 skipped, 0 failed
+[16:01:48] [WU13][E$] Started sync task for project UCSync_Test1
+[16:01:48] [WU02][E$] Found 0 files (0 B)
+[16:01:48] [CU][E$] Started sync task for project UCSync_Test1
+[16:01:48] [WU02][E$] Sync completed: 13 copied, 0 skipped, 0 failed
+[16:01:48] [WU04][E$] Found 0 files (0 B)
+[16:01:48] [WU04][E$] Sync completed: 13 copied, 0 skipped, 0 failed
+[16:01:48] [WU05][E$] Found 0 files (0 B)
+[16:01:48] [WU05][E$] Sync completed: 13 copied, 0 skipped, 0 failed
+[16:01:48] [WU03][E$] Found 0 files (0 B)
+[16:01:48] [WU06][E$] Found 0 files (0 B)
+[16:01:48] [WU07][E$] Found 0 files (0 B)
+[16:01:48] [WU08][E$] Found 0 files (0 B)
+[16:01:48] [WU09][E$] Found 0 files (0 B)
+[16:01:48] [WU10][E$] Found 0 files (0 B)
+[16:01:48] [WU03][E$] Sync completed: 13 copied, 0 skipped, 0 failed
+[16:01:48] [WU11][E$] Found 0 files (0 B)
+[16:01:48] [WU06][E$] Sync completed: 13 copied, 0 skipped, 0 failed
+[16:01:48] [WU07][E$] Sync completed: 13 copied, 0 skipped, 0 failed
+[16:01:48] [WU08][E$] Sync completed: 13 copied, 0 skipped, 0 failed
+[16:01:48] [WU09][E$] Sync completed: 13 copied, 0 skipped, 0 failed
+[16:01:48] [WU10][E$] Sync completed: 13 copied, 0 skipped, 0 failed
+[16:01:48] [WU11][E$] Sync completed: 13 copied, 0 skipped, 0 failed
+[16:01:48] [WU13][E$] Found 0 files (0 B)
+[16:01:48] [WU13][E$] Sync completed: 13 copied, 0 skipped, 0 failed
+[16:01:48] [WU12][E$] Found 0 files (0 B)
+[16:01:48] [WU12][E$] Sync completed: 13 copied, 0 skipped, 0 failed
+[16:01:49] [CU][E$] Found 0 files (0 B)
+[16:01:49] [CU][E$] Sync completed: 0 copied, 0 skipped, 0 failed
+[16:01:58] [WU01][E$] Started sync task for project UCSync_Test1
+[16:01:58] [WU02][E$] Started sync task for project UCSync_Test1
+[16:01:58] [WU03][E$] Started sync task for project UCSync_Test1
+[16:01:58] [WU04][E$] Started sync task for project UCSync_Test1
+[16:01:58] [WU05][E$] Started sync task for project UCSync_Test1
+[16:01:58] [WU06][E$] Started sync task for project UCSync_Test1
+[16:01:58] [WU07][E$] Started sync task for project UCSync_Test1
+[16:01:58] [WU08][E$] Started sync task for project UCSync_Test1
+[16:01:58] [WU09][E$] Started sync task for project UCSync_Test1
+[16:01:58] [WU10][E$] Started sync task for project UCSync_Test1
+[16:01:58] [WU11][E$] Started sync task for project UCSync_Test1
+[16:01:58] [WU12][E$] Started sync task for project UCSync_Test1
+[16:01:58] [WU13][E$] Started sync task for project UCSync_Test1
+[16:01:58] [CU][E$] Started sync task for project UCSync_Test1
+[16:01:58] [WU02][E$] Found 0 files (0 B)
+[16:01:58] [WU03][E$] Found 0 files (0 B)
+[16:01:58] [WU02][E$] Sync completed: 13 copied, 0 skipped, 0 failed
+[16:01:58] [WU03][E$] Sync completed: 13 copied, 0 skipped, 0 failed
+[16:01:58] [WU04][E$] Found 0 files (0 B)
+[16:01:58] [WU04][E$] Sync completed: 13 copied, 0 skipped, 0 failed
+[16:01:58] [WU01][E$] Found 0 files (0 B)
+[16:01:58] [WU01][E$] Sync completed: 13 copied, 0 skipped, 0 failed
+[16:01:58] [WU06][E$] Found 0 files (0 B)
+[16:01:58] [WU06][E$] Sync completed: 13 copied, 0 skipped, 0 failed
+[16:01:58] [WU05][E$] Found 0 files (0 B)
+[16:01:58] [WU05][E$] Sync completed: 13 copied, 0 skipped, 0 failed
+[16:01:58] [WU07][E$] Found 0 files (0 B)
+[16:01:58] [WU07][E$] Sync completed: 13 copied, 0 skipped, 0 failed
+[16:01:58] [WU08][E$] Found 0 files (0 B)
+[16:01:58] [WU08][E$] Sync completed: 13 copied, 0 skipped, 0 failed
+[16:01:58] [WU10][E$] Found 0 files (0 B)
+[16:01:58] [WU10][E$] Sync completed: 13 copied, 0 skipped, 0 failed
+[16:01:58] [WU12][E$] Found 0 files (0 B)
+[16:01:58] [WU12][E$] Sync completed: 13 copied, 0 skipped, 0 failed
+[16:01:58] [WU09][E$] Found 0 files (0 B)
+[16:01:58] [WU09][E$] Sync completed: 13 copied, 0 skipped, 0 failed
+[16:01:58] [WU11][E$] Found 0 files (0 B)
+[16:01:58] [WU11][E$] Sync completed: 13 copied, 0 skipped, 0 failed
+[16:01:58] [WU13][E$] Found 0 files (0 B)
+[16:01:58] [WU13][E$] Sync completed: 13 copied, 0 skipped, 0 failed
+[16:01:58] [CU][E$] Found 0 files (0 B)
+[16:01:58] [CU][E$] Sync completed: 0 copied, 0 skipped, 0 failed
+[16:02:08] [WU01][E$] Started sync task for project UCSync_Test1
+[16:02:08] [WU02][E$] Started sync task for project UCSync_Test1
+[16:02:08] [WU03][E$] Started sync task for project UCSync_Test1
+[16:02:08] [WU04][E$] Started sync task for project UCSync_Test1
+[16:02:08] [WU05][E$] Started sync task for project UCSync_Test1
+[16:02:08] [WU06][E$] Started sync task for project UCSync_Test1
+[16:02:08] [WU07][E$] Started sync task for project UCSync_Test1
+[16:02:08] [WU08][E$] Started sync task for project UCSync_Test1
+[16:02:08] [WU09][E$] Started sync task for project UCSync_Test1
+[16:02:08] [WU10][E$] Started sync task for project UCSync_Test1
+[16:02:08] [WU11][E$] Started sync task for project UCSync_Test1
+[16:02:08] [WU12][E$] Started sync task for project UCSync_Test1
+[16:02:08] [WU13][E$] Started sync task for project UCSync_Test1
+[16:02:08] [CU][E$] Started sync task for project UCSync_Test1
+[16:02:08] [WU01][E$] Found 0 files (0 B)
+[16:02:08] [WU02][E$] Found 0 files (0 B)
+[16:02:08] [WU01][E$] Sync completed: 13 copied, 0 skipped, 0 failed
+[16:02:08] [WU02][E$] Sync completed: 13 copied, 0 skipped, 0 failed
+[16:02:08] [WU03][E$] Found 0 files (0 B)
+[16:02:08] [WU03][E$] Sync completed: 13 copied, 0 skipped, 0 failed
+[16:02:08] [WU05][E$] Found 0 files (0 B)
+[16:02:08] [WU06][E$] Found 0 files (0 B)
+[16:02:08] [WU07][E$] Found 0 files (0 B)
+[16:02:08] [WU05][E$] Sync completed: 13 copied, 0 skipped, 0 failed
+[16:02:08] [WU04][E$] Found 0 files (0 B)
+[16:02:08] [WU06][E$] Sync completed: 13 copied, 0 skipped, 0 failed
+[16:02:08] [WU07][E$] Sync completed: 13 copied, 0 skipped, 0 failed
+[16:02:08] [WU04][E$] Sync completed: 13 copied, 0 skipped, 0 failed
+[16:02:08] [WU08][E$] Found 0 files (0 B)
+[16:02:08] [WU09][E$] Found 0 files (0 B)
+[16:02:08] [WU08][E$] Sync completed: 13 copied, 0 skipped, 0 failed
+[16:02:08] [WU09][E$] Sync completed: 13 copied, 0 skipped, 0 failed
+[16:02:08] [WU10][E$] Found 0 files (0 B)
+[16:02:08] [WU10][E$] Sync completed: 13 copied, 0 skipped, 0 failed
+[16:02:08] [WU11][E$] Found 0 files (0 B)
+[16:02:08] [WU11][E$] Sync completed: 13 copied, 0 skipped, 0 failed
+[16:02:08] [WU13][E$] Found 0 files (0 B)
+[16:02:08] [WU13][E$] Sync completed: 13 copied, 0 skipped, 0 failed
+[16:02:08] [WU12][E$] Found 0 files (0 B)
+[16:02:08] [WU12][E$] Sync completed: 13 copied, 0 skipped, 0 failed
+[16:02:09] [CU][E$] Found 0 files (0 B)
+[16:02:09] [CU][E$] Sync completed: 0 copied, 0 skipped, 0 failed
+[16:02:18] [WU01][E$] Started sync task for project UCSync_Test1
+[16:02:18] [WU02][E$] Started sync task for project UCSync_Test1
+[16:02:18] [WU03][E$] Started sync task for project UCSync_Test1
+[16:02:18] [WU04][E$] Started sync task for project UCSync_Test1
+[16:02:18] [WU05][E$] Started sync task for project UCSync_Test1
+[16:02:18] [WU06][E$] Started sync task for project UCSync_Test1
+[16:02:18] [WU07][E$] Started sync task for project UCSync_Test1
+[16:02:18] [WU08][E$] Started sync task for project UCSync_Test1
+[16:02:18] [WU09][E$] Started sync task for project UCSync_Test1
+[16:02:18] [WU10][E$] Started sync task for project UCSync_Test1
+[16:02:18] [WU11][E$] Started sync task for project UCSync_Test1
+[16:02:18] [WU12][E$] Started sync task for project UCSync_Test1
+[16:02:18] [WU13][E$] Started sync task for project UCSync_Test1
+[16:02:18] [WU04][E$] Found 0 files (0 B)
+[16:02:18] [WU04][E$] Sync completed: 13 copied, 0 skipped, 0 failed
+[16:02:18] [WU05][E$] Found 0 files (0 B)
+[16:02:18] [WU06][E$] Found 0 files (0 B)
+[16:02:18] [WU01][E$] Found 0 files (0 B)
+[16:02:18] [WU02][E$] Found 0 files (0 B)
+[16:02:18] [WU07][E$] Found 0 files (0 B)
+[16:02:18] [WU08][E$] Found 0 files (0 B)
+[16:02:18] [WU05][E$] Sync completed: 13 copied, 0 skipped, 0 failed
+[16:02:18] [WU06][E$] Sync completed: 13 copied, 0 skipped, 0 failed
+[16:02:18] [WU01][E$] Sync completed: 13 copied, 0 skipped, 0 failed
+[16:02:18] [WU11][E$] Found 0 files (0 B)
+[16:02:18] [WU02][E$] Sync completed: 13 copied, 0 skipped, 0 failed
+[16:02:18] [WU07][E$] Sync completed: 13 copied, 0 skipped, 0 failed
+[16:02:18] [WU03][E$] Found 0 files (0 B)
+[16:02:18] [WU13][E$] Found 0 files (0 B)
+[16:02:18] [WU08][E$] Sync completed: 13 copied, 0 skipped, 0 failed
+[16:02:18] [WU11][E$] Sync completed: 13 copied, 0 skipped, 0 failed
+[16:02:18] [WU03][E$] Sync completed: 13 copied, 0 skipped, 0 failed
+[16:02:18] [WU13][E$] Sync completed: 13 copied, 0 skipped, 0 failed
+[16:02:18] [WU10][E$] Found 0 files (0 B)
+[16:02:18] [WU09][E$] Found 0 files (0 B)
+[16:02:18] [WU10][E$] Sync completed: 13 copied, 0 skipped, 0 failed
+[16:02:18] [WU09][E$] Sync completed: 13 copied, 0 skipped, 0 failed
+[16:02:18] [WU12][E$] Found 0 files (0 B)
+[16:02:18] [WU12][E$] Sync completed: 13 copied, 0 skipped, 0 failed
+[16:03:57] [WU01][E$] Started sync task for project UCSync_Test1
+[16:03:57] [WU01][E$] Found 0 files (0 B)
+[16:03:57] [WU01][E$] Sync completed: 0 copied, 0 skipped, 0 failed
+[16:03:59] [WU02][E$] Started sync task for project UCSync_Test1
+[16:03:59] [WU02][E$] Found 0 files (0 B)
+[16:03:59] [WU02][E$] Sync completed: 0 copied, 0 skipped, 0 failed
+[16:04:01] [WU03][E$] Started sync task for project UCSync_Test1
+[16:04:01] [WU03][E$] Found 0 files (0 B)
+[16:04:01] [WU03][E$] Sync completed: 0 copied, 0 skipped, 0 failed
+[16:04:04] [WU04][E$] Started sync task for project UCSync_Test1
+[16:04:04] [WU04][E$] Found 0 files (0 B)
+[16:04:04] [WU04][E$] Sync completed: 0 copied, 0 skipped, 0 failed
+[16:04:06] [WU05][E$] Started sync task for project UCSync_Test1
+[16:04:06] [WU05][E$] Found 0 files (0 B)
+[16:04:06] [WU05][E$] Sync completed: 0 copied, 0 skipped, 0 failed
+[16:04:08] [WU06][E$] Started sync task for project UCSync_Test1
+[16:04:08] [WU06][E$] Found 0 files (0 B)
+[16:04:08] [WU06][E$] Sync completed: 0 copied, 0 skipped, 0 failed
+[16:04:10] [WU07][E$] Started sync task for project UCSync_Test1
+[16:04:11] [WU07][E$] Found 0 files (0 B)
+[16:04:11] [WU07][E$] Sync completed: 0 copied, 0 skipped, 0 failed
+[16:04:13] [WU08][E$] Started sync task for project UCSync_Test1
+[16:04:13] [WU08][E$] Found 0 files (0 B)
+[16:04:13] [WU08][E$] Sync completed: 0 copied, 0 skipped, 0 failed
+[16:04:15] [WU09][E$] Started sync task for project UCSync_Test1
+[16:04:15] [WU09][E$] Found 0 files (0 B)
+[16:04:15] [WU09][E$] Sync completed: 0 copied, 0 skipped, 0 failed
+[16:04:17] [WU10][E$] Started sync task for project UCSync_Test1
+[16:04:18] [WU10][E$] Found 0 files (0 B)
+[16:04:18] [WU10][E$] Sync completed: 0 copied, 0 skipped, 0 failed
+[16:04:20] [WU11][E$] Started sync task for project UCSync_Test1
+[16:04:20] [WU11][E$] Found 0 files (0 B)
+[16:04:20] [WU11][E$] Sync completed: 0 copied, 0 skipped, 0 failed
+[16:04:22] [WU12][E$] Started sync task for project UCSync_Test1
+[16:04:22] [WU12][E$] Found 0 files (0 B)
+[16:04:22] [WU12][E$] Sync completed: 0 copied, 0 skipped, 0 failed
+[16:04:24] [WU13][E$] Started sync task for project UCSync_Test1
+[16:04:25] [WU13][E$] Found 0 files (0 B)
+[16:04:25] [WU13][E$] Sync completed: 0 copied, 0 skipped, 0 failed
+[16:04:27] [CU][E$] Started sync task for project UCSync_Test1
+[16:04:27] [CU][E$] Found 0 files (0 B)
+[16:04:27] [CU][E$] Sync completed: 0 copied, 0 skipped, 0 failed
+[16:04:37] [WU01][E$] Started sync task for project UCSync_Test1
+[16:04:37] [WU02][E$] Started sync task for project UCSync_Test1
+[16:04:37] [WU03][E$] Started sync task for project UCSync_Test1
+[16:04:37] [WU04][E$] Started sync task for project UCSync_Test1
+[16:04:37] [WU05][E$] Started sync task for project UCSync_Test1
+[16:04:37] [WU06][E$] Started sync task for project UCSync_Test1
+[16:04:37] [WU07][E$] Started sync task for project UCSync_Test1
+[16:04:37] [WU08][E$] Started sync task for project UCSync_Test1
+[16:04:37] [WU09][E$] Started sync task for project UCSync_Test1
+[16:04:37] [WU10][E$] Started sync task for project UCSync_Test1
+[16:04:37] [WU11][E$] Started sync task for project UCSync_Test1
+[16:04:37] [WU12][E$] Started sync task for project UCSync_Test1
+[16:04:37] [WU01][E$] Found 0 files (0 B)
+[16:04:37] [WU13][E$] Started sync task for project UCSync_Test1
+[16:04:37] [WU01][E$] Sync completed: 0 copied, 0 skipped, 0 failed
+[16:04:37] [CU][E$] Started sync task for project UCSync_Test1
+[16:04:37] [WU05][E$] Found 0 files (0 B)
+[16:04:37] [WU06][E$] Found 0 files (0 B)
+[16:04:37] [WU02][E$] Found 0 files (0 B)
+[16:04:37] [WU07][E$] Found 0 files (0 B)
+[16:04:37] [WU03][E$] Found 0 files (0 B)
+[16:04:37] [WU08][E$] Found 0 files (0 B)
+[16:04:37] [WU05][E$] Sync completed: 0 copied, 0 skipped, 0 failed
+[16:04:37] [WU06][E$] Sync completed: 0 copied, 0 skipped, 0 failed
+[16:04:37] [WU04][E$] Found 0 files (0 B)
+[16:04:37] [WU02][E$] Sync completed: 0 copied, 0 skipped, 0 failed
+[16:04:37] [WU07][E$] Sync completed: 0 copied, 0 skipped, 0 failed
+[16:04:37] [WU03][E$] Sync completed: 0 copied, 0 skipped, 0 failed
+[16:04:37] [WU08][E$] Sync completed: 0 copied, 0 skipped, 0 failed
+[16:04:37] [WU04][E$] Sync completed: 0 copied, 0 skipped, 0 failed
+[16:04:37] [WU09][E$] Found 0 files (0 B)
+[16:04:37] [WU09][E$] Sync completed: 0 copied, 0 skipped, 0 failed
+[16:04:37] [WU13][E$] Found 0 files (0 B)
+[16:04:37] [WU13][E$] Sync completed: 0 copied, 0 skipped, 0 failed
+[16:04:37] [WU10][E$] Found 0 files (0 B)
+[16:04:37] [WU10][E$] Sync completed: 0 copied, 0 skipped, 0 failed
+[16:04:37] [WU11][E$] Found 0 files (0 B)
+[16:04:37] [WU12][E$] Found 0 files (0 B)
+[16:04:37] [WU11][E$] Sync completed: 0 copied, 0 skipped, 0 failed
+[16:04:37] [WU12][E$] Sync completed: 0 copied, 0 skipped, 0 failed
+[16:04:37] [CU][E$] Found 0 files (0 B)
+[16:04:37] [CU][E$] Sync completed: 0 copied, 0 skipped, 0 failed
+[16:04:47] [WU01][E$] Started sync task for project UCSync_Test1
+[16:04:47] [WU02][E$] Started sync task for project UCSync_Test1
+[16:04:47] [WU03][E$] Started sync task for project UCSync_Test1
+[16:04:47] [WU04][E$] Started sync task for project UCSync_Test1
+[16:04:47] [WU05][E$] Started sync task for project UCSync_Test1
+[16:04:47] [WU06][E$] Started sync task for project UCSync_Test1
+[16:04:47] [WU07][E$] Started sync task for project UCSync_Test1
+[16:04:47] [WU08][E$] Started sync task for project UCSync_Test1
+[16:04:47] [WU09][E$] Started sync task for project UCSync_Test1
+[16:04:47] [WU10][E$] Started sync task for project UCSync_Test1
+[16:04:47] [WU11][E$] Started sync task for project UCSync_Test1
+[16:04:47] [WU12][E$] Started sync task for project UCSync_Test1
+[16:04:47] [WU13][E$] Started sync task for project UCSync_Test1
+[16:04:47] [CU][E$] Started sync task for project UCSync_Test1
+[16:04:47] [WU01][E$] Found 0 files (0 B)
+[16:04:47] [WU01][E$] Sync completed: 0 copied, 0 skipped, 0 failed
+[16:04:47] [WU02][E$] Found 0 files (0 B)
+[16:04:47] [WU02][E$] Sync completed: 0 copied, 0 skipped, 0 failed
+[16:04:47] [WU04][E$] Found 0 files (0 B)
+[16:04:47] [WU04][E$] Sync completed: 0 copied, 0 skipped, 0 failed
+[16:04:47] [WU05][E$] Found 0 files (0 B)
+[16:04:47] [WU05][E$] Sync completed: 0 copied, 0 skipped, 0 failed
+[16:04:47] [WU06][E$] Found 0 files (0 B)
+[16:04:47] [WU07][E$] Found 0 files (0 B)
+[16:04:47] [WU06][E$] Sync completed: 0 copied, 0 skipped, 0 failed
+[16:04:47] [WU07][E$] Sync completed: 0 copied, 0 skipped, 0 failed
+[16:04:47] [WU03][E$] Found 0 files (0 B)
+[16:04:47] [WU03][E$] Sync completed: 0 copied, 0 skipped, 0 failed
+[16:04:47] [WU09][E$] Found 0 files (0 B)
+[16:04:47] [WU09][E$] Sync completed: 0 copied, 0 skipped, 0 failed
+[16:04:47] [WU10][E$] Found 0 files (0 B)
+[16:04:47] [WU10][E$] Sync completed: 0 copied, 0 skipped, 0 failed
+[16:04:47] [WU08][E$] Found 0 files (0 B)
+[16:04:47] [WU11][E$] Found 0 files (0 B)
+[16:04:47] [WU08][E$] Sync completed: 0 copied, 0 skipped, 0 failed
+[16:04:47] [WU11][E$] Sync completed: 0 copied, 0 skipped, 0 failed
+[16:04:47] [WU12][E$] Found 0 files (0 B)
+[16:04:47] [WU12][E$] Sync completed: 0 copied, 0 skipped, 0 failed
+[16:04:47] [CU][E$] Found 0 files (0 B)
+[16:04:47] [CU][E$] Sync completed: 0 copied, 0 skipped, 0 failed
+[16:04:47] [WU13][E$] Found 0 files (0 B)
+[16:04:47] [WU13][E$] Sync completed: 0 copied, 0 skipped, 0 failed
+[16:04:57] [WU01][E$] Started sync task for project UCSync_Test1
+[16:04:57] [WU02][E$] Started sync task for project UCSync_Test1
+[16:04:57] [WU03][E$] Started sync task for project UCSync_Test1
+[16:04:57] [WU04][E$] Started sync task for project UCSync_Test1
+[16:04:57] [WU05][E$] Started sync task for project UCSync_Test1
+[16:04:57] [WU06][E$] Started sync task for project UCSync_Test1
+[16:04:57] [WU07][E$] Started sync task for project UCSync_Test1
+[16:04:57] [WU08][E$] Started sync task for project UCSync_Test1
+[16:04:57] [WU09][E$] Started sync task for project UCSync_Test1
+[16:04:57] [WU10][E$] Started sync task for project UCSync_Test1
+[16:04:57] [WU11][E$] Started sync task for project UCSync_Test1
+[16:04:57] [WU01][E$] Found 0 files (0 B)
+[16:04:57] [WU02][E$] Found 0 files (0 B)
+[16:04:57] [WU03][E$] Found 0 files (0 B)
+[16:04:57] [WU04][E$] Found 0 files (0 B)
+[16:04:57] [WU12][E$] Started sync task for project UCSync_Test1
+[16:04:57] [WU01][E$] Sync completed: 0 copied, 0 skipped, 0 failed
+[16:04:57] [WU02][E$] Sync completed: 0 copied, 0 skipped, 0 failed
+[16:04:57] [WU06][E$] Found 0 files (0 B)
+[16:04:57] [WU03][E$] Sync completed: 0 copied, 0 skipped, 0 failed
+[16:04:57] [WU04][E$] Sync completed: 0 copied, 0 skipped, 0 failed
+[16:04:57] [WU13][E$] Started sync task for project UCSync_Test1
+[16:04:57] [WU06][E$] Sync completed: 0 copied, 0 skipped, 0 failed
+[16:04:57] [CU][E$] Started sync task for project UCSync_Test1
+[16:04:57] [WU05][E$] Found 0 files (0 B)
+[16:04:57] [WU07][E$] Found 0 files (0 B)
+[16:04:57] [WU05][E$] Sync completed: 0 copied, 0 skipped, 0 failed
+[16:04:57] [WU07][E$] Sync completed: 0 copied, 0 skipped, 0 failed
+[16:04:57] [WU09][E$] Found 0 files (0 B)
+[16:04:57] [WU09][E$] Sync completed: 0 copied, 0 skipped, 0 failed
+[16:04:57] [WU10][E$] Found 0 files (0 B)
+[16:04:57] [WU11][E$] Found 0 files (0 B)
+[16:04:57] [WU10][E$] Sync completed: 0 copied, 0 skipped, 0 failed
+[16:04:57] [WU11][E$] Sync completed: 0 copied, 0 skipped, 0 failed
+[16:04:57] [WU13][E$] Found 0 files (0 B)
+[16:04:57] [WU13][E$] Sync completed: 0 copied, 0 skipped, 0 failed
+[16:04:57] [WU08][E$] Found 0 files (0 B)
+[16:04:57] [WU08][E$] Sync completed: 0 copied, 0 skipped, 0 failed
+[16:04:57] [WU12][E$] Found 0 files (0 B)
+[16:04:57] [WU12][E$] Sync completed: 0 copied, 0 skipped, 0 failed
+[16:04:57] [CU][E$] Found 0 files (0 B)
+[16:04:57] [CU][E$] Sync completed: 0 copied, 0 skipped, 0 failed
+[16:05:07] [WU01][E$] Started sync task for project UCSync_Test1
+[16:05:07] [WU02][E$] Started sync task for project UCSync_Test1
+[16:05:07] [WU03][E$] Started sync task for project UCSync_Test1
+[16:05:07] [WU04][E$] Started sync task for project UCSync_Test1
+[16:05:07] [WU05][E$] Started sync task for project UCSync_Test1
+[16:05:07] [WU06][E$] Started sync task for project UCSync_Test1
+[16:05:07] [WU07][E$] Started sync task for project UCSync_Test1
+[16:05:07] [WU01][E$] Found 0 files (0 B)
+[16:05:07] [WU08][E$] Started sync task for project UCSync_Test1
+[16:05:07] [WU01][E$] Sync completed: 0 copied, 0 skipped, 0 failed
+[16:05:07] [WU02][E$] Found 0 files (0 B)
+[16:05:07] [WU03][E$] Found 0 files (0 B)
+[16:05:07] [WU04][E$] Found 0 files (0 B)
+[16:05:07] [WU05][E$] Found 0 files (0 B)
+[16:05:07] [WU09][E$] Started sync task for project UCSync_Test1
+[16:05:07] [WU02][E$] Sync completed: 0 copied, 0 skipped, 0 failed
+[16:05:07] [WU03][E$] Sync completed: 0 copied, 0 skipped, 0 failed
+[16:05:07] [WU04][E$] Sync completed: 0 copied, 0 skipped, 0 failed
+[16:05:07] [WU05][E$] Sync completed: 0 copied, 0 skipped, 0 failed
+[16:05:07] [WU10][E$] Started sync task for project UCSync_Test1
+[16:05:07] [WU11][E$] Started sync task for project UCSync_Test1
+[16:05:07] [WU12][E$] Started sync task for project UCSync_Test1
+[16:05:07] [WU06][E$] Found 0 files (0 B)
+[16:05:07] [WU07][E$] Found 0 files (0 B)
+[16:05:07] [WU06][E$] Sync completed: 0 copied, 0 skipped, 0 failed
+[16:05:07] [WU07][E$] Sync completed: 0 copied, 0 skipped, 0 failed
+[16:05:07] [WU13][E$] Started sync task for project UCSync_Test1
+[16:05:07] [CU][E$] Started sync task for project UCSync_Test1
+[16:05:07] [WU08][E$] Found 0 files (0 B)
+[16:05:07] [WU09][E$] Found 0 files (0 B)
+[16:05:07] [WU10][E$] Found 0 files (0 B)
+[16:05:07] [WU11][E$] Found 0 files (0 B)
+[16:05:07] [WU08][E$] Sync completed: 0 copied, 0 skipped, 0 failed
+[16:05:07] [WU09][E$] Sync completed: 0 copied, 0 skipped, 0 failed
+[16:05:07] [WU10][E$] Sync completed: 0 copied, 0 skipped, 0 failed
+[16:05:07] [WU11][E$] Sync completed: 0 copied, 0 skipped, 0 failed
+[16:05:07] [WU13][E$] Found 0 files (0 B)
+[16:05:07] [WU13][E$] Sync completed: 0 copied, 0 skipped, 0 failed
+[16:05:07] Stopping all synchronization tasks...
+[16:05:12] All synchronization tasks stopped
+[16:05:12] Synchronization cancelled
+[16:05:12] [WU12][E$] Found 0 files (0 B)
+
+=== UCX SyncTool Log Ended: 2025-10-31 16:10:20 ===
