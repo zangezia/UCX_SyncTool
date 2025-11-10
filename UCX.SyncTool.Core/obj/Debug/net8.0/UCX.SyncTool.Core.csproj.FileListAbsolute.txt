@@ -1,0 +1,13 @@
+E:\UCX_SyncTool\UCX.SyncTool.Core\obj\Debug\net8.0\UCX.SyncTool.Core.GeneratedMSBuildEditorConfig.editorconfig
+E:\UCX_SyncTool\UCX.SyncTool.Core\obj\Debug\net8.0\UCX.SyncTool.Core.AssemblyInfoInputs.cache
+E:\UCX_SyncTool\UCX.SyncTool.Core\obj\Debug\net8.0\UCX.SyncTool.Core.AssemblyInfo.cs
+E:\UCX_SyncTool\UCX.SyncTool.Core\obj\Debug\net8.0\UCX.SyncTool.Core.csproj.CoreCompileInputs.cache
+E:\UCX_SyncTool\UCX.SyncTool.Core\obj\Debug\net8.0\UCX.SyncTool.Core.sourcelink.json
+E:\UCX_SyncTool\UCX.SyncTool.Core\obj\Debug\net8.0\UCX.SyncTool.Core.csproj.AssemblyReference.cache
+E:\UCX_SyncTool\UCX.SyncTool.Core\bin\Debug\net8.0\UCX.SyncTool.Core.deps.json
+E:\UCX_SyncTool\UCX.SyncTool.Core\bin\Debug\net8.0\UCX.SyncTool.Core.dll
+E:\UCX_SyncTool\UCX.SyncTool.Core\bin\Debug\net8.0\UCX.SyncTool.Core.pdb
+E:\UCX_SyncTool\UCX.SyncTool.Core\obj\Debug\net8.0\UCX.SyncTool.Core.dll
+E:\UCX_SyncTool\UCX.SyncTool.Core\obj\Debug\net8.0\refint\UCX.SyncTool.Core.dll
+E:\UCX_SyncTool\UCX.SyncTool.Core\obj\Debug\net8.0\UCX.SyncTool.Core.pdb
+E:\UCX_SyncTool\UCX.SyncTool.Core\obj\Debug\net8.0\ref\UCX.SyncTool.Core.dll

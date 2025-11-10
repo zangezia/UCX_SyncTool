@@ -1,0 +1,433 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>UCX SyncTool - Web Interface</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: #f5f5f5;
+            padding: 20px;
+        }
+
+        .container {
+            max-width: 1400px;
+            margin: 0 auto;
+            background: white;
+            border-radius: 8px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+            padding: 20px;
+        }
+
+        h1 {
+            color: #333;
+            margin-bottom: 20px;
+            border-bottom: 3px solid #4CAF50;
+            padding-bottom: 10px;
+        }
+
+        .controls {
+            display: grid;
+            grid-template-columns: 1fr 1fr auto auto;
+            gap: 10px;
+            margin-bottom: 20px;
+        }
+
+        .form-group {
+            display: flex;
+            flex-direction: column;
+        }
+
+        label {
+            font-weight: 600;
+            margin-bottom: 5px;
+            color: #555;
+        }
+
+        input, select {
+            padding: 8px;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            font-size: 14px;
+        }
+
+        button {
+            padding: 10px 20px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 14px;
+            font-weight: 600;
+            transition: background 0.3s;
+        }
+
+        .btn-start {
+            background: #4CAF50;
+            color: white;
+        }
+
+        .btn-start:hover {
+            background: #45a049;
+        }
+
+        .btn-stop {
+            background: #f44336;
+            color: white;
+        }
+
+        .btn-stop:hover {
+            background: #da190b;
+        }
+
+        .btn-refresh {
+            background: #2196F3;
+            color: white;
+        }
+
+        .btn-refresh:hover {
+            background: #0b7dda;
+        }
+
+        button:disabled {
+            background: #ccc;
+            cursor: not-allowed;
+        }
+
+        .status-bar {
+            background: #f9f9f9;
+            padding: 15px;
+            border-radius: 4px;
+            margin-bottom: 20px;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 15px;
+        }
+
+        .status-item {
+            text-align: center;
+        }
+
+        .status-label {
+            font-size: 12px;
+            color: #777;
+            margin-bottom: 5px;
+        }
+
+        .status-value {
+            font-size: 24px;
+            font-weight: bold;
+            color: #4CAF50;
+        }
+
+        .log-container {
+            background: #1e1e1e;
+            color: #d4d4d4;
+            padding: 15px;
+            border-radius: 4px;
+            height: 300px;
+            overflow-y: auto;
+            font-family: 'Consolas', 'Courier New', monospace;
+            font-size: 13px;
+            line-height: 1.5;
+            margin-bottom: 20px;
+        }
+
+        .log-entry {
+            margin-bottom: 5px;
+        }
+
+        .log-time {
+            color: #569cd6;
+        }
+
+        .log-error {
+            color: #f48771;
+        }
+
+        .log-success {
+            color: #4ec9b0;
+        }
+
+        .activities-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 10px;
+        }
+
+        .activities-table th,
+        .activities-table td {
+            padding: 10px;
+            text-align: left;
+            border-bottom: 1px solid #ddd;
+        }
+
+        .activities-table th {
+            background: #f5f5f5;
+            font-weight: 600;
+            color: #555;
+        }
+
+        .activities-table tr:hover {
+            background: #f9f9f9;
+        }
+
+        .progress-bar {
+            height: 20px;
+            background: #e0e0e0;
+            border-radius: 10px;
+            overflow: hidden;
+        }
+
+        .progress-fill {
+            height: 100%;
+            background: linear-gradient(90deg, #4CAF50, #45a049);
+            transition: width 0.3s;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-size: 11px;
+            font-weight: 600;
+        }
+
+        .connection-status {
+            display: inline-block;
+            padding: 5px 10px;
+            border-radius: 4px;
+            font-size: 12px;
+            font-weight: 600;
+            margin-left: 10px;
+        }
+
+        .connected {
+            background: #4CAF50;
+            color: white;
+        }
+
+        .disconnected {
+            background: #f44336;
+            color: white;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>
+            UCX SyncTool - Веб-интерфейс
+            <span id="connectionStatus" class="connection-status disconnected">Отключено</span>
+        </h1>
+
+        <div class="controls">
+            <div class="form-group">
+                <label for="projectSelect">Проект:</label>
+                <select id="projectSelect">
+                    <option value="">Загрузка...</option>
+                </select>
+            </div>
+
+            <div class="form-group">
+                <label for="destPath">Папка назначения:</label>
+                <input type="text" id="destPath" placeholder="/mnt/data/ucx" value="/mnt/data/ucx">
+            </div>
+
+            <button class="btn-refresh" onclick="loadProjects()">Обновить проекты</button>
+            <button class="btn-start" id="startBtn" onclick="startSync()">Запустить</button>
+            <button class="btn-stop" id="stopBtn" onclick="stopSync()" disabled>Остановить</button>
+        </div>
+
+        <div class="status-bar">
+            <div class="status-item">
+                <div class="status-label">Снимков скачано</div>
+                <div class="status-value" id="capturesCount">0</div>
+            </div>
+            <div class="status-item">
+                <div class="status-label">Последний снимок</div>
+                <div class="status-value" id="lastCapture">-</div>
+            </div>
+            <div class="status-item">
+                <div class="status-label">Тестовых снимков</div>
+                <div class="status-value" id="testCapturesCount">0</div>
+            </div>
+        </div>
+
+        <h3>Лог:</h3>
+        <div class="log-container" id="logContainer"></div>
+
+        <h3>Активные задачи:</h3>
+        <table class="activities-table">
+            <thead>
+                <tr>
+                    <th>Узел</th>
+                    <th>Шара</th>
+                    <th>Состояние</th>
+                    <th>Прогресс</th>
+                </tr>
+            </thead>
+            <tbody id="activitiesBody">
+                <tr>
+                    <td colspan="4" style="text-align: center; color: #999;">Нет активных задач</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/microsoft-signalr/6.0.1/signalr.min.js"></script>
+    <script>
+        const connection = new signalR.HubConnectionBuilder()
+            .withUrl("/syncHub")
+            .withAutomaticReconnect()
+            .build();
+
+        connection.on("ReceiveLog", (message) => {
+            appendLog(message);
+        });
+
+        connection.on("ReceiveStatus", (status) => {
+            document.getElementById('capturesCount').textContent = status.completedCaptures;
+            document.getElementById('lastCapture').textContent = status.lastCaptureNumber || '-';
+            document.getElementById('testCapturesCount').textContent = status.completedTestCaptures;
+        });
+
+        connection.start()
+            .then(() => {
+                console.log("Connected to SignalR");
+                document.getElementById('connectionStatus').textContent = 'Подключено';
+                document.getElementById('connectionStatus').className = 'connection-status connected';
+                loadProjects();
+                updateStatus();
+            })
+            .catch(err => {
+                console.error("SignalR connection error:", err);
+                document.getElementById('connectionStatus').textContent = 'Ошибка подключения';
+            });
+
+        connection.onreconnected(() => {
+            document.getElementById('connectionStatus').textContent = 'Подключено';
+            document.getElementById('connectionStatus').className = 'connection-status connected';
+        });
+
+        connection.onreconnecting(() => {
+            document.getElementById('connectionStatus').textContent = 'Переподключение...';
+            document.getElementById('connectionStatus').className = 'connection-status disconnected';
+        });
+
+        function appendLog(message) {
+            const container = document.getElementById('logContainer');
+            const entry = document.createElement('div');
+            entry.className = 'log-entry';
+            
+            const now = new Date();
+            const time = now.toLocaleTimeString('ru-RU');
+            
+            let className = '';
+            if (message.toLowerCase().includes('error') || message.toLowerCase().includes('ошибка')) {
+                className = 'log-error';
+            } else if (message.toLowerCase().includes('✓') || message.toLowerCase().includes('completed')) {
+                className = 'log-success';
+            }
+            
+            entry.innerHTML = `<span class="log-time">[${time}]</span> <span class="${className}">${escapeHtml(message)}</span>`;
+            container.appendChild(entry);
+            container.scrollTop = container.scrollHeight;
+        }
+
+        function escapeHtml(text) {
+            const div = document.createElement('div');
+            div.textContent = text;
+            return div.innerHTML;
+        }
+
+        async function loadProjects() {
+            try {
+                const response = await fetch('/api/sync/projects');
+                const projects = await response.json();
+                
+                const select = document.getElementById('projectSelect');
+                select.innerHTML = '<option value="">Выберите проект...</option>';
+                
+                projects.forEach(project => {
+                    const option = document.createElement('option');
+                    option.value = project;
+                    option.textContent = project;
+                    select.appendChild(option);
+                });
+                
+                appendLog(`Найдено проектов: ${projects.length}`);
+            } catch (error) {
+                appendLog(`Ошибка загрузки проектов: ${error.message}`);
+            }
+        }
+
+        async function startSync() {
+            const project = document.getElementById('projectSelect').value;
+            const destPath = document.getElementById('destPath').value;
+            
+            if (!project || !destPath) {
+                alert('Выберите проект и укажите папку назначения');
+                return;
+            }
+
+            try {
+                const response = await fetch('/api/sync/start', {
+                    method: 'POST',
+                    headers: { 'Content-Type': 'application/json' },
+                    body: JSON.stringify({
+                        project: project,
+                        destinationPath: destPath,
+                        maxParallelism: 8
+                    })
+                });
+
+                if (response.ok) {
+                    document.getElementById('startBtn').disabled = true;
+                    document.getElementById('stopBtn').disabled = false;
+                    appendLog(`Синхронизация проекта '${project}' запущена`);
+                } else {
+                    const error = await response.json();
+                    alert(`Ошибка: ${error.error || error.message}`);
+                }
+            } catch (error) {
+                alert(`Ошибка запуска: ${error.message}`);
+            }
+        }
+
+        async function stopSync() {
+            try {
+                const response = await fetch('/api/sync/stop', {
+                    method: 'POST'
+                });
+
+                if (response.ok) {
+                    document.getElementById('startBtn').disabled = false;
+                    document.getElementById('stopBtn').disabled = true;
+                    appendLog('Синхронизация остановлена');
+                }
+            } catch (error) {
+                alert(`Ошибка остановки: ${error.message}`);
+            }
+        }
+
+        async function updateStatus() {
+            try {
+                const response = await fetch('/api/sync/status');
+                const status = await response.json();
+                
+                document.getElementById('capturesCount').textContent = status.completedCaptures;
+                document.getElementById('lastCapture').textContent = status.lastCaptureNumber || '-';
+                document.getElementById('testCapturesCount').textContent = status.completedTestCaptures;
+            } catch (error) {
+                console.error('Failed to update status:', error);
+            }
+
+            setTimeout(updateStatus, 2000);
+        }
+    </script>
+</body>
+</html>

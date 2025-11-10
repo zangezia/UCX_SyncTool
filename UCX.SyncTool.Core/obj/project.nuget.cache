@@ -1,0 +1,13 @@
+{
+  "version": 2,
+  "dgSpecHash": "k75P3hXQres=",
+  "success": true,
+  "projectFilePath": "E:\\UCX_SyncTool\\UCX.SyncTool.Core\\UCX.SyncTool.Core.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\Operator\\.nuget\\packages\\system.configuration.configurationmanager\\9.0.10\\system.configuration.configurationmanager.9.0.10.nupkg.sha512",
+    "C:\\Users\\Operator\\.nuget\\packages\\system.diagnostics.eventlog\\9.0.10\\system.diagnostics.eventlog.9.0.10.nupkg.sha512",
+    "C:\\Users\\Operator\\.nuget\\packages\\system.diagnostics.performancecounter\\9.0.10\\system.diagnostics.performancecounter.9.0.10.nupkg.sha512",
+    "C:\\Users\\Operator\\.nuget\\packages\\system.security.cryptography.protecteddata\\9.0.10\\system.security.cryptography.protecteddata.9.0.10.nupkg.sha512"
+  ],
+  "logs": []
+}
